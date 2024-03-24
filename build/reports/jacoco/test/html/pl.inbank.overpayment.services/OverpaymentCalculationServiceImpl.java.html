@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>OverpaymentCalculationServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">OverpaymentCalculatorAndChangeWibor</a> &gt; <a href="index.source.html" class="el_package">pl.inbank.overpayment.services</a> &gt; <span class="el_source">OverpaymentCalculationServiceImpl.java</span></div><h1>OverpaymentCalculationServiceImpl.java</h1><pre class="source lang-java linenums">package pl.inbank.overpayment.services;
+
+import org.springframework.stereotype.Service;
+import pl.inbank.overpayment.model.InputData;
+import pl.inbank.overpayment.model.Overpayment;
+
+import java.math.BigDecimal;
+import java.util.Map;
+import java.util.Optional;
+
+@Service
+<span class="fc" id="L12">public class OverpaymentCalculationServiceImpl implements OverpaymentCalculationService {</span>
+
+    @Override
+    public Overpayment calculate(final BigDecimal installmentNumber, final InputData inputData) {
+<span class="fc" id="L16">        BigDecimal overpaymentAmount = calculateOverpaymentAmount(installmentNumber, inputData.overpaymentSchema()).orElse(BigDecimal.ZERO);</span>
+<span class="fc" id="L17">        BigDecimal overpaymentProvision = calculateOverpaymentProvision(installmentNumber, overpaymentAmount, inputData);</span>
+<span class="fc" id="L18">        return new Overpayment(overpaymentAmount, overpaymentProvision);</span>
+    }
+
+    private Optional&lt;BigDecimal&gt; calculateOverpaymentAmount(final BigDecimal installmentNumber, Map&lt;Integer, BigDecimal&gt; overpaymentSchema) {
+<span class="fc" id="L22">        return overpaymentSchema.entrySet().stream()</span>
+<span class="fc" id="L23">            .filter(entry -&gt; BigDecimal.valueOf(entry.getKey()).equals(installmentNumber))</span>
+<span class="fc" id="L24">            .findFirst()</span>
+<span class="fc" id="L25">            .map(Map.Entry::getValue);</span>
+    }
+
+    private BigDecimal calculateOverpaymentProvision(final BigDecimal installmentNumber, final BigDecimal overpaymentAmount, final InputData inputData) {
+<span class="fc bfc" id="L29" title="All 2 branches covered.">        if (BigDecimal.ZERO.equals(overpaymentAmount)) {</span>
+<span class="fc" id="L30">            return BigDecimal.ZERO;</span>
+        }
+
+<span class="pc bpc" id="L33" title="1 of 2 branches missed.">        if (installmentNumber.compareTo(inputData.overpaymentProvisionMonths()) &gt; 0) {</span>
+<span class="nc" id="L34">            return BigDecimal.ZERO;</span>
+        }
+
+<span class="fc" id="L37">        return overpaymentAmount.multiply(inputData.overpaymentProvisionPercent());</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

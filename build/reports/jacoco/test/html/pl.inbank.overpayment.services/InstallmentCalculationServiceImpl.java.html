@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>InstallmentCalculationServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">OverpaymentCalculatorAndChangeWibor</a> &gt; <a href="index.source.html" class="el_package">pl.inbank.overpayment.services</a> &gt; <span class="el_source">InstallmentCalculationServiceImpl.java</span></div><h1>InstallmentCalculationServiceImpl.java</h1><pre class="source lang-java linenums">package pl.inbank.overpayment.services;
+
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+import pl.inbank.overpayment.model.*;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.ArrayList;
+import java.util.List;
+
+<span class="fc" id="L13">@Slf4j</span>
+@Service
+<span class="fc" id="L15">@AllArgsConstructor</span>
+public class InstallmentCalculationServiceImpl implements InstallmentCalculationService {
+
+    private final TimePointCalculationService timePointCalculationService;
+
+    private final AmountsCalculationService amountsCalculationService;
+
+    private final ResidualCalculationService residualCalculationService;
+
+    private final ReferenceCalculationService referenceCalculationService;
+
+    private final OverpaymentCalculationService overpaymentCalculationService;
+
+    @Override
+    public List&lt;Installment&gt; calculate(final InputData inputData) {
+<span class="fc" id="L30">        List&lt;Installment&gt; installmentList = new ArrayList&lt;&gt;();</span>
+
+<span class="fc" id="L32">        BigDecimal installmentNumber = BigDecimal.ONE;</span>
+
+<span class="fc" id="L34">        Installment zeroInstallment = calculateZeroInstallment(installmentNumber, inputData);</span>
+
+<span class="fc" id="L36">        Installment previousInstallment = zeroInstallment;</span>
+<span class="fc" id="L37">        installmentList.add(zeroInstallment);</span>
+<span class="fc" id="L38">        log.debug(&quot;Calculated: [{}] installment&quot;, 1);</span>
+
+<span class="fc bfc" id="L40" title="All 2 branches covered.">        for (BigDecimal i = installmentNumber.add(BigDecimal.ONE); i.compareTo(inputData.monthsDuration()) &lt;= 0; i = i.add(BigDecimal.ONE)) {</span>
+<span class="fc" id="L41">            Installment nextInstallment = calculateNextInstallment(i, inputData, previousInstallment);</span>
+<span class="fc" id="L42">            previousInstallment = nextInstallment;</span>
+<span class="fc" id="L43">            installmentList.add(nextInstallment);</span>
+
+<span class="fc" id="L45">            log.debug(&quot;Calculated: [{}] installment&quot;, i);</span>
+<span class="fc" id="L46">            log.trace(&quot;Calculated: [{}] installment: [{}]&quot;, i, nextInstallment);</span>
+<span class="fc bfc" id="L47" title="All 2 branches covered.">            if (BigDecimal.ZERO.equals(nextInstallment.residual().residualAmount().setScale(0, RoundingMode.HALF_UP))) {</span>
+<span class="fc" id="L48">                break;</span>
+            }
+        }
+
+<span class="fc" id="L52">        return installmentList;</span>
+    }
+
+    private Installment calculateZeroInstallment(final BigDecimal installmentNumber, final InputData inputData) {
+<span class="fc" id="L56">        TimePoint timePoint = timePointCalculationService.calculate(installmentNumber, inputData);</span>
+<span class="fc" id="L57">        Overpayment overpayment = overpaymentCalculationService.calculate(installmentNumber, inputData);</span>
+<span class="fc" id="L58">        InstallmentAmounts installmentAmounts = amountsCalculationService.calculate(inputData, overpayment);</span>
+<span class="fc" id="L59">        Residual residual = residualCalculationService.calculate(installmentAmounts, inputData);</span>
+<span class="fc" id="L60">        Reference reference = referenceCalculationService.calculate(installmentAmounts, inputData);</span>
+
+<span class="fc" id="L62">        return new Installment(installmentNumber, timePoint, installmentAmounts, residual, reference);</span>
+    }
+
+    private Installment calculateNextInstallment(final BigDecimal installmentNumber, final InputData inputData, final Installment previousInstallment) {
+<span class="fc" id="L66">        TimePoint timepoint = timePointCalculationService.calculate(installmentNumber, previousInstallment);</span>
+<span class="fc" id="L67">        Overpayment overpayment = overpaymentCalculationService.calculate(installmentNumber, inputData);</span>
+<span class="fc" id="L68">        InstallmentAmounts installmentAmounts = amountsCalculationService.calculate(inputData, overpayment, inputData.monthlyCommissionFee(), previousInstallment);</span>
+<span class="fc" id="L69">        Residual residual = residualCalculationService.calculate(installmentAmounts, inputData, previousInstallment);</span>
+<span class="fc" id="L70">        Reference reference = referenceCalculationService.calculate(installmentAmounts, inputData, previousInstallment);</span>
+
+<span class="fc" id="L72">        return new Installment(installmentNumber, timepoint, installmentAmounts, residual, reference);</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

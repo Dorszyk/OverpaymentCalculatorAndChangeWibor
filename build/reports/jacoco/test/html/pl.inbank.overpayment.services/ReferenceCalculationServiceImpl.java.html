@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ReferenceCalculationServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">OverpaymentCalculatorAndChangeWibor</a> &gt; <a href="index.source.html" class="el_package">pl.inbank.overpayment.services</a> &gt; <span class="el_source">ReferenceCalculationServiceImpl.java</span></div><h1>ReferenceCalculationServiceImpl.java</h1><pre class="source lang-java linenums">package pl.inbank.overpayment.services;
+
+import org.springframework.stereotype.Service;
+import pl.inbank.overpayment.model.*;
+
+import java.math.BigDecimal;
+
+@Service
+<span class="fc" id="L9">public class ReferenceCalculationServiceImpl implements ReferenceCalculationService {</span>
+
+    @Override
+    public Reference calculate(InstallmentAmounts installmentAmounts, InputData inputData) {
+<span class="pc bpc" id="L13" title="1 of 2 branches missed.">        if (BigDecimal.ZERO.equals(inputData.amount())) {</span>
+<span class="nc" id="L14">            return new Reference(BigDecimal.ZERO, BigDecimal.ZERO);</span>
+        }
+
+<span class="fc" id="L17">        return new Reference(inputData.amount(), inputData.monthsDuration());</span>
+    }
+
+    @Override
+    public Reference calculate(InstallmentAmounts installmentAmounts, final InputData inputData, Installment previousInstallment) {
+<span class="pc bpc" id="L22" title="1 of 2 branches missed.">        if (BigDecimal.ZERO.equals(previousInstallment.residual().residualAmount())) {</span>
+<span class="nc" id="L23">            return new Reference(BigDecimal.ZERO, BigDecimal.ZERO);</span>
+        }
+
+<span class="pc bpc" id="L26" title="2 of 3 branches missed.">        return switch (inputData.overpaymentReduceWay()) {</span>
+<span class="nc" id="L27">            case Overpayment.REDUCE_INSTALLMENT -&gt; reduceInstallmentReference(installmentAmounts, previousInstallment.residual());</span>
+<span class="fc" id="L28">            case Overpayment.REDUCE_PERIOD -&gt; new Reference(inputData.amount(), inputData.monthsDuration());</span>
+<span class="nc" id="L29">            default -&gt; throw new Exception(&quot;Case not handled&quot;);</span>
+        };
+
+    }
+
+    private Reference reduceInstallmentReference(final InstallmentAmounts installmentAmounts, final Residual previousResidual) {
+<span class="nc bnc" id="L35" title="All 2 branches missed.">        if (installmentAmounts.overpayment().amount().compareTo(BigDecimal.ZERO) &gt; 0) {</span>
+<span class="nc" id="L36">            BigDecimal residualAmount = calculateResidualAmount(previousResidual.residualAmount(), installmentAmounts);</span>
+<span class="nc" id="L37">            return new Reference(residualAmount, previousResidual.residualDuration().subtract(BigDecimal.ONE));</span>
+        }
+
+<span class="nc" id="L40">        return new Reference(previousResidual.residualAmount(), previousResidual.residualDuration());</span>
+    }
+
+    private BigDecimal calculateResidualAmount(final BigDecimal residualAmount, final InstallmentAmounts installmentAmounts) {
+<span class="nc" id="L44">        return residualAmount</span>
+<span class="nc" id="L45">            .subtract(installmentAmounts.capitalAmount())</span>
+<span class="nc" id="L46">            .subtract(installmentAmounts.overpayment().amount())</span>
+<span class="nc" id="L47">            .max(BigDecimal.ZERO);</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

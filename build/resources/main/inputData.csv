@@ -1,0 +1,16 @@
+repaymentStartDate;2022-11-20
+wibor;0.0
+wiborChanges;0:0.0
+amount;8354.07
+monthsDuration;13
+installmentType;CONSTANT
+margin;9.99
+overpaymentProvision;0
+overpaymentProvisionMonths;0
+overpaymentStartMonth;0
+overpaymentSchema;0:0
+overpaymentReduceWay;REDUCE_PERIOD
+printPayoffsSchedule;true
+installmentNumberToPrint;1
+loanGrantingFee;0.0
+monthlyCommissionFee;0.0

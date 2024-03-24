@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ConstantAmountsCalculationServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">OverpaymentCalculatorAndChangeWibor</a> &gt; <a href="index.source.html" class="el_package">pl.inbank.overpayment.services</a> &gt; <span class="el_source">ConstantAmountsCalculationServiceImpl.java</span></div><h1>ConstantAmountsCalculationServiceImpl.java</h1><pre class="source lang-java linenums">package pl.inbank.overpayment.services;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
+import pl.inbank.overpayment.model.InputData;
+import pl.inbank.overpayment.model.Installment;
+import pl.inbank.overpayment.model.InstallmentAmounts;
+import pl.inbank.overpayment.model.Overpayment;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.time.LocalDate;
+
+<span class="fc" id="L14">@Slf4j</span>
+@Service
+<span class="fc" id="L16">public class ConstantAmountsCalculationServiceImpl implements ConstantAmountsCalculationService {</span>
+
+    @Override
+    public InstallmentAmounts calculate(final InputData inputData, final Overpayment overpayment) {
+<span class="fc" id="L20">        BigDecimal interestPercent = inputData.interestPercent();</span>
+<span class="fc" id="L21">        log.debug(&quot;InterestPercent: [{}]&quot;, interestPercent);</span>
+
+<span class="fc" id="L23">        BigDecimal residualAmount = inputData.amount();</span>
+
+        // Ustalenie dat startowych i koĹ„cowych dla obliczenia odsetek
+<span class="fc" id="L26">        LocalDate previousPaymentDate = inputData.repaymentStartDate(); // ZakĹ‚adamy, ĹĽe jest to data rozpoczÄ™cia kredytu</span>
+<span class="fc" id="L27">        LocalDate currentPaymentDate = inputData.repaymentStartDate().plusMonths(1); // Data nastÄ™pnej spĹ‚aty jako punkt koĹ„cowy</span>
+
+        // Obliczenie kwoty odsetek z uwzglÄ™dnieniem rzeczywistych dni
+<span class="fc" id="L30">        BigDecimal interestAmount = AmountsCalculationService.calculateInterestAmount(</span>
+                residualAmount, interestPercent, previousPaymentDate, currentPaymentDate);
+
+<span class="fc" id="L33">        BigDecimal q = AmountsCalculationService.calculateQ(interestPercent);</span>
+<span class="fc" id="L34">        log.trace(&quot;Q: [{}]&quot;, q);</span>
+
+        // Obliczenie staĹ‚ej kwoty raty bez uwzglÄ™dnienia prowizji
+<span class="fc" id="L37">        BigDecimal installmentAmountWithoutCommission = calculateConstantInstallmentAmount(</span>
+<span class="fc" id="L38">                q, interestAmount, residualAmount, inputData.amount(), inputData.monthsDuration());</span>
+
+        // Obliczenie kwoty kapitaĹ‚owej jako rĂłĹĽnicy miÄ™dzy caĹ‚kowitÄ… kwotÄ… raty (bez prowizji) a kwotÄ… odsetek
+<span class="fc" id="L41">        BigDecimal capitalAmount = AmountsCalculationService.compareCapitalWithResidual(</span>
+<span class="fc" id="L42">                installmentAmountWithoutCommission.subtract(interestAmount), residualAmount);</span>
+
+        // Pobranie opĹ‚aty prowizyjnej
+<span class="fc" id="L45">        BigDecimal commissionAmount = inputData.monthlyCommissionFee();</span>
+
+        // Dodanie opĹ‚aty prowizyjnej do caĹ‚kowitej kwoty raty
+<span class="fc" id="L48">        BigDecimal installmentAmount = installmentAmountWithoutCommission.add(commissionAmount);</span>
+
+        // Logowanie obliczeĹ„
+<span class="fc" id="L51">        log.info(</span>
+                &quot;Calculated installment: [{}], residualAmount: [{}], interestAmount: [{}], capitalAmount: [{}], installmentAmount: [{}], commissionAmount: [{}]&quot;,
+<span class="fc" id="L53">                1, residualAmount, interestAmount, capitalAmount, installmentAmount, commissionAmount);</span>
+
+        // ZwrĂłcenie obliczonych wartoĹ›ci
+<span class="fc" id="L56">        return new InstallmentAmounts(installmentAmount, interestAmount, capitalAmount, overpayment, commissionAmount);</span>
+    }
+
+    @Override
+    public InstallmentAmounts calculate(final InputData inputData, final Overpayment overpayment, final Installment previousInstallment) {
+        // Pobranie aktualnej wartoĹ›ci WIBOR dla bieĹĽÄ…cej raty
+<span class="fc" id="L62">        BigDecimal currentInstallmentNumber = previousInstallment.installmentNumber().add(BigDecimal.ONE);</span>
+<span class="fc" id="L63">        BigDecimal wiborPercent = inputData.wiborPercentForInstallment(previousInstallment.installmentNumber().add(BigDecimal.ONE));</span>
+<span class="fc" id="L64">        BigDecimal interestPercent = wiborPercent.add(inputData.marginPercent()); // Dodanie marĹĽy do WIBOR</span>
+
+<span class="fc" id="L66">        BigDecimal q = AmountsCalculationService.calculateQ(interestPercent);</span>
+
+<span class="fc" id="L68">        BigDecimal residualAmount = previousInstallment.residual().residualAmount();</span>
+
+        LocalDate previousPaymentDate, currentPaymentDate;
+<span class="fc" id="L71">        previousPaymentDate = inputData.repaymentStartDate().plusMonths(currentInstallmentNumber.intValue() - 1);</span>
+<span class="fc" id="L72">        currentPaymentDate = inputData.repaymentStartDate().plusMonths(currentInstallmentNumber.intValue());</span>
+
+
+        // Obliczenie kwoty odsetek z uwzglÄ™dnieniem aktualnej wartoĹ›ci WIBOR oraz rzeczywistej liczby dni
+<span class="fc" id="L76">        BigDecimal interestAmount = AmountsCalculationService.calculateInterestAmount(</span>
+                residualAmount, interestPercent, previousPaymentDate, currentPaymentDate);
+
+<span class="fc" id="L79">        BigDecimal referenceAmount = previousInstallment.reference().referenceAmount();</span>
+<span class="fc" id="L80">        BigDecimal referenceDuration = previousInstallment.reference().referenceDuration();</span>
+
+        // Obliczenie staĹ‚ej kwoty raty bez uwzglÄ™dnienia prowizji
+<span class="fc" id="L83">        BigDecimal installmentAmountWithoutCommission = calculateConstantInstallmentAmount(</span>
+                q, interestAmount, residualAmount, referenceAmount, referenceDuration);
+
+        // Obliczenie kwoty kapitaĹ‚owej jako rĂłĹĽnicy miÄ™dzy caĹ‚kowitÄ… kwotÄ… raty (bez prowizji) a kwotÄ… odsetek
+<span class="fc" id="L87">        BigDecimal capitalAmount = AmountsCalculationService.compareCapitalWithResidual(installmentAmountWithoutCommission.subtract(interestAmount), residualAmount);</span>
+
+        // Pobranie opĹ‚aty prowizyjnej
+<span class="fc" id="L90">        BigDecimal commissionAmount = inputData.monthlyCommissionFee();</span>
+
+        // Dodanie opĹ‚aty prowizyjnej do caĹ‚kowitej kwoty raty
+<span class="fc" id="L93">        BigDecimal installmentAmount = installmentAmountWithoutCommission.add(commissionAmount);</span>
+
+<span class="fc" id="L95">        log.info(</span>
+                &quot;Calculated installment: [{}], residualAmount: [{}], interestAmount: [{}], capitalAmount: [{}], installmentAmount: [{}], &quot; +
+                        &quot;commissionAmount: [{}], referenceAmount: [{}], referenceDuration: [{}], WIBOR: [{}]&quot;,
+<span class="fc" id="L98">                previousInstallment.installmentNumber().add(BigDecimal.ONE), residualAmount, interestAmount, capitalAmount, installmentAmount,</span>
+                commissionAmount, referenceAmount, referenceDuration, wiborPercent);
+
+<span class="fc" id="L101">        return new InstallmentAmounts(installmentAmount, interestAmount, capitalAmount, overpayment, commissionAmount);</span>
+    }
+
+
+    private BigDecimal calculateConstantInstallmentAmount(
+            final BigDecimal q,
+            final BigDecimal interestAmount,
+            final BigDecimal residualAmount,
+            final BigDecimal referenceAmount,
+            final BigDecimal referenceDuration
+    ) {
+<span class="fc" id="L112">        BigDecimal installmentAmount = referenceAmount</span>
+<span class="fc" id="L113">                .multiply(q.pow(referenceDuration.intValue()))</span>
+<span class="fc" id="L114">                .multiply(q.subtract(BigDecimal.ONE))</span>
+<span class="fc" id="L115">                .divide(q.pow(referenceDuration.intValue()).subtract(BigDecimal.ONE), 2, RoundingMode.HALF_UP);</span>
+
+<span class="fc" id="L117">        return compareInstallmentWithResidual(installmentAmount, interestAmount, residualAmount);</span>
+    }
+
+    private BigDecimal compareInstallmentWithResidual(
+            final BigDecimal installmentAmount,
+            final BigDecimal interestAmount,
+            final BigDecimal residualAmount
+    ) {
+<span class="fc bfc" id="L125" title="All 2 branches covered.">        if (installmentAmount.subtract(interestAmount).compareTo(residualAmount) &gt;= 0) {</span>
+<span class="fc" id="L126">            return residualAmount.add(interestAmount);</span>
+        }
+<span class="fc" id="L128">        return installmentAmount;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

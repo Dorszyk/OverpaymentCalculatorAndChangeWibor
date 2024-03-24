@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="pl"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PrintingService.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">OverpaymentCalculatorAndChangeWibor</a> &gt; <a href="index.source.html" class="el_package">pl.inbank.overpayment.services</a> &gt; <span class="el_source">PrintingService.java</span></div><h1>PrintingService.java</h1><pre class="source lang-java linenums">package pl.inbank.overpayment.services;
+
+import pl.inbank.overpayment.model.InputData;
+import pl.inbank.overpayment.model.Installment;
+import pl.inbank.overpayment.model.Summary;
+
+import java.util.List;
+
+public interface PrintingService {
+
+    String SCHEDULE_TABLE_FORMAT =
+            &quot;%-1s:%3s  &quot; +
+                    &quot;%-1s:%3s  &quot; +
+                    &quot;%-1s:%3s  &quot; +
+                    &quot;%-7s:%5s  &quot; +
+                    &quot;%-7s:%7s  &quot; +
+                    &quot;%-7s:%7s  &quot; +
+                    &quot;%-7s:%7s  &quot; +
+                    &quot;%-7s:%3s  &quot; +
+                    &quot;%-8s:%8s  &quot; +
+                    &quot;%-8s:%9s  &quot; +
+                    &quot;%-1s:%3s%n&quot;;
+
+<span class="fc" id="L24">    List&lt;String&gt; INSTALLMENT_LINE_KEYS = List.of(</span>
+            &quot;No&quot;,
+            &quot;Yr&quot;,
+            &quot;Month&quot;,
+            &quot;Payment date&quot;,
+            &quot;Monthly payment&quot;,
+            &quot;Interest amount&quot;,
+            &quot;Main part&quot;,
+            &quot;Administration fee&quot;,
+            &quot;Overpayment&quot;,
+            &quot;Balance&quot;,
+            &quot;No&quot;
+    );
+
+    String INTRO_INFORMATION = &quot;&quot;&quot;  
+            Initial loan amount: %s PLN
+            Period in months: %s
+            Annual interest rate when granting a loan: %s%%
+            Month of overpayments: %s months
+            Contract fee: %s PLN
+            Administration fee: %S PLN
+            &quot;&quot;&quot;;
+
+    String OVERPAYMENT_INFORMATION = &quot;&quot;&quot;
+            
+            %s
+            Diagram of overpayment:
+            %s&quot;&quot;&quot;;
+
+    String WIBOR_CHANGES_INFORMATION = &quot;&quot;&quot;
+            
+            Diagram of WIBOR changes:
+            %s
+            &quot;&quot;&quot;;
+
+    String SUMMARY_INFORMATION = &quot;&quot;&quot;
+                    
+            Sum of credit interest: %s PLN
+            Commission for overpayment: %s PLN
+            Total sum interest and commission overpayment: %s PL
+            Total sum of capital repaid by the customer: %s PLN
+            Total sum capital and interest: %s PLN
+            Total administration Fee: %s PLN
+            Total amount to be paid by the customer: %s PLN
+                    
+            &quot;&quot;&quot;;
+
+    String OVERPAYMENT_REDUCE_INSTALLMENT = &quot;Overpayment - Reduce instalment &quot;;
+    String OVERPAYMENT_REDUCE_PERIOD = &quot;Overpayment - Reduce period&quot;;
+    String OVERPAYMENT_SCHEMA = &quot;Monthly: %s, Sum: %s PLN%n&quot;;
+
+    void printIntroInformation(InputData inputData);
+
+    void printSchedule(List&lt;Installment&gt; installments, final InputData inputData);
+
+    void printSummary(Summary summaryNoOverpayment);
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

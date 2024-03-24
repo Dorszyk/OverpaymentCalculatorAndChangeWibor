@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pl.inbank.overpayment.services.TimePointCalculationServiceImplTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2024-03-24T22:07:14" hostname="DORSZYKP" time="0.05">
+  <properties/>
+  <testcase name="[1] 2010-02-01, 12, 1, 12, 2010-01-01" classname="pl.inbank.overpayment.services.TimePointCalculationServiceImplTest" time="0.032"/>
+  <testcase name="[2] 2010-02-01, 15, 2, 3, 2010-01-01" classname="pl.inbank.overpayment.services.TimePointCalculationServiceImplTest" time="0.003"/>
+  <testcase name="[3] 2013-10-01, 76, 7, 4, 2013-09-01" classname="pl.inbank.overpayment.services.TimePointCalculationServiceImplTest" time="0.005"/>
+  <testcase name="Should calculate first installment time point successfully" classname="pl.inbank.overpayment.services.TimePointCalculationServiceImplTest" time="0.003"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
