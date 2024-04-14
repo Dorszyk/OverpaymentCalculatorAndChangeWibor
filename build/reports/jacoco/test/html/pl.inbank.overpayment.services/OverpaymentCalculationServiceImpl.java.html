@@ -9,32 +9,32 @@ import java.util.Map;
 import java.util.Optional;
 
 @Service
-<span class="fc" id="L12">public class OverpaymentCalculationServiceImpl implements OverpaymentCalculationService {</span>
+<span class="nc" id="L12">public class OverpaymentCalculationServiceImpl implements OverpaymentCalculationService {</span>
 
     @Override
     public Overpayment calculate(final BigDecimal installmentNumber, final InputData inputData) {
-<span class="fc" id="L16">        BigDecimal overpaymentAmount = calculateOverpaymentAmount(installmentNumber, inputData.overpaymentSchema()).orElse(BigDecimal.ZERO);</span>
-<span class="fc" id="L17">        BigDecimal overpaymentProvision = calculateOverpaymentProvision(installmentNumber, overpaymentAmount, inputData);</span>
-<span class="fc" id="L18">        return new Overpayment(overpaymentAmount, overpaymentProvision);</span>
+<span class="nc" id="L16">        BigDecimal overpaymentAmount = calculateOverpaymentAmount(installmentNumber, inputData.overpaymentSchema()).orElse(BigDecimal.ZERO);</span>
+<span class="nc" id="L17">        BigDecimal overpaymentProvision = calculateOverpaymentProvision(installmentNumber, overpaymentAmount, inputData);</span>
+<span class="nc" id="L18">        return new Overpayment(overpaymentAmount, overpaymentProvision);</span>
     }
 
     private Optional&lt;BigDecimal&gt; calculateOverpaymentAmount(final BigDecimal installmentNumber, Map&lt;Integer, BigDecimal&gt; overpaymentSchema) {
-<span class="fc" id="L22">        return overpaymentSchema.entrySet().stream()</span>
-<span class="fc" id="L23">            .filter(entry -&gt; BigDecimal.valueOf(entry.getKey()).equals(installmentNumber))</span>
-<span class="fc" id="L24">            .findFirst()</span>
-<span class="fc" id="L25">            .map(Map.Entry::getValue);</span>
+<span class="nc" id="L22">        return overpaymentSchema.entrySet().stream()</span>
+<span class="nc" id="L23">            .filter(entry -&gt; BigDecimal.valueOf(entry.getKey()).equals(installmentNumber))</span>
+<span class="nc" id="L24">            .findFirst()</span>
+<span class="nc" id="L25">            .map(Map.Entry::getValue);</span>
     }
 
     private BigDecimal calculateOverpaymentProvision(final BigDecimal installmentNumber, final BigDecimal overpaymentAmount, final InputData inputData) {
-<span class="fc bfc" id="L29" title="All 2 branches covered.">        if (BigDecimal.ZERO.equals(overpaymentAmount)) {</span>
-<span class="fc" id="L30">            return BigDecimal.ZERO;</span>
+<span class="nc bnc" id="L29" title="All 2 branches missed.">        if (BigDecimal.ZERO.equals(overpaymentAmount)) {</span>
+<span class="nc" id="L30">            return BigDecimal.ZERO;</span>
         }
 
-<span class="pc bpc" id="L33" title="1 of 2 branches missed.">        if (installmentNumber.compareTo(inputData.overpaymentProvisionMonths()) &gt; 0) {</span>
+<span class="nc bnc" id="L33" title="All 2 branches missed.">        if (installmentNumber.compareTo(inputData.overpaymentProvisionMonths()) &gt; 0) {</span>
 <span class="nc" id="L34">            return BigDecimal.ZERO;</span>
         }
 
-<span class="fc" id="L37">        return overpaymentAmount.multiply(inputData.overpaymentProvisionPercent());</span>
+<span class="nc" id="L37">        return overpaymentAmount.multiply(inputData.overpaymentProvisionPercent());</span>
     }
 
 }

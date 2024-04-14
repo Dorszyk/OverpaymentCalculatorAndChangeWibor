@@ -14,7 +14,7 @@ import java.util.Map;
 public record InputData(
 <span class="nc bnc" id="L15" title="All 2 branches missed.">        LocalDate repaymentStartDate,</span>
 <span class="nc bnc" id="L16" title="All 2 branches missed.">        BigDecimal wiborPercent,</span>
-<span class="fc" id="L17">        @Getter</span>
+<span class="nc" id="L17">        @Getter</span>
 <span class="nc bnc" id="L18" title="All 2 branches missed.">        Map&lt;Integer, BigDecimal&gt; wiborChanges,</span>
 <span class="nc bnc" id="L19" title="All 2 branches missed.">        BigDecimal amount,</span>
 <span class="nc bnc" id="L20" title="All 2 branches missed.">        BigDecimal monthsDuration,</span>
@@ -37,42 +37,42 @@ public record InputData(
 <span class="fc" id="L37">    }</span>
 
     public BigDecimal wiborPercentForInstallment(BigDecimal installmentNumber) {
-<span class="fc" id="L40">        BigDecimal currentWibor = this.wiborPercent;</span>
-<span class="fc" id="L41">        BigDecimal lastChangeInstallmentNumber = BigDecimal.ZERO;</span>
+<span class="nc" id="L40">        BigDecimal currentWibor = this.wiborPercent;</span>
+<span class="nc" id="L41">        BigDecimal lastChangeInstallmentNumber = BigDecimal.ZERO;</span>
 
-<span class="fc bfc" id="L43" title="All 2 branches covered.">        for (Map.Entry&lt;Integer, BigDecimal&gt; entry : this.wiborChanges.entrySet()) {</span>
-<span class="fc" id="L44">            BigDecimal entryInstallmentNumber = BigDecimal.valueOf(entry.getKey());</span>
-<span class="pc bpc" id="L45" title="2 of 4 branches missed.">            if (installmentNumber.compareTo(entryInstallmentNumber) &gt;= 0 &amp;&amp; entryInstallmentNumber.compareTo(lastChangeInstallmentNumber) &gt; 0) {</span>
+<span class="nc bnc" id="L43" title="All 2 branches missed.">        for (Map.Entry&lt;Integer, BigDecimal&gt; entry : this.wiborChanges.entrySet()) {</span>
+<span class="nc" id="L44">            BigDecimal entryInstallmentNumber = BigDecimal.valueOf(entry.getKey());</span>
+<span class="nc bnc" id="L45" title="All 4 branches missed.">            if (installmentNumber.compareTo(entryInstallmentNumber) &gt;= 0 &amp;&amp; entryInstallmentNumber.compareTo(lastChangeInstallmentNumber) &gt; 0) {</span>
 <span class="nc" id="L46">                currentWibor = entry.getValue();</span>
 <span class="nc" id="L47">                lastChangeInstallmentNumber = entryInstallmentNumber;</span>
             }
-<span class="fc" id="L49">        }</span>
-<span class="fc" id="L50">        return currentWibor.divide(PERCENT, 4, RoundingMode.HALF_UP);</span>
+<span class="nc" id="L49">        }</span>
+<span class="nc" id="L50">        return currentWibor.divide(PERCENT, 4, RoundingMode.HALF_UP);</span>
     }
 
 <span class="fc" id="L53">    private static final BigDecimal PERCENT = new BigDecimal(&quot;100&quot;);</span>
 
     public BigDecimal wiborPercent() {
-<span class="fc" id="L56">        return wiborPercent.divide(PERCENT, 4, RoundingMode.HALF_UP);</span>
+<span class="nc" id="L56">        return wiborPercent.divide(PERCENT, 4, RoundingMode.HALF_UP);</span>
     }
 
     public BigDecimal marginPercent() {
-<span class="fc" id="L60">        return marginPercent.divide(PERCENT, 4, RoundingMode.HALF_UP);</span>
+<span class="nc" id="L60">        return marginPercent.divide(PERCENT, 4, RoundingMode.HALF_UP);</span>
     }
 
 
     public BigDecimal overpaymentProvisionPercent() {
-<span class="fc" id="L65">        return overpaymentProvisionPercent.divide(PERCENT, 4, RoundingMode.HALF_UP);</span>
+<span class="nc" id="L65">        return overpaymentProvisionPercent.divide(PERCENT, 4, RoundingMode.HALF_UP);</span>
     }
 
     public BigDecimal interestPercent() {
-<span class="fc" id="L69">        return marginPercent().add(wiborPercent());</span>
+<span class="nc" id="L69">        return marginPercent().add(wiborPercent());</span>
     }
 
     public String interestToDisplay() {
-<span class="fc" id="L73">        BigDecimal interest = wiborPercent().add(marginPercent());</span>
-<span class="fc" id="L74">        interest = interest.multiply(new BigDecimal(&quot;100&quot;)).setScale(2, RoundingMode.HALF_UP);</span>
-<span class="fc" id="L75">        return interest.toString();</span>
+<span class="nc" id="L73">        BigDecimal interest = wiborPercent().add(marginPercent());</span>
+<span class="nc" id="L74">        interest = interest.multiply(new BigDecimal(&quot;100&quot;)).setScale(2, RoundingMode.HALF_UP);</span>
+<span class="nc" id="L75">        return interest.toString();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

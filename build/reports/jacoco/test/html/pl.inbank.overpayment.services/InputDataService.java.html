@@ -18,67 +18,67 @@ import java.util.TreeMap;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-<span class="fc" id="L21">@Slf4j</span>
+<span class="nc" id="L21">@Slf4j</span>
 @Service
-<span class="fc" id="L23">public class InputDataService {</span>
+<span class="nc" id="L23">public class InputDataService {</span>
 
     private static final String INPUT_DATA_CSV = &quot;classpath:inputData.csv&quot;;
 
     public Optional&lt;InputData&gt; read() {
-<span class="fc" id="L28">        final var content = readFile();</span>
-<span class="pc bpc" id="L29" title="1 of 2 branches missed.">        if (content.isEmpty()) {</span>
+<span class="nc" id="L28">        final var content = readFile();</span>
+<span class="nc bnc" id="L29" title="All 2 branches missed.">        if (content.isEmpty()) {</span>
 <span class="nc" id="L30">            return Optional.empty();</span>
         }
 
-<span class="fc" id="L33">        validate(content);</span>
+<span class="nc" id="L33">        validate(content);</span>
 
-<span class="fc" id="L35">        var inputData = content.entrySet().stream()</span>
-<span class="fc" id="L36">                .collect(Collectors.toMap(Map.Entry::getKey, entry -&gt; entry.getValue().get(0).split(&quot;;&quot;)[1]));</span>
+<span class="nc" id="L35">        var inputData = content.entrySet().stream()</span>
+<span class="nc" id="L36">                .collect(Collectors.toMap(Map.Entry::getKey, entry -&gt; entry.getValue().get(0).split(&quot;;&quot;)[1]));</span>
 
-<span class="fc" id="L38">        return Optional.of(</span>
-<span class="fc" id="L39">                InputData.builder()</span>
-<span class="fc" id="L40">                        .repaymentStartDate(</span>
-<span class="fc" id="L41">                                Optional.ofNullable(inputData.get(&quot;repaymentStartDate&quot;)).map(LocalDate::parse).orElseThrow())</span>
-<span class="fc" id="L42">                        .wiborPercent(</span>
-<span class="fc" id="L43">                                Optional.ofNullable(inputData.get(&quot;wibor&quot;)).map(BigDecimal::new).orElseThrow())</span>
-<span class="fc" id="L44">                        .amount(</span>
-<span class="fc" id="L45">                                Optional.ofNullable(inputData.get(&quot;amount&quot;)).map(BigDecimal::new).orElseThrow())</span>
-<span class="fc" id="L46">                        .wiborChanges(</span>
-<span class="fc" id="L47">                                Optional.ofNullable(inputData.get(&quot;wiborChanges&quot;)).map(InputDataService::parseWiborChanges).orElseThrow())</span>
-<span class="fc" id="L48">                        .monthsDuration(</span>
-<span class="fc" id="L49">                                Optional.ofNullable(inputData.get(&quot;monthsDuration&quot;)).map(BigDecimal::new).orElseThrow())</span>
-<span class="fc" id="L50">                        .installmentType(</span>
-<span class="fc" id="L51">                                Optional.ofNullable(inputData.get(&quot;installmentType&quot;)).map(OverpaymentType::valueOf).orElseThrow())</span>
-<span class="fc" id="L52">                        .marginPercent(</span>
-<span class="fc" id="L53">                                Optional.ofNullable(inputData.get(&quot;margin&quot;)).map(BigDecimal::new).orElseThrow())</span>
-<span class="fc" id="L54">                        .overpaymentProvisionPercent(</span>
-<span class="fc" id="L55">                                Optional.ofNullable(inputData.get(&quot;overpaymentProvision&quot;)).map(BigDecimal::new).orElseThrow())</span>
-<span class="fc" id="L56">                        .overpaymentProvisionMonths(</span>
-<span class="fc" id="L57">                                Optional.ofNullable(inputData.get(&quot;overpaymentProvisionMonths&quot;)).map(BigDecimal::new).orElseThrow())</span>
-<span class="fc" id="L58">                        .overpaymentStartMonth(</span>
-<span class="fc" id="L59">                                Optional.ofNullable(inputData.get(&quot;overpaymentStartMonth&quot;)).map(BigDecimal::new).orElseThrow())</span>
-<span class="fc" id="L60">                        .overpaymentSchema(</span>
-<span class="fc" id="L61">                                Optional.ofNullable(inputData.get(&quot;overpaymentSchema&quot;)).map(InputDataService::calculateSchema).orElseThrow())</span>
-<span class="fc" id="L62">                        .overpaymentReduceWay(</span>
-<span class="fc" id="L63">                                Optional.ofNullable(inputData.get(&quot;overpaymentReduceWay&quot;)).orElseThrow())</span>
-<span class="fc" id="L64">                        .printPayoffsSchedule(</span>
-<span class="fc" id="L65">                                Optional.ofNullable(inputData.get(&quot;printPayoffsSchedule&quot;)).map(Boolean::parseBoolean).orElseThrow())</span>
-<span class="fc" id="L66">                        .installmentNumberToPrint(</span>
-<span class="fc" id="L67">                                Optional.ofNullable(inputData.get(&quot;installmentNumberToPrint&quot;)).map(Integer::parseInt).orElseThrow())</span>
-<span class="fc" id="L68">                        .loanGrantingFee(</span>
-<span class="fc" id="L69">                                Optional.ofNullable(inputData.get(&quot;loanGrantingFee&quot;)).map(BigDecimal::new).orElseThrow())</span>
-<span class="fc" id="L70">                        .monthlyCommissionFee(</span>
-<span class="fc" id="L71">                                Optional.ofNullable(inputData.get(&quot;monthlyCommissionFee&quot;)).map(BigDecimal::new).orElseThrow())</span>
-<span class="fc" id="L72">                        .build()</span>
+<span class="nc" id="L38">        return Optional.of(</span>
+<span class="nc" id="L39">                InputData.builder()</span>
+<span class="nc" id="L40">                        .repaymentStartDate(</span>
+<span class="nc" id="L41">                                Optional.ofNullable(inputData.get(&quot;repaymentStartDate&quot;)).map(LocalDate::parse).orElseThrow())</span>
+<span class="nc" id="L42">                        .wiborPercent(</span>
+<span class="nc" id="L43">                                Optional.ofNullable(inputData.get(&quot;wibor&quot;)).map(BigDecimal::new).orElseThrow())</span>
+<span class="nc" id="L44">                        .amount(</span>
+<span class="nc" id="L45">                                Optional.ofNullable(inputData.get(&quot;amount&quot;)).map(BigDecimal::new).orElseThrow())</span>
+<span class="nc" id="L46">                        .wiborChanges(</span>
+<span class="nc" id="L47">                                Optional.ofNullable(inputData.get(&quot;wiborChanges&quot;)).map(InputDataService::parseWiborChanges).orElseThrow())</span>
+<span class="nc" id="L48">                        .monthsDuration(</span>
+<span class="nc" id="L49">                                Optional.ofNullable(inputData.get(&quot;monthsDuration&quot;)).map(BigDecimal::new).orElseThrow())</span>
+<span class="nc" id="L50">                        .installmentType(</span>
+<span class="nc" id="L51">                                Optional.ofNullable(inputData.get(&quot;installmentType&quot;)).map(OverpaymentType::valueOf).orElseThrow())</span>
+<span class="nc" id="L52">                        .marginPercent(</span>
+<span class="nc" id="L53">                                Optional.ofNullable(inputData.get(&quot;margin&quot;)).map(BigDecimal::new).orElseThrow())</span>
+<span class="nc" id="L54">                        .overpaymentProvisionPercent(</span>
+<span class="nc" id="L55">                                Optional.ofNullable(inputData.get(&quot;overpaymentProvision&quot;)).map(BigDecimal::new).orElseThrow())</span>
+<span class="nc" id="L56">                        .overpaymentProvisionMonths(</span>
+<span class="nc" id="L57">                                Optional.ofNullable(inputData.get(&quot;overpaymentProvisionMonths&quot;)).map(BigDecimal::new).orElseThrow())</span>
+<span class="nc" id="L58">                        .overpaymentStartMonth(</span>
+<span class="nc" id="L59">                                Optional.ofNullable(inputData.get(&quot;overpaymentStartMonth&quot;)).map(BigDecimal::new).orElseThrow())</span>
+<span class="nc" id="L60">                        .overpaymentSchema(</span>
+<span class="nc" id="L61">                                Optional.ofNullable(inputData.get(&quot;overpaymentSchema&quot;)).map(InputDataService::calculateSchema).orElseThrow())</span>
+<span class="nc" id="L62">                        .overpaymentReduceWay(</span>
+<span class="nc" id="L63">                                Optional.ofNullable(inputData.get(&quot;overpaymentReduceWay&quot;)).orElseThrow())</span>
+<span class="nc" id="L64">                        .printPayoffsSchedule(</span>
+<span class="nc" id="L65">                                Optional.ofNullable(inputData.get(&quot;printPayoffsSchedule&quot;)).map(Boolean::parseBoolean).orElseThrow())</span>
+<span class="nc" id="L66">                        .installmentNumberToPrint(</span>
+<span class="nc" id="L67">                                Optional.ofNullable(inputData.get(&quot;installmentNumberToPrint&quot;)).map(Integer::parseInt).orElseThrow())</span>
+<span class="nc" id="L68">                        .loanGrantingFee(</span>
+<span class="nc" id="L69">                                Optional.ofNullable(inputData.get(&quot;loanGrantingFee&quot;)).map(BigDecimal::new).orElseThrow())</span>
+<span class="nc" id="L70">                        .monthlyCommissionFee(</span>
+<span class="nc" id="L71">                                Optional.ofNullable(inputData.get(&quot;monthlyCommissionFee&quot;)).map(BigDecimal::new).orElseThrow())</span>
+<span class="nc" id="L72">                        .build()</span>
         );
     }
 
     private Map&lt;String, List&lt;String&gt;&gt; readFile() {
         try {
-<span class="fc" id="L78">            File file = ResourceUtils.getFile(INPUT_DATA_CSV);</span>
-<span class="fc" id="L79">            return Files.readString(file.toPath())</span>
-<span class="fc" id="L80">                    .lines()</span>
-<span class="fc" id="L81">                    .collect(Collectors.groupingBy(line -&gt; line.split(&quot;;&quot;)[0]));</span>
+<span class="nc" id="L78">            File file = ResourceUtils.getFile(INPUT_DATA_CSV);</span>
+<span class="nc" id="L79">            return Files.readString(file.toPath())</span>
+<span class="nc" id="L80">                    .lines()</span>
+<span class="nc" id="L81">                    .collect(Collectors.groupingBy(line -&gt; line.split(&quot;;&quot;)[0]));</span>
 <span class="nc" id="L82">        } catch (Exception | IOException e) {</span>
 <span class="nc" id="L83">            log.error(&quot;Error loading input data, interrupting&quot;, e);</span>
 <span class="nc" id="L84">            return Map.of();</span>
@@ -86,25 +86,25 @@ import java.util.stream.Stream;
     }
 
     private static Map&lt;Integer, BigDecimal&gt; calculateSchema(String schema) {
-<span class="fc" id="L89">        return Stream.of(schema.split(&quot;,&quot;))</span>
-<span class="fc" id="L90">                .map(entry -&gt; Map.entry(</span>
-<span class="fc" id="L91">                        entry.split(&quot;:&quot;)[0],</span>
-<span class="fc" id="L92">                        entry.split(&quot;:&quot;)[1]))</span>
-<span class="fc" id="L93">                .collect(Collectors.toMap(</span>
-<span class="fc" id="L94">                        entry -&gt; Integer.parseInt(entry.getKey()),</span>
-<span class="fc" id="L95">                        entry -&gt; new BigDecimal(entry.getValue()),</span>
+<span class="nc" id="L89">        return Stream.of(schema.split(&quot;,&quot;))</span>
+<span class="nc" id="L90">                .map(entry -&gt; Map.entry(</span>
+<span class="nc" id="L91">                        entry.split(&quot;:&quot;)[0],</span>
+<span class="nc" id="L92">                        entry.split(&quot;:&quot;)[1]))</span>
+<span class="nc" id="L93">                .collect(Collectors.toMap(</span>
+<span class="nc" id="L94">                        entry -&gt; Integer.parseInt(entry.getKey()),</span>
+<span class="nc" id="L95">                        entry -&gt; new BigDecimal(entry.getValue()),</span>
 <span class="nc" id="L96">                        (v1, v2) -&gt; v2,</span>
                         TreeMap::new
                 ));
     }
 
     public static Map&lt;Integer, BigDecimal&gt; parseWiborChanges(String wiborChangesInput) {
-<span class="fc" id="L102">        return Stream.of(wiborChangesInput.split(&quot;,&quot;))</span>
-<span class="fc" id="L103">                .map(entry -&gt; {</span>
-<span class="fc" id="L104">                    String[] parts = entry.split(&quot;:&quot;);</span>
-<span class="fc" id="L105">                    return Map.entry(Integer.parseInt(parts[0]), new BigDecimal(parts[1]));</span>
+<span class="nc" id="L102">        return Stream.of(wiborChangesInput.split(&quot;,&quot;))</span>
+<span class="nc" id="L103">                .map(entry -&gt; {</span>
+<span class="nc" id="L104">                    String[] parts = entry.split(&quot;:&quot;);</span>
+<span class="nc" id="L105">                    return Map.entry(Integer.parseInt(parts[0]), new BigDecimal(parts[1]));</span>
                 })
-<span class="fc" id="L107">                .collect(Collectors.toMap(</span>
+<span class="nc" id="L107">                .collect(Collectors.toMap(</span>
                         Map.Entry::getKey,
                         Map.Entry::getValue,
 <span class="nc" id="L110">                        (existingValue, newValue) -&gt; newValue,</span>
@@ -113,9 +113,9 @@ import java.util.stream.Stream;
     }
 
     private void validate(final Map&lt;String, List&lt;String&gt;&gt; content) {
-<span class="pc bpc" id="L116" title="2 of 4 branches missed.">        if (content.values().stream().anyMatch(values -&gt; values.size() != 1)) {</span>
+<span class="nc bnc" id="L116" title="All 4 branches missed.">        if (content.values().stream().anyMatch(values -&gt; values.size() != 1)) {</span>
 <span class="nc" id="L117">            throw new IllegalArgumentException(&quot;Configuration mismatch&quot;);</span>
         }
-<span class="fc" id="L119">    }</span>
+<span class="nc" id="L119">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

@@ -10,9 +10,9 @@ import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.List;
 
-<span class="fc" id="L13">@Slf4j</span>
+<span class="nc" id="L13">@Slf4j</span>
 @Service
-<span class="fc" id="L15">@AllArgsConstructor</span>
+<span class="nc" id="L15">@AllArgsConstructor</span>
 public class InstallmentCalculationServiceImpl implements InstallmentCalculationService {
 
     private final TimePointCalculationService timePointCalculationService;
@@ -27,49 +27,49 @@ public class InstallmentCalculationServiceImpl implements InstallmentCalculation
 
     @Override
     public List&lt;Installment&gt; calculate(final InputData inputData) {
-<span class="fc" id="L30">        List&lt;Installment&gt; installmentList = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L30">        List&lt;Installment&gt; installmentList = new ArrayList&lt;&gt;();</span>
 
-<span class="fc" id="L32">        BigDecimal installmentNumber = BigDecimal.ONE;</span>
+<span class="nc" id="L32">        BigDecimal installmentNumber = BigDecimal.ONE;</span>
 
-<span class="fc" id="L34">        Installment zeroInstallment = calculateZeroInstallment(installmentNumber, inputData);</span>
+<span class="nc" id="L34">        Installment zeroInstallment = calculateZeroInstallment(installmentNumber, inputData);</span>
 
-<span class="fc" id="L36">        Installment previousInstallment = zeroInstallment;</span>
-<span class="fc" id="L37">        installmentList.add(zeroInstallment);</span>
-<span class="fc" id="L38">        log.debug(&quot;Calculated: [{}] installment&quot;, 1);</span>
+<span class="nc" id="L36">        Installment previousInstallment = zeroInstallment;</span>
+<span class="nc" id="L37">        installmentList.add(zeroInstallment);</span>
+<span class="nc" id="L38">        log.debug(&quot;Calculated: [{}] installment&quot;, 1);</span>
 
-<span class="fc bfc" id="L40" title="All 2 branches covered.">        for (BigDecimal i = installmentNumber.add(BigDecimal.ONE); i.compareTo(inputData.monthsDuration()) &lt;= 0; i = i.add(BigDecimal.ONE)) {</span>
-<span class="fc" id="L41">            Installment nextInstallment = calculateNextInstallment(i, inputData, previousInstallment);</span>
-<span class="fc" id="L42">            previousInstallment = nextInstallment;</span>
-<span class="fc" id="L43">            installmentList.add(nextInstallment);</span>
+<span class="nc bnc" id="L40" title="All 2 branches missed.">        for (BigDecimal i = installmentNumber.add(BigDecimal.ONE); i.compareTo(inputData.monthsDuration()) &lt;= 0; i = i.add(BigDecimal.ONE)) {</span>
+<span class="nc" id="L41">            Installment nextInstallment = calculateNextInstallment(i, inputData, previousInstallment);</span>
+<span class="nc" id="L42">            previousInstallment = nextInstallment;</span>
+<span class="nc" id="L43">            installmentList.add(nextInstallment);</span>
 
-<span class="fc" id="L45">            log.debug(&quot;Calculated: [{}] installment&quot;, i);</span>
-<span class="fc" id="L46">            log.trace(&quot;Calculated: [{}] installment: [{}]&quot;, i, nextInstallment);</span>
-<span class="fc bfc" id="L47" title="All 2 branches covered.">            if (BigDecimal.ZERO.equals(nextInstallment.residual().residualAmount().setScale(0, RoundingMode.HALF_UP))) {</span>
-<span class="fc" id="L48">                break;</span>
+<span class="nc" id="L45">            log.debug(&quot;Calculated: [{}] installment&quot;, i);</span>
+<span class="nc" id="L46">            log.trace(&quot;Calculated: [{}] installment: [{}]&quot;, i, nextInstallment);</span>
+<span class="nc bnc" id="L47" title="All 2 branches missed.">            if (BigDecimal.ZERO.equals(nextInstallment.residual().residualAmount().setScale(0, RoundingMode.HALF_UP))) {</span>
+<span class="nc" id="L48">                break;</span>
             }
         }
 
-<span class="fc" id="L52">        return installmentList;</span>
+<span class="nc" id="L52">        return installmentList;</span>
     }
 
     private Installment calculateZeroInstallment(final BigDecimal installmentNumber, final InputData inputData) {
-<span class="fc" id="L56">        TimePoint timePoint = timePointCalculationService.calculate(installmentNumber, inputData);</span>
-<span class="fc" id="L57">        Overpayment overpayment = overpaymentCalculationService.calculate(installmentNumber, inputData);</span>
-<span class="fc" id="L58">        InstallmentAmounts installmentAmounts = amountsCalculationService.calculate(inputData, overpayment);</span>
-<span class="fc" id="L59">        Residual residual = residualCalculationService.calculate(installmentAmounts, inputData);</span>
-<span class="fc" id="L60">        Reference reference = referenceCalculationService.calculate(installmentAmounts, inputData);</span>
+<span class="nc" id="L56">        TimePoint timePoint = timePointCalculationService.calculate(installmentNumber, inputData);</span>
+<span class="nc" id="L57">        Overpayment overpayment = overpaymentCalculationService.calculate(installmentNumber, inputData);</span>
+<span class="nc" id="L58">        InstallmentAmounts installmentAmounts = amountsCalculationService.calculate(inputData, overpayment);</span>
+<span class="nc" id="L59">        Residual residual = residualCalculationService.calculate(installmentAmounts, inputData);</span>
+<span class="nc" id="L60">        Reference reference = referenceCalculationService.calculate(installmentAmounts, inputData);</span>
 
-<span class="fc" id="L62">        return new Installment(installmentNumber, timePoint, installmentAmounts, residual, reference);</span>
+<span class="nc" id="L62">        return new Installment(installmentNumber, timePoint, installmentAmounts, residual, reference);</span>
     }
 
     private Installment calculateNextInstallment(final BigDecimal installmentNumber, final InputData inputData, final Installment previousInstallment) {
-<span class="fc" id="L66">        TimePoint timepoint = timePointCalculationService.calculate(installmentNumber, previousInstallment);</span>
-<span class="fc" id="L67">        Overpayment overpayment = overpaymentCalculationService.calculate(installmentNumber, inputData);</span>
-<span class="fc" id="L68">        InstallmentAmounts installmentAmounts = amountsCalculationService.calculate(inputData, overpayment, inputData.monthlyCommissionFee(), previousInstallment);</span>
-<span class="fc" id="L69">        Residual residual = residualCalculationService.calculate(installmentAmounts, inputData, previousInstallment);</span>
-<span class="fc" id="L70">        Reference reference = referenceCalculationService.calculate(installmentAmounts, inputData, previousInstallment);</span>
+<span class="nc" id="L66">        TimePoint timepoint = timePointCalculationService.calculate(installmentNumber, previousInstallment);</span>
+<span class="nc" id="L67">        Overpayment overpayment = overpaymentCalculationService.calculate(installmentNumber, inputData);</span>
+<span class="nc" id="L68">        InstallmentAmounts installmentAmounts = amountsCalculationService.calculate(inputData, overpayment, inputData.monthlyCommissionFee(), previousInstallment);</span>
+<span class="nc" id="L69">        Residual residual = residualCalculationService.calculate(installmentAmounts, inputData, previousInstallment);</span>
+<span class="nc" id="L70">        Reference reference = referenceCalculationService.calculate(installmentAmounts, inputData, previousInstallment);</span>
 
-<span class="fc" id="L72">        return new Installment(installmentNumber, timepoint, installmentAmounts, residual, reference);</span>
+<span class="nc" id="L72">        return new Installment(installmentNumber, timepoint, installmentAmounts, residual, reference);</span>
     }
 
 }

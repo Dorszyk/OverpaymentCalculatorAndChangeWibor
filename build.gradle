@@ -13,9 +13,12 @@ ext {
     springVersion = '6.1.5'
     junitVersion = '5.10.1'
     mockitoVersion = '5.10.0'
+    plantUml = '2.0.0'
 }
 
 dependencies {
+    implementation "de.elnarion.util:plantuml-generator-util:$plantUml"
+
     implementation "ch.qos.logback:logback-classic:$logbackVersion"
 
     compileOnly "org.projectlombok:lombok:$lombokVersion"

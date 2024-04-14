@@ -26,34 +26,34 @@ public interface AmountsCalculationService {
             final LocalDate nextPaymentDate) { // Data nastÄ™pnej pĹ‚atnoĹ›ci
 
         // Oblicz liczby dni miÄ™dzy datami
-<span class="fc" id="L29">        long daysBetween = ChronoUnit.DAYS.between(startPaymentDate, nextPaymentDate);</span>
+<span class="nc" id="L29">        long daysBetween = ChronoUnit.DAYS.between(startPaymentDate, nextPaymentDate);</span>
 
         // Ustawienie liczby dni w roku na staĹ‚Ä… wartoĹ›Ä‡ 360 dla 'bank year'
-<span class="fc" id="L32">        BigDecimal daysInBankYear = BigDecimal.valueOf(360);</span>
+<span class="nc" id="L32">        BigDecimal daysInBankYear = BigDecimal.valueOf(360);</span>
 
         // Oblicz dziennÄ… stopÄ™ procentowÄ…
-<span class="fc" id="L35">        BigDecimal dailyInterestRate = annualInterestRate.divide(daysInBankYear, MathContext.DECIMAL128);</span>
+<span class="nc" id="L35">        BigDecimal dailyInterestRate = annualInterestRate.divide(daysInBankYear, MathContext.DECIMAL128);</span>
 
         // Oblicz kwotÄ™ odsetek za okres miÄ™dzy pĹ‚atnoĹ›ciami
-<span class="fc" id="L38">        BigDecimal interestAmountForPeriod = principalAmount</span>
-<span class="fc" id="L39">                .multiply(dailyInterestRate)</span>
-<span class="fc" id="L40">                .multiply(BigDecimal.valueOf(daysBetween));</span>
+<span class="nc" id="L38">        BigDecimal interestAmountForPeriod = principalAmount</span>
+<span class="nc" id="L39">                .multiply(dailyInterestRate)</span>
+<span class="nc" id="L40">                .multiply(BigDecimal.valueOf(daysBetween));</span>
 
-<span class="fc" id="L42">        return interestAmountForPeriod.setScale(2, RoundingMode.HALF_EVEN);</span>
+<span class="nc" id="L42">        return interestAmountForPeriod.setScale(2, RoundingMode.HALF_EVEN);</span>
     }
 
 
 
 
     static BigDecimal calculateQ(final BigDecimal interestPercent) {
-<span class="fc" id="L49">        return interestPercent.divide(AmountsCalculationService.YEAR, 10, RoundingMode.HALF_UP).add(BigDecimal.ONE);</span>
+<span class="nc" id="L49">        return interestPercent.divide(AmountsCalculationService.YEAR, 10, RoundingMode.HALF_UP).add(BigDecimal.ONE);</span>
     }
 
     static BigDecimal compareCapitalWithResidual(final BigDecimal capitalAmount, final BigDecimal residualAmount) {
-<span class="fc bfc" id="L53" title="All 2 branches covered.">        if (capitalAmount.compareTo(residualAmount) &gt;= 0) {</span>
-<span class="fc" id="L54">            return residualAmount;</span>
+<span class="nc bnc" id="L53" title="All 2 branches missed.">        if (capitalAmount.compareTo(residualAmount) &gt;= 0) {</span>
+<span class="nc" id="L54">            return residualAmount;</span>
         }
-<span class="fc" id="L56">        return capitalAmount;</span>
+<span class="nc" id="L56">        return capitalAmount;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.9.202303310957</span></div></body></html>

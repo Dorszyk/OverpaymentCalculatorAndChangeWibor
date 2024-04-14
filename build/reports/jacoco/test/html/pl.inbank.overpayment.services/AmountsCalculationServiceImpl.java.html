@@ -10,7 +10,7 @@ import pl.inbank.overpayment.model.Overpayment;
 import java.math.BigDecimal;
 
 @Service
-<span class="fc" id="L13">@AllArgsConstructor</span>
+<span class="nc" id="L13">@AllArgsConstructor</span>
 public class AmountsCalculationServiceImpl implements AmountsCalculationService {
 
     private final ConstantAmountsCalculationService constantAmountsCalculationService;
@@ -19,16 +19,16 @@ public class AmountsCalculationServiceImpl implements AmountsCalculationService 
 
     @Override
     public InstallmentAmounts calculate(final InputData inputData, final Overpayment overpayment) {
-<span class="pc bpc" id="L22" title="2 of 3 branches missed.">        return switch (inputData.installmentType()) {</span>
-<span class="fc" id="L23">            case CONSTANT -&gt; constantAmountsCalculationService.calculate(inputData, overpayment);</span>
+<span class="nc bnc" id="L22" title="All 3 branches missed.">        return switch (inputData.installmentType()) {</span>
+<span class="nc" id="L23">            case CONSTANT -&gt; constantAmountsCalculationService.calculate(inputData, overpayment);</span>
 <span class="nc" id="L24">            case DECREASING -&gt; decreasingAmountsCalculationService.calculate(inputData, overpayment);</span>
         };
     }
 
     @Override
     public InstallmentAmounts calculate(final InputData inputData, final Overpayment overpayment,final BigDecimal residualAmount,final Installment previousInstallment) {
-<span class="pc bpc" id="L30" title="2 of 3 branches missed.">        return switch (inputData.installmentType()) {</span>
-<span class="fc" id="L31">            case CONSTANT -&gt; constantAmountsCalculationService.calculate(inputData, overpayment, previousInstallment);</span>
+<span class="nc bnc" id="L30" title="All 3 branches missed.">        return switch (inputData.installmentType()) {</span>
+<span class="nc" id="L31">            case CONSTANT -&gt; constantAmountsCalculationService.calculate(inputData, overpayment, previousInstallment);</span>
 <span class="nc" id="L32">            case DECREASING -&gt; decreasingAmountsCalculationService.calculate(inputData, overpayment, previousInstallment);</span>
         };
     }

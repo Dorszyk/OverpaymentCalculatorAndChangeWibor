@@ -1,0 +1,460 @@
+@startuml
+!theme vibrant
+skinparam classAttributeIconSize 0
+
+
+class OverpaymentCalculatorApplication {
+	{method}  {static} +main ( paramString;1 : [Ljava.lang.String; ) : void
+}
+
+
+class configuration.CalculatorConfiguration {
+	{method}  {static} -calculate ( paramList1 : java.util.List , paramFunction2 : java.util.function.Function ) : java.math.BigDecimal
+	{method}  {static} +summaryService () : services.SummaryService
+	{method}  {static} -totalCapital ( paramInstallmentAmounts1 : model.InstallmentAmounts ) : java.math.BigDecimal
+}
+
+
+class model.InputData {
+	{method} +amount () : java.math.BigDecimal
+	{method}  {static} +builder () : model.InputData$InputDataBuilder
+	{method} +equals ( paramObject1 : Object ) : boolean
+	{method} +hashCode () : int
+	{method} +installmentNumberToPrint () : Integer
+	{method} +installmentType () : model.OverpaymentType
+	{method} +interestPercent () : java.math.BigDecimal
+	{method} +interestToDisplay () : String
+	{method} +loanGrantingFee () : java.math.BigDecimal
+	{method} +marginPercent () : java.math.BigDecimal
+	{method} +monthlyCommissionFee () : java.math.BigDecimal
+	{method} +monthsDuration () : java.math.BigDecimal
+	{method} +overpaymentProvisionMonths () : java.math.BigDecimal
+	{method} +overpaymentProvisionPercent () : java.math.BigDecimal
+	{method} +overpaymentReduceWay () : String
+	{method} +overpaymentSchema () : java.util.Map
+	{method} +overpaymentStartMonth () : java.math.BigDecimal
+	{method} +printPayoffsSchedule () : boolean
+	{method} +repaymentStartDate () : java.time.LocalDate
+	{method} +toString () : String
+	{method} +wiborChanges () : java.util.Map
+	{method} +wiborPercent () : java.math.BigDecimal
+	{method} +wiborPercentForInstallment ( paramBigDecimal1 : java.math.BigDecimal ) : java.math.BigDecimal
+	{method} +withAmount ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData
+	{method} +withInstallmentNumberToPrint ( paramInteger1 : Integer ) : model.InputData
+	{method} +withInstallmentType ( paramOverpaymentType1 : model.OverpaymentType ) : model.InputData
+	{method} +withLoanGrantingFee ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData
+	{method} +withMarginPercent ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData
+	{method} +withMonthlyCommissionFee ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData
+	{method} +withMonthsDuration ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData
+	{method} +withOverpaymentProvisionMonths ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData
+	{method} +withOverpaymentProvisionPercent ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData
+	{method} +withOverpaymentReduceWay ( paramString1 : String ) : model.InputData
+	{method} +withOverpaymentSchema ( paramMap1 : java.util.Map ) : model.InputData
+	{method} +withOverpaymentStartMonth ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData
+	{method} +withPrintPayoffsSchedule ( paramboolean1 : boolean ) : model.InputData
+	{method} +withRepaymentStartDate ( paramLocalDate1 : java.time.LocalDate ) : model.InputData
+	{method} +withWiborChanges ( paramMap1 : java.util.Map ) : model.InputData
+	{method} +withWiborPercent ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData
+}
+
+
+class model.InputData$InputDataBuilder {
+	{method} +amount ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData$InputDataBuilder
+	{method} +build () : model.InputData
+	{method} +installmentNumberToPrint ( paramInteger1 : Integer ) : model.InputData$InputDataBuilder
+	{method} +installmentType ( paramOverpaymentType1 : model.OverpaymentType ) : model.InputData$InputDataBuilder
+	{method} +loanGrantingFee ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData$InputDataBuilder
+	{method} +marginPercent ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData$InputDataBuilder
+	{method} +monthlyCommissionFee ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData$InputDataBuilder
+	{method} +monthsDuration ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData$InputDataBuilder
+	{method} +overpaymentProvisionMonths ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData$InputDataBuilder
+	{method} +overpaymentProvisionPercent ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData$InputDataBuilder
+	{method} +overpaymentReduceWay ( paramString1 : String ) : model.InputData$InputDataBuilder
+	{method} +overpaymentSchema ( paramMap1 : java.util.Map ) : model.InputData$InputDataBuilder
+	{method} +overpaymentStartMonth ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData$InputDataBuilder
+	{method} +printPayoffsSchedule ( paramboolean1 : boolean ) : model.InputData$InputDataBuilder
+	{method} +repaymentStartDate ( paramLocalDate1 : java.time.LocalDate ) : model.InputData$InputDataBuilder
+	{method} +toString () : String
+	{method} +wiborChanges ( paramMap1 : java.util.Map ) : model.InputData$InputDataBuilder
+	{method} +wiborPercent ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData$InputDataBuilder
+}
+
+
+class model.Installment {
+	{method}  {static} +builder () : model.Installment$InstallmentBuilder
+	{method} +equals ( paramObject1 : Object ) : boolean
+	{method} +hashCode () : int
+	{method} +installmentAmounts () : model.InstallmentAmounts
+	{method} +installmentNumber () : java.math.BigDecimal
+	{method} +reference () : model.Reference
+	{method} +residual () : model.Residual
+	{method} +timePoint () : model.TimePoint
+	{method} +toString () : String
+	{method} +withInstallmentAmounts ( paramInstallmentAmounts1 : model.InstallmentAmounts ) : model.Installment
+	{method} +withInstallmentNumber ( paramBigDecimal1 : java.math.BigDecimal ) : model.Installment
+	{method} +withReference ( paramReference1 : model.Reference ) : model.Installment
+	{method} +withResidual ( paramResidual1 : model.Residual ) : model.Installment
+	{method} +withTimePoint ( paramTimePoint1 : model.TimePoint ) : model.Installment
+}
+
+
+class model.Installment$InstallmentBuilder {
+	{method} +build () : model.Installment
+	{method} +installmentAmounts ( paramInstallmentAmounts1 : model.InstallmentAmounts ) : model.Installment$InstallmentBuilder
+	{method} +installmentNumber ( paramBigDecimal1 : java.math.BigDecimal ) : model.Installment$InstallmentBuilder
+	{method} +reference ( paramReference1 : model.Reference ) : model.Installment$InstallmentBuilder
+	{method} +residual ( paramResidual1 : model.Residual ) : model.Installment$InstallmentBuilder
+	{method} +timePoint ( paramTimePoint1 : model.TimePoint ) : model.Installment$InstallmentBuilder
+	{method} +toString () : String
+}
+
+
+class model.InstallmentAmounts {
+	{method}  {static} +builder () : model.InstallmentAmounts$InstallmentAmountsBuilder
+	{method} +capitalAmount () : java.math.BigDecimal
+	{method} +equals ( paramObject1 : Object ) : boolean
+	{method} +hashCode () : int
+	{method} +installmentAmount () : java.math.BigDecimal
+	{method} +interestAmount () : java.math.BigDecimal
+	{method} +monthlyFee () : java.math.BigDecimal
+	{method} +overpayment () : model.Overpayment
+	{method} +toString () : String
+	{method} +withCapitalAmount ( paramBigDecimal1 : java.math.BigDecimal ) : model.InstallmentAmounts
+	{method} +withInstallmentAmount ( paramBigDecimal1 : java.math.BigDecimal ) : model.InstallmentAmounts
+	{method} +withInterestAmount ( paramBigDecimal1 : java.math.BigDecimal ) : model.InstallmentAmounts
+	{method} +withMonthlyFee ( paramBigDecimal1 : java.math.BigDecimal ) : model.InstallmentAmounts
+	{method} +withOverpayment ( paramOverpayment1 : model.Overpayment ) : model.InstallmentAmounts
+}
+
+
+class model.InstallmentAmounts$InstallmentAmountsBuilder {
+	{method} +build () : model.InstallmentAmounts
+	{method} +capitalAmount ( paramBigDecimal1 : java.math.BigDecimal ) : model.InstallmentAmounts$InstallmentAmountsBuilder
+	{method} +installmentAmount ( paramBigDecimal1 : java.math.BigDecimal ) : model.InstallmentAmounts$InstallmentAmountsBuilder
+	{method} +interestAmount ( paramBigDecimal1 : java.math.BigDecimal ) : model.InstallmentAmounts$InstallmentAmountsBuilder
+	{method} +monthlyFee ( paramBigDecimal1 : java.math.BigDecimal ) : model.InstallmentAmounts$InstallmentAmountsBuilder
+	{method} +overpayment ( paramOverpayment1 : model.Overpayment ) : model.InstallmentAmounts$InstallmentAmountsBuilder
+	{method} +toString () : String
+}
+
+
+class model.Overpayment {
+	{method} +amount () : java.math.BigDecimal
+	{method}  {static} +builder () : model.Overpayment$OverpaymentBuilder
+	{method} +equals ( paramObject1 : Object ) : boolean
+	{method} +hashCode () : int
+	{method} +provisionAmount () : java.math.BigDecimal
+	{method} +toString () : String
+	{method} +withAmount ( paramBigDecimal1 : java.math.BigDecimal ) : model.Overpayment
+	{method} +withProvisionAmount ( paramBigDecimal1 : java.math.BigDecimal ) : model.Overpayment
+}
+
+
+class model.Overpayment$OverpaymentBuilder {
+	{method} +amount ( paramBigDecimal1 : java.math.BigDecimal ) : model.Overpayment$OverpaymentBuilder
+	{method} +build () : model.Overpayment
+	{method} +provisionAmount ( paramBigDecimal1 : java.math.BigDecimal ) : model.Overpayment$OverpaymentBuilder
+	{method} +toString () : String
+}
+
+
+enum model.OverpaymentType {
+	{field} +CONSTANT
+	{field} +DECREASING
+}
+
+
+class model.Reference {
+	{method}  {static} +builder () : model.Reference$ReferenceBuilder
+	{method} +equals ( paramObject1 : Object ) : boolean
+	{method} +hashCode () : int
+	{method} +referenceAmount () : java.math.BigDecimal
+	{method} +referenceDuration () : java.math.BigDecimal
+	{method} +toString () : String
+	{method} +withReferenceAmount ( paramBigDecimal1 : java.math.BigDecimal ) : model.Reference
+	{method} +withReferenceDuration ( paramBigDecimal1 : java.math.BigDecimal ) : model.Reference
+}
+
+
+class model.Reference$ReferenceBuilder {
+	{method} +build () : model.Reference
+	{method} +referenceAmount ( paramBigDecimal1 : java.math.BigDecimal ) : model.Reference$ReferenceBuilder
+	{method} +referenceDuration ( paramBigDecimal1 : java.math.BigDecimal ) : model.Reference$ReferenceBuilder
+	{method} +toString () : String
+}
+
+
+class model.Residual {
+	{method}  {static} +builder () : model.Residual$ResidualBuilder
+	{method} +equals ( paramObject1 : Object ) : boolean
+	{method} +hashCode () : int
+	{method} +residualAmount () : java.math.BigDecimal
+	{method} +residualDuration () : java.math.BigDecimal
+	{method} +toString () : String
+	{method} +withResidualAmount ( paramBigDecimal1 : java.math.BigDecimal ) : model.Residual
+	{method} +withResidualDuration ( paramBigDecimal1 : java.math.BigDecimal ) : model.Residual
+}
+
+
+class model.Residual$ResidualBuilder {
+	{method} +build () : model.Residual
+	{method} +residualAmount ( paramBigDecimal1 : java.math.BigDecimal ) : model.Residual$ResidualBuilder
+	{method} +residualDuration ( paramBigDecimal1 : java.math.BigDecimal ) : model.Residual$ResidualBuilder
+	{method} +toString () : String
+}
+
+
+class model.Summary {
+	{method}  {static} +builder () : model.Summary$SummaryBuilder
+	{method} +equals ( paramObject1 : Object ) : boolean
+	{method} +hashCode () : int
+	{method} +interestSum () : java.math.BigDecimal
+	{method} +overpaymentProvisionSum () : java.math.BigDecimal
+	{method} +toString () : String
+	{method} +totalAdministrationFee () : java.math.BigDecimal
+	{method} +totalAmountPaid () : java.math.BigDecimal
+	{method} +totalCapital () : java.math.BigDecimal
+	{method} +totalInterestAndCapital () : java.math.BigDecimal
+	{method} +totalLostSum () : java.math.BigDecimal
+	{method} +withInterestSum ( paramBigDecimal1 : java.math.BigDecimal ) : model.Summary
+	{method} +withOverpaymentProvisionSum ( paramBigDecimal1 : java.math.BigDecimal ) : model.Summary
+	{method} +withTotalAdministrationFee ( paramBigDecimal1 : java.math.BigDecimal ) : model.Summary
+	{method} +withTotalAmountPaid ( paramBigDecimal1 : java.math.BigDecimal ) : model.Summary
+	{method} +withTotalCapital ( paramBigDecimal1 : java.math.BigDecimal ) : model.Summary
+	{method} +withTotalInterestAndCapital ( paramBigDecimal1 : java.math.BigDecimal ) : model.Summary
+	{method} +withTotalLostSum ( paramBigDecimal1 : java.math.BigDecimal ) : model.Summary
+}
+
+
+class model.Summary$SummaryBuilder {
+	{method} +build () : model.Summary
+	{method} +interestSum ( paramBigDecimal1 : java.math.BigDecimal ) : model.Summary$SummaryBuilder
+	{method} +overpaymentProvisionSum ( paramBigDecimal1 : java.math.BigDecimal ) : model.Summary$SummaryBuilder
+	{method} +toString () : String
+	{method} +totalAdministrationFee ( paramBigDecimal1 : java.math.BigDecimal ) : model.Summary$SummaryBuilder
+	{method} +totalAmountPaid ( paramBigDecimal1 : java.math.BigDecimal ) : model.Summary$SummaryBuilder
+	{method} +totalCapital ( paramBigDecimal1 : java.math.BigDecimal ) : model.Summary$SummaryBuilder
+	{method} +totalInterestAndCapital ( paramBigDecimal1 : java.math.BigDecimal ) : model.Summary$SummaryBuilder
+	{method} +totalLostSum ( paramBigDecimal1 : java.math.BigDecimal ) : model.Summary$SummaryBuilder
+}
+
+
+class model.TimePoint {
+	{method}  {static} +builder () : model.TimePoint$TimePointBuilder
+	{method} +date () : java.time.LocalDate
+	{method} +equals ( paramObject1 : Object ) : boolean
+	{method} +hashCode () : int
+	{method} +month () : java.math.BigDecimal
+	{method} +toString () : String
+	{method} +withDate ( paramLocalDate1 : java.time.LocalDate ) : model.TimePoint
+	{method} +withMonth ( paramBigDecimal1 : java.math.BigDecimal ) : model.TimePoint
+	{method} +withYear ( paramBigDecimal1 : java.math.BigDecimal ) : model.TimePoint
+	{method} +year () : java.math.BigDecimal
+}
+
+
+class model.TimePoint$TimePointBuilder {
+	{method} +build () : model.TimePoint
+	{method} +date ( paramLocalDate1 : java.time.LocalDate ) : model.TimePoint$TimePointBuilder
+	{method} +month ( paramBigDecimal1 : java.math.BigDecimal ) : model.TimePoint$TimePointBuilder
+	{method} +toString () : String
+	{method} +year ( paramBigDecimal1 : java.math.BigDecimal ) : model.TimePoint$TimePointBuilder
+}
+
+
+interface services.AmountsCalculationService {
+	{method}  {abstract} +calculate ( paramInputData1 : model.InputData , paramOverpayment2 : model.Overpayment ) : model.InstallmentAmounts
+	{method}  {abstract} +calculate ( paramInputData1 : model.InputData , paramOverpayment2 : model.Overpayment , paramBigDecimal3 : java.math.BigDecimal , paramInstallment4 : model.Installment ) : model.InstallmentAmounts
+	{method}  {static} +calculateInterestAmount ( paramBigDecimal1 : java.math.BigDecimal , paramBigDecimal2 : java.math.BigDecimal , paramLocalDate3 : java.time.LocalDate , paramLocalDate4 : java.time.LocalDate ) : java.math.BigDecimal
+	{method}  {static} +calculateQ ( paramBigDecimal1 : java.math.BigDecimal ) : java.math.BigDecimal
+	{method}  {static} +compareCapitalWithResidual ( paramBigDecimal1 : java.math.BigDecimal , paramBigDecimal2 : java.math.BigDecimal ) : java.math.BigDecimal
+}
+
+
+class services.AmountsCalculationServiceImpl {
+	{method} +calculate ( paramInputData1 : model.InputData , paramOverpayment2 : model.Overpayment ) : model.InstallmentAmounts
+	{method} +calculate ( paramInputData1 : model.InputData , paramOverpayment2 : model.Overpayment , paramBigDecimal3 : java.math.BigDecimal , paramInstallment4 : model.Installment ) : model.InstallmentAmounts
+}
+
+
+interface services.CalculationService {
+	{method}  {abstract} +calculate () : void
+}
+
+
+class services.CalculationServiceImpl {
+	{method} +calculate () : void
+}
+
+
+interface services.ConstantAmountsCalculationService {
+	{method}  {abstract} +calculate ( paramInputData1 : model.InputData , paramOverpayment2 : model.Overpayment ) : model.InstallmentAmounts
+	{method}  {abstract} +calculate ( paramInputData1 : model.InputData , paramOverpayment2 : model.Overpayment , paramInstallment3 : model.Installment ) : model.InstallmentAmounts
+}
+
+
+class services.ConstantAmountsCalculationServiceImpl {
+	{method} +calculate ( paramInputData1 : model.InputData , paramOverpayment2 : model.Overpayment ) : model.InstallmentAmounts
+	{method} +calculate ( paramInputData1 : model.InputData , paramOverpayment2 : model.Overpayment , paramInstallment3 : model.Installment ) : model.InstallmentAmounts
+	{method} -calculateConstantInstallmentAmount ( paramBigDecimal1 : java.math.BigDecimal , paramBigDecimal2 : java.math.BigDecimal , paramBigDecimal3 : java.math.BigDecimal , paramBigDecimal4 : java.math.BigDecimal , paramBigDecimal5 : java.math.BigDecimal ) : java.math.BigDecimal
+	{method} -compareInstallmentWithResidual ( paramBigDecimal1 : java.math.BigDecimal , paramBigDecimal2 : java.math.BigDecimal , paramBigDecimal3 : java.math.BigDecimal ) : java.math.BigDecimal
+}
+
+
+interface services.DecreasingAmountsCalculationService {
+	{method}  {abstract} +calculate ( paramInputData1 : model.InputData , paramOverpayment2 : model.Overpayment ) : model.InstallmentAmounts
+	{method}  {abstract} +calculate ( paramInputData1 : model.InputData , paramOverpayment2 : model.Overpayment , paramInstallment3 : model.Installment ) : model.InstallmentAmounts
+}
+
+
+class services.DecreasingAmountsCalculationServiceImpl {
+	{method} +calculate ( paramInputData1 : model.InputData , paramOverpayment2 : model.Overpayment ) : model.InstallmentAmounts
+	{method} +calculate ( paramInputData1 : model.InputData , paramOverpayment2 : model.Overpayment , paramInstallment3 : model.Installment ) : model.InstallmentAmounts
+	{method} -calculateDecreasingCapitalAmount ( paramBigDecimal1 : java.math.BigDecimal , paramBigDecimal2 : java.math.BigDecimal ) : java.math.BigDecimal
+}
+
+
+class services.Exception {
+}
+
+
+class services.InputDataService {
+	{method}  {static} -calculateSchema ( paramString1 : String ) : java.util.Map
+	{method}  {static} +parseWiborChanges ( paramString1 : String ) : java.util.Map
+	{method} +read () : java.util.Optional
+	{method} -readFile () : java.util.Map
+	{method} -validate ( paramMap1 : java.util.Map ) : void
+}
+
+
+interface services.InstallmentCalculationService {
+	{method}  {abstract} +calculate ( paramInputData1 : model.InputData ) : java.util.List
+}
+
+
+class services.InstallmentCalculationServiceImpl {
+	{method} +calculate ( paramInputData1 : model.InputData ) : java.util.List
+	{method} -calculateNextInstallment ( paramBigDecimal1 : java.math.BigDecimal , paramInputData2 : model.InputData , paramInstallment3 : model.Installment ) : model.Installment
+	{method} -calculateZeroInstallment ( paramBigDecimal1 : java.math.BigDecimal , paramInputData2 : model.InputData ) : model.Installment
+}
+
+
+interface services.OverpaymentCalculationService {
+	{method}  {abstract} +calculate ( paramBigDecimal1 : java.math.BigDecimal , paramInputData2 : model.InputData ) : model.Overpayment
+}
+
+
+class services.OverpaymentCalculationServiceImpl {
+	{method} +calculate ( paramBigDecimal1 : java.math.BigDecimal , paramInputData2 : model.InputData ) : model.Overpayment
+	{method} -calculateOverpaymentAmount ( paramBigDecimal1 : java.math.BigDecimal , paramMap2 : java.util.Map ) : java.util.Optional
+	{method} -calculateOverpaymentProvision ( paramBigDecimal1 : java.math.BigDecimal , paramBigDecimal2 : java.math.BigDecimal , paramInputData3 : model.InputData ) : java.math.BigDecimal
+}
+
+
+interface services.PrintingService {
+	{method}  {abstract} +printIntroInformation ( paramInputData1 : model.InputData ) : void
+	{method}  {abstract} +printSchedule ( paramList1 : java.util.List , paramInputData2 : model.InputData ) : void
+	{method}  {abstract} +printSummary ( paramSummary1 : model.Summary ) : void
+}
+
+
+class services.PrintingServiceImpl {
+	{method}  {static} -createSeparator ( paramchar1 : char , paramint2 : int ) : String
+	{method} -formatInstallmentLine ( paramInstallment1 : model.Installment ) : String
+	{method} -log ( paramString1 : String ) : void
+	{method} -overpaymentSchemaMessage ( paramMap1 : java.util.Map ) : String
+	{method} +printIntroInformation ( paramInputData1 : model.InputData ) : void
+	{method} +printSchedule ( paramList1 : java.util.List , paramInputData2 : model.InputData ) : void
+	{method} +printSummary ( paramSummary1 : model.Summary ) : void
+	{method} -wiborChangesMessage ( paramMap1 : java.util.Map ) : String
+}
+
+
+interface services.ReferenceCalculationService {
+	{method}  {abstract} +calculate ( paramInstallmentAmounts1 : model.InstallmentAmounts , paramInputData2 : model.InputData ) : model.Reference
+	{method}  {abstract} +calculate ( paramInstallmentAmounts1 : model.InstallmentAmounts , paramInputData2 : model.InputData , paramInstallment3 : model.Installment ) : model.Reference
+}
+
+
+class services.ReferenceCalculationServiceImpl {
+	{method} +calculate ( paramInstallmentAmounts1 : model.InstallmentAmounts , paramInputData2 : model.InputData ) : model.Reference
+	{method} +calculate ( paramInstallmentAmounts1 : model.InstallmentAmounts , paramInputData2 : model.InputData , paramInstallment3 : model.Installment ) : model.Reference
+	{method} -calculateResidualAmount ( paramBigDecimal1 : java.math.BigDecimal , paramInstallmentAmounts2 : model.InstallmentAmounts ) : java.math.BigDecimal
+	{method} -reduceInstallmentReference ( paramInstallmentAmounts1 : model.InstallmentAmounts , paramResidual2 : model.Residual ) : model.Reference
+}
+
+
+interface services.ResidualCalculationService {
+	{method}  {abstract} +calculate ( paramInstallmentAmounts1 : model.InstallmentAmounts , paramInputData2 : model.InputData ) : model.Residual
+	{method}  {abstract} +calculate ( paramInstallmentAmounts1 : model.InstallmentAmounts , paramInputData2 : model.InputData , paramInstallment3 : model.Installment ) : model.Residual
+}
+
+
+class services.ResidualCalculationServiceImpl {
+	{method} +calculate ( paramInstallmentAmounts1 : model.InstallmentAmounts , paramInputData2 : model.InputData ) : model.Residual
+	{method} +calculate ( paramInstallmentAmounts1 : model.InstallmentAmounts , paramInputData2 : model.InputData , paramInstallment3 : model.Installment ) : model.Residual
+	{method} -calculateConstantResidualDuration ( paramInputData1 : model.InputData , paramBigDecimal2 : java.math.BigDecimal , paramInstallmentAmounts3 : model.InstallmentAmounts ) : java.math.BigDecimal
+	{method} -calculateDecreasingResidualDuration ( paramBigDecimal1 : java.math.BigDecimal , paramInstallmentAmounts2 : model.InstallmentAmounts ) : java.math.BigDecimal
+	{method} -calculateResidualAmount ( paramBigDecimal1 : java.math.BigDecimal , paramInstallmentAmounts2 : model.InstallmentAmounts ) : java.math.BigDecimal
+	{method} -calculateResidualDuration ( paramInputData1 : model.InputData , paramBigDecimal2 : java.math.BigDecimal , paramBigDecimal3 : java.math.BigDecimal , paramInstallmentAmounts4 : model.InstallmentAmounts ) : java.math.BigDecimal
+}
+
+
+interface services.SummaryService {
+	{method}  {abstract} +calculateSummary ( paramList1 : java.util.List ) : model.Summary
+}
+
+
+interface services.TimePointCalculationService {
+	{method}  {abstract} +calculate ( paramBigDecimal1 : java.math.BigDecimal , paramInputData2 : model.InputData ) : model.TimePoint
+	{method}  {abstract} +calculate ( paramBigDecimal1 : java.math.BigDecimal , paramInstallment2 : model.Installment ) : model.TimePoint
+}
+
+
+class services.TimePointCalculationServiceImpl {
+	{method} +calculate ( paramBigDecimal1 : java.math.BigDecimal , paramInputData2 : model.InputData ) : model.TimePoint
+	{method} +calculate ( paramBigDecimal1 : java.math.BigDecimal , paramInstallment2 : model.Installment ) : model.TimePoint
+	{method} -calculateMonth ( paramBigDecimal1 : java.math.BigDecimal ) : java.math.BigDecimal
+	{method} -calculateYear ( paramBigDecimal1 : java.math.BigDecimal ) : java.math.BigDecimal
+}
+
+
+
+
+model.InputData *--  model.OverpaymentType : installmentType
+model.InputData$InputDataBuilder -->  model.OverpaymentType : installmentType
+model.Installment *--  model.InstallmentAmounts : installmentAmounts
+model.Installment *--  model.Reference : reference
+model.Installment *--  model.Residual : residual
+model.Installment *--  model.TimePoint : timePoint
+model.Installment$InstallmentBuilder -->  model.InstallmentAmounts : installmentAmounts
+model.Installment$InstallmentBuilder -->  model.Reference : reference
+model.Installment$InstallmentBuilder -->  model.Residual : residual
+model.Installment$InstallmentBuilder -->  model.TimePoint : timePoint
+model.InstallmentAmounts *--  model.Overpayment : overpayment
+model.InstallmentAmounts$InstallmentAmountsBuilder -->  model.Overpayment : overpayment
+services.AmountsCalculationServiceImpl *--  services.ConstantAmountsCalculationService : constantAmountsCalculationService
+services.AmountsCalculationServiceImpl *--  services.DecreasingAmountsCalculationService : decreasingAmountsCalculationService
+services.AmountsCalculationServiceImpl ..|>  services.AmountsCalculationService
+services.CalculationServiceImpl *--  services.InputDataService : inputDataService
+services.CalculationServiceImpl *--  services.InstallmentCalculationService : installmentCalculationService
+services.CalculationServiceImpl *--  services.PrintingService : printingService
+services.CalculationServiceImpl *--  services.SummaryService : summaryService
+services.CalculationServiceImpl ..|>  services.CalculationService
+services.ConstantAmountsCalculationServiceImpl ..|>  services.ConstantAmountsCalculationService
+services.DecreasingAmountsCalculationServiceImpl ..|>  services.DecreasingAmountsCalculationService
+services.InstallmentCalculationServiceImpl *--  services.AmountsCalculationService : amountsCalculationService
+services.InstallmentCalculationServiceImpl *--  services.OverpaymentCalculationService : overpaymentCalculationService
+services.InstallmentCalculationServiceImpl *--  services.ReferenceCalculationService : referenceCalculationService
+services.InstallmentCalculationServiceImpl *--  services.ResidualCalculationService : residualCalculationService
+services.InstallmentCalculationServiceImpl *--  services.TimePointCalculationService : timePointCalculationService
+services.InstallmentCalculationServiceImpl ..|>  services.InstallmentCalculationService
+services.OverpaymentCalculationServiceImpl ..|>  services.OverpaymentCalculationService
+services.PrintingServiceImpl ..|>  services.PrintingService
+services.ReferenceCalculationServiceImpl ..|>  services.ReferenceCalculationService
+services.ResidualCalculationServiceImpl ..|>  services.ResidualCalculationService
+services.TimePointCalculationServiceImpl ..|>  services.TimePointCalculationService
+
+hide methods
+
+@enduml

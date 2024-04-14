@@ -1,0 +1,533 @@
+Initial loan amount: 8354.07 PLN
+Period in months: 13
+Annual interest rate when granting a loan: 15.98%
+Month of overpayments: 8 months
+Contract fee: 0.0 PLN
+Administration fee: 0.0 PLN
+
+Overpayment - Reduce period
+Diagram of overpayment:
+Monthly: 8, Sum: 200.00 PLN
+
+Diagram of WIBOR changes:
+Monthly: 5, change WIBOR: 10.99%
+
+Sum of credit interest: 918.55 PLN
+Commission for overpayment: 0.00 PLN
+Total sum interest and commission overpayment: 918.55 PL
+Total sum of capital repaid by the customer: 8354.07 PLN
+Total sum capital and interest: 9272.62 PLN
+Total administration Fee: 0.00 PLN
+Total amount to be paid by the customer: 9272.62 PLN
+
+No:  1  Yr:  1  Month:  1  Payment date:2022-11-20  Monthly payment: 704.11  Interest amount: 111.25  Main part: 592.86  Administration fee:0.0  Overpayment:       0  Balance :  7761.21  No: 12
+No:  2  Yr:  1  Month:  2  Payment date:2022-12-20  Monthly payment: 704.11  Interest amount: 106.80  Main part: 597.31  Administration fee:0.0  Overpayment:       0  Balance :  7163.90  No: 11
+No:  3  Yr:  1  Month:  3  Payment date:2023-01-20  Monthly payment: 704.11  Interest amount:  98.58  Main part: 605.53  Administration fee:0.0  Overpayment:       0  Balance :  6558.37  No: 10
+No:  4  Yr:  1  Month:  4  Payment date:2023-02-20  Monthly payment: 704.11  Interest amount:  81.51  Main part: 622.60  Administration fee:0.0  Overpayment:       0  Balance :  5935.77  No:  9
+No:  5  Yr:  1  Month:  5  Payment date:2023-03-20  Monthly payment: 723.99  Interest amount: 107.24  Main part: 616.75  Administration fee:0.0  Overpayment:       0  Balance :  5319.02  No:  8
+No:  6  Yr:  1  Month:  6  Payment date:2023-04-20  Monthly payment: 723.99  Interest amount:  92.99  Main part: 631.00  Administration fee:0.0  Overpayment:       0  Balance :  4688.02  No:  7
+No:  7  Yr:  1  Month:  7  Payment date:2023-05-20  Monthly payment: 723.99  Interest amount:  84.69  Main part: 639.30  Administration fee:0.0  Overpayment:       0  Balance :  4048.72  No:  6
+No:  8  Yr:  1  Month:  8  Payment date:2023-06-20  Monthly payment: 723.99  Interest amount:  70.79  Main part: 653.20  Administration fee:0.0  Overpayment:  200.00  Balance :  3195.52  No:  5
+No:  9  Yr:  1  Month:  9  Payment date:2023-07-20  Monthly payment: 723.99  Interest amount:  57.73  Main part: 666.26  Administration fee:0.0  Overpayment:       0  Balance :  2529.26  No:  4
+No: 10  Yr:  1  Month: 10  Payment date:2023-08-20  Monthly payment: 723.99  Interest amount:  45.69  Main part: 678.30  Administration fee:0.0  Overpayment:       0  Balance :  1850.96  No:  3
+No: 11  Yr:  1  Month: 11  Payment date:2023-09-20  Monthly payment: 723.99  Interest amount:  32.36  Main part: 691.63  Administration fee:0.0  Overpayment:       0  Balance :  1159.33  No:  2
+No: 12  Yr:  1  Month: 12  Payment date:2023-10-20  Monthly payment: 723.99  Interest amount:  20.94  Main part: 703.05  Administration fee:0.0  Overpayment:       0  Balance :   456.28  No:  1
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No: 13  Yr:  2  Month:  1  Payment date:2023-11-20  Monthly payment: 464.26  Interest amount:   7.98  Main part: 456.28  Administration fee:0.0  Overpayment:       0  Balance :     0.00  No:  0
+
+Initial loan amount: 571521.99 PLN
+Period in months: 240
+Annual interest rate when granting a loan: 8.43%
+Month of overpayments: 10 months
+Contract fee: 0.0 PLN
+Administration fee: 0.0 PLN
+
+Overpayment - Reduce period
+Diagram of overpayment:
+Monthly: 15, Sum: 10000 PLN
+Monthly: 20, Sum: 10000 PLN
+Monthly: 25, Sum: 10000 PLN
+Monthly: 30, Sum: 10000 PLN
+Monthly: 35, Sum: 10000 PLN
+
+Diagram of WIBOR changes:
+Monthly: 0, change WIBOR: 0.00%
+
+Sum of credit interest: 484380.73 PLN
+Commission for overpayment: 5000.00 PLN
+Total sum interest and commission overpayment: 489380.73 PL
+Total sum of capital repaid by the customer: 571521.99 PLN
+Total sum capital and interest: 1055902.72 PLN
+Total administration Fee: 0.00 PLN
+Total amount to be paid by the customer: 1060902.72 PLN
+
+No:  1  Yr:  1  Month:  1  Payment date:2020-01-01  Monthly payment:4934.51  Interest amount:4148.77  Main part: 785.74  Administration fee:0.0  Overpayment:       0  Balance :570736.25  No:239
+No:  2  Yr:  1  Month:  2  Payment date:2020-02-01  Monthly payment:4934.51  Interest amount:3875.77  Main part:1058.74  Administration fee:0.0  Overpayment:       0  Balance :569677.51  No:238
+No:  3  Yr:  1  Month:  3  Payment date:2020-03-01  Monthly payment:4934.51  Interest amount:4135.38  Main part: 799.13  Administration fee:0.0  Overpayment:       0  Balance :568878.38  No:237
+No:  4  Yr:  1  Month:  4  Payment date:2020-04-01  Monthly payment:4934.51  Interest amount:3996.37  Main part: 938.14  Administration fee:0.0  Overpayment:       0  Balance :567940.24  No:236
+No:  5  Yr:  1  Month:  5  Payment date:2020-05-01  Monthly payment:4934.51  Interest amount:4122.77  Main part: 811.74  Administration fee:0.0  Overpayment:       0  Balance :567128.50  No:235
+No:  6  Yr:  1  Month:  6  Payment date:2020-06-01  Monthly payment:4934.51  Interest amount:3984.08  Main part: 950.43  Administration fee:0.0  Overpayment:       0  Balance :566178.07  No:234
+No:  7  Yr:  1  Month:  7  Payment date:2020-07-01  Monthly payment:4934.51  Interest amount:4109.98  Main part: 824.53  Administration fee:0.0  Overpayment:       0  Balance :565353.54  No:233
+No:  8  Yr:  1  Month:  8  Payment date:2020-08-01  Monthly payment:4934.51  Interest amount:4104.00  Main part: 830.51  Administration fee:0.0  Overpayment:       0  Balance :564523.03  No:232
+No:  9  Yr:  1  Month:  9  Payment date:2020-09-01  Monthly payment:4934.51  Interest amount:3965.77  Main part: 968.74  Administration fee:0.0  Overpayment:       0  Balance :563554.29  No:231
+No: 10  Yr:  1  Month: 10  Payment date:2020-10-01  Monthly payment:4934.51  Interest amount:4090.93  Main part: 843.58  Administration fee:0.0  Overpayment:       0  Balance :562710.71  No:230
+No: 11  Yr:  1  Month: 11  Payment date:2020-11-01  Monthly payment:4934.51  Interest amount:3953.04  Main part: 981.47  Administration fee:0.0  Overpayment:       0  Balance :561729.24  No:229
+No: 12  Yr:  1  Month: 12  Payment date:2020-12-01  Monthly payment:4934.51  Interest amount:4077.69  Main part: 856.82  Administration fee:0.0  Overpayment:       0  Balance :560872.42  No:228
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No: 13  Yr:  2  Month:  1  Payment date:2021-01-01  Monthly payment:4934.51  Interest amount:4071.47  Main part: 863.04  Administration fee:0.0  Overpayment:       0  Balance :560009.38  No:227
+No: 14  Yr:  2  Month:  2  Payment date:2021-02-01  Monthly payment:4934.51  Interest amount:3671.79  Main part:1262.72  Administration fee:0.0  Overpayment:       0  Balance :558746.66  No:226
+No: 15  Yr:  2  Month:  3  Payment date:2021-03-01  Monthly payment:4934.51  Interest amount:4056.04  Main part: 878.47  Administration fee:0.0  Overpayment:   10000  Balance :547868.19  No:217
+No: 16  Yr:  2  Month:  4  Payment date:2021-04-01  Monthly payment:4934.51  Interest amount:3848.77  Main part:1085.74  Administration fee:0.0  Overpayment:       0  Balance :546782.45  No:216
+No: 17  Yr:  2  Month:  5  Payment date:2021-05-01  Monthly payment:4934.51  Interest amount:3969.18  Main part: 965.33  Administration fee:0.0  Overpayment:       0  Balance :545817.12  No:215
+No: 18  Yr:  2  Month:  6  Payment date:2021-06-01  Monthly payment:4934.51  Interest amount:3834.37  Main part:1100.14  Administration fee:0.0  Overpayment:       0  Balance :544716.98  No:214
+No: 19  Yr:  2  Month:  7  Payment date:2021-07-01  Monthly payment:4934.51  Interest amount:3954.19  Main part: 980.32  Administration fee:0.0  Overpayment:       0  Balance :543736.66  No:213
+No: 20  Yr:  2  Month:  8  Payment date:2021-08-01  Monthly payment:4934.51  Interest amount:3947.08  Main part: 987.43  Administration fee:0.0  Overpayment:   10000  Balance :532749.23  No:203
+No: 21  Yr:  2  Month:  9  Payment date:2021-09-01  Monthly payment:4934.51  Interest amount:3742.56  Main part:1191.95  Administration fee:0.0  Overpayment:       0  Balance :531557.28  No:202
+No: 22  Yr:  2  Month: 10  Payment date:2021-10-01  Monthly payment:4934.51  Interest amount:3858.66  Main part:1075.85  Administration fee:0.0  Overpayment:       0  Balance :530481.43  No:201
+No: 23  Yr:  2  Month: 11  Payment date:2021-11-01  Monthly payment:4934.51  Interest amount:3726.63  Main part:1207.88  Administration fee:0.0  Overpayment:       0  Balance :529273.55  No:200
+No: 24  Yr:  2  Month: 12  Payment date:2021-12-01  Monthly payment:4934.51  Interest amount:3842.08  Main part:1092.43  Administration fee:0.0  Overpayment:       0  Balance :528181.12  No:199
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No: 25  Yr:  3  Month:  1  Payment date:2022-01-01  Monthly payment:4934.51  Interest amount:3834.15  Main part:1100.36  Administration fee:0.0  Overpayment:   10000  Balance :517080.76  No:191
+No: 26  Yr:  3  Month:  2  Payment date:2022-02-01  Monthly payment:4934.51  Interest amount:3390.33  Main part:1544.18  Administration fee:0.0  Overpayment:       0  Balance :515536.58  No:190
+No: 27  Yr:  3  Month:  3  Payment date:2022-03-01  Monthly payment:4934.51  Interest amount:3742.37  Main part:1192.14  Administration fee:0.0  Overpayment:       0  Balance :514344.44  No:189
+No: 28  Yr:  3  Month:  4  Payment date:2022-04-01  Monthly payment:4934.51  Interest amount:3613.27  Main part:1321.24  Administration fee:0.0  Overpayment:       0  Balance :513023.20  No:188
+No: 29  Yr:  3  Month:  5  Payment date:2022-05-01  Monthly payment:4934.51  Interest amount:3724.12  Main part:1210.39  Administration fee:0.0  Overpayment:       0  Balance :511812.81  No:187
+No: 30  Yr:  3  Month:  6  Payment date:2022-06-01  Monthly payment:4934.51  Interest amount:3595.48  Main part:1339.03  Administration fee:0.0  Overpayment:   10000  Balance :500473.78  No:179
+No: 31  Yr:  3  Month:  7  Payment date:2022-07-01  Monthly payment:4934.51  Interest amount:3633.02  Main part:1301.49  Administration fee:0.0  Overpayment:       0  Balance :499172.29  No:178
+No: 32  Yr:  3  Month:  8  Payment date:2022-08-01  Monthly payment:4934.51  Interest amount:3623.57  Main part:1310.94  Administration fee:0.0  Overpayment:       0  Balance :497861.35  No:177
+No: 33  Yr:  3  Month:  9  Payment date:2022-09-01  Monthly payment:4934.51  Interest amount:3497.48  Main part:1437.03  Administration fee:0.0  Overpayment:       0  Balance :496424.32  No:176
+No: 34  Yr:  3  Month: 10  Payment date:2022-10-01  Monthly payment:4934.51  Interest amount:3603.63  Main part:1330.88  Administration fee:0.0  Overpayment:       0  Balance :495093.44  No:175
+No: 35  Yr:  3  Month: 11  Payment date:2022-11-01  Monthly payment:4934.51  Interest amount:3478.03  Main part:1456.48  Administration fee:0.0  Overpayment:   10000  Balance :483636.96  No:167
+No: 36  Yr:  3  Month: 12  Payment date:2022-12-01  Monthly payment:4934.51  Interest amount:3510.80  Main part:1423.71  Administration fee:0.0  Overpayment:       0  Balance :482213.25  No:166
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No: 37  Yr:  4  Month:  1  Payment date:2023-01-01  Monthly payment:4934.51  Interest amount:3500.47  Main part:1434.04  Administration fee:0.0  Overpayment:       0  Balance :480779.21  No:165
+No: 38  Yr:  4  Month:  2  Payment date:2023-02-01  Monthly payment:4934.51  Interest amount:3152.31  Main part:1782.20  Administration fee:0.0  Overpayment:       0  Balance :478997.01  No:164
+No: 39  Yr:  4  Month:  3  Payment date:2023-03-01  Monthly payment:4934.51  Interest amount:3477.12  Main part:1457.39  Administration fee:0.0  Overpayment:       0  Balance :477539.62  No:163
+No: 40  Yr:  4  Month:  4  Payment date:2023-04-01  Monthly payment:4934.51  Interest amount:3354.72  Main part:1579.79  Administration fee:0.0  Overpayment:       0  Balance :475959.83  No:162
+No: 41  Yr:  4  Month:  5  Payment date:2023-05-01  Monthly payment:4934.51  Interest amount:3455.07  Main part:1479.44  Administration fee:0.0  Overpayment:       0  Balance :474480.39  No:161
+No: 42  Yr:  4  Month:  6  Payment date:2023-06-01  Monthly payment:4934.51  Interest amount:3333.22  Main part:1601.29  Administration fee:0.0  Overpayment:       0  Balance :472879.10  No:160
+No: 43  Yr:  4  Month:  7  Payment date:2023-07-01  Monthly payment:4934.51  Interest amount:3432.71  Main part:1501.80  Administration fee:0.0  Overpayment:       0  Balance :471377.30  No:159
+No: 44  Yr:  4  Month:  8  Payment date:2023-08-01  Monthly payment:4934.51  Interest amount:3421.81  Main part:1512.70  Administration fee:0.0  Overpayment:       0  Balance :469864.60  No:158
+No: 45  Yr:  4  Month:  9  Payment date:2023-09-01  Monthly payment:4934.51  Interest amount:3300.80  Main part:1633.71  Administration fee:0.0  Overpayment:       0  Balance :468230.89  No:157
+No: 46  Yr:  4  Month: 10  Payment date:2023-10-01  Monthly payment:4934.51  Interest amount:3398.97  Main part:1535.54  Administration fee:0.0  Overpayment:       0  Balance :466695.35  No:156
+No: 47  Yr:  4  Month: 11  Payment date:2023-11-01  Monthly payment:4934.51  Interest amount:3278.53  Main part:1655.98  Administration fee:0.0  Overpayment:       0  Balance :465039.37  No:155
+No: 48  Yr:  4  Month: 12  Payment date:2023-12-01  Monthly payment:4934.51  Interest amount:3375.80  Main part:1558.71  Administration fee:0.0  Overpayment:       0  Balance :463480.66  No:154
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No: 49  Yr:  5  Month:  1  Payment date:2024-01-01  Monthly payment:4934.51  Interest amount:3364.48  Main part:1570.03  Administration fee:0.0  Overpayment:       0  Balance :461910.63  No:153
+No: 50  Yr:  5  Month:  2  Payment date:2024-02-01  Monthly payment:4934.51  Interest amount:3136.76  Main part:1797.75  Administration fee:0.0  Overpayment:       0  Balance :460112.88  No:152
+No: 51  Yr:  5  Month:  3  Payment date:2024-03-01  Monthly payment:4934.51  Interest amount:3340.04  Main part:1594.47  Administration fee:0.0  Overpayment:       0  Balance :458518.41  No:151
+No: 52  Yr:  5  Month:  4  Payment date:2024-04-01  Monthly payment:4934.51  Interest amount:3221.09  Main part:1713.42  Administration fee:0.0  Overpayment:       0  Balance :456804.99  No:150
+No: 53  Yr:  5  Month:  5  Payment date:2024-05-01  Monthly payment:4934.51  Interest amount:3316.02  Main part:1618.49  Administration fee:0.0  Overpayment:       0  Balance :455186.50  No:149
+No: 54  Yr:  5  Month:  6  Payment date:2024-06-01  Monthly payment:4934.51  Interest amount:3197.69  Main part:1736.82  Administration fee:0.0  Overpayment:       0  Balance :453449.68  No:148
+No: 55  Yr:  5  Month:  7  Payment date:2024-07-01  Monthly payment:4934.51  Interest amount:3291.67  Main part:1642.84  Administration fee:0.0  Overpayment:       0  Balance :451806.84  No:147
+No: 56  Yr:  5  Month:  8  Payment date:2024-08-01  Monthly payment:4934.51  Interest amount:3279.74  Main part:1654.77  Administration fee:0.0  Overpayment:       0  Balance :450152.07  No:146
+No: 57  Yr:  5  Month:  9  Payment date:2024-09-01  Monthly payment:4934.51  Interest amount:3162.32  Main part:1772.19  Administration fee:0.0  Overpayment:       0  Balance :448379.88  No:145
+No: 58  Yr:  5  Month: 10  Payment date:2024-10-01  Monthly payment:4934.51  Interest amount:3254.86  Main part:1679.65  Administration fee:0.0  Overpayment:       0  Balance :446700.23  No:144
+No: 59  Yr:  5  Month: 11  Payment date:2024-11-01  Monthly payment:4934.51  Interest amount:3138.07  Main part:1796.44  Administration fee:0.0  Overpayment:       0  Balance :444903.79  No:143
+No: 60  Yr:  5  Month: 12  Payment date:2024-12-01  Monthly payment:4934.51  Interest amount:3229.63  Main part:1704.88  Administration fee:0.0  Overpayment:       0  Balance :443198.91  No:142
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No: 61  Yr:  6  Month:  1  Payment date:2025-01-01  Monthly payment:4934.51  Interest amount:3217.25  Main part:1717.26  Administration fee:0.0  Overpayment:       0  Balance :441481.65  No:141
+No: 62  Yr:  6  Month:  2  Payment date:2025-02-01  Monthly payment:4934.51  Interest amount:2894.65  Main part:2039.86  Administration fee:0.0  Overpayment:       0  Balance :439441.79  No:140
+No: 63  Yr:  6  Month:  3  Payment date:2025-03-01  Monthly payment:4934.51  Interest amount:3189.98  Main part:1744.53  Administration fee:0.0  Overpayment:       0  Balance :437697.26  No:139
+No: 64  Yr:  6  Month:  4  Payment date:2025-04-01  Monthly payment:4934.51  Interest amount:3074.82  Main part:1859.69  Administration fee:0.0  Overpayment:       0  Balance :435837.57  No:138
+No: 65  Yr:  6  Month:  5  Payment date:2025-05-01  Monthly payment:4934.51  Interest amount:3163.82  Main part:1770.69  Administration fee:0.0  Overpayment:       0  Balance :434066.88  No:137
+No: 66  Yr:  6  Month:  6  Payment date:2025-06-01  Monthly payment:4934.51  Interest amount:3049.32  Main part:1885.19  Administration fee:0.0  Overpayment:       0  Balance :432181.69  No:136
+No: 67  Yr:  6  Month:  7  Payment date:2025-07-01  Monthly payment:4934.51  Interest amount:3137.28  Main part:1797.23  Administration fee:0.0  Overpayment:       0  Balance :430384.46  No:135
+No: 68  Yr:  6  Month:  8  Payment date:2025-08-01  Monthly payment:4934.51  Interest amount:3124.23  Main part:1810.28  Administration fee:0.0  Overpayment:       0  Balance :428574.18  No:134
+No: 69  Yr:  6  Month:  9  Payment date:2025-09-01  Monthly payment:4934.51  Interest amount:3010.73  Main part:1923.78  Administration fee:0.0  Overpayment:       0  Balance :426650.40  No:133
+No: 70  Yr:  6  Month: 10  Payment date:2025-10-01  Monthly payment:4934.51  Interest amount:3097.13  Main part:1837.38  Administration fee:0.0  Overpayment:       0  Balance :424813.02  No:132
+No: 71  Yr:  6  Month: 11  Payment date:2025-11-01  Monthly payment:4934.51  Interest amount:2984.31  Main part:1950.20  Administration fee:0.0  Overpayment:       0  Balance :422862.82  No:131
+No: 72  Yr:  6  Month: 12  Payment date:2025-12-01  Monthly payment:4934.51  Interest amount:3069.63  Main part:1864.88  Administration fee:0.0  Overpayment:       0  Balance :420997.94  No:130
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No: 73  Yr:  7  Month:  1  Payment date:2026-01-01  Monthly payment:4934.51  Interest amount:3056.09  Main part:1878.42  Administration fee:0.0  Overpayment:       0  Balance :419119.52  No:129
+No: 74  Yr:  7  Month:  2  Payment date:2026-02-01  Monthly payment:4934.51  Interest amount:2748.03  Main part:2186.48  Administration fee:0.0  Overpayment:       0  Balance :416933.04  No:128
+No: 75  Yr:  7  Month:  3  Payment date:2026-03-01  Monthly payment:4934.51  Interest amount:3026.59  Main part:1907.92  Administration fee:0.0  Overpayment:       0  Balance :415025.12  No:127
+No: 76  Yr:  7  Month:  4  Payment date:2026-04-01  Monthly payment:4934.51  Interest amount:2915.55  Main part:2018.96  Administration fee:0.0  Overpayment:       0  Balance :413006.16  No:126
+No: 77  Yr:  7  Month:  5  Payment date:2026-05-01  Monthly payment:4934.51  Interest amount:2998.08  Main part:1936.43  Administration fee:0.0  Overpayment:       0  Balance :411069.73  No:125
+No: 78  Yr:  7  Month:  6  Payment date:2026-06-01  Monthly payment:4934.51  Interest amount:2887.76  Main part:2046.75  Administration fee:0.0  Overpayment:       0  Balance :409022.98  No:124
+No: 79  Yr:  7  Month:  7  Payment date:2026-07-01  Monthly payment:4934.51  Interest amount:2969.17  Main part:1965.34  Administration fee:0.0  Overpayment:       0  Balance :407057.64  No:123
+No: 80  Yr:  7  Month:  8  Payment date:2026-08-01  Monthly payment:4934.51  Interest amount:2954.90  Main part:1979.61  Administration fee:0.0  Overpayment:       0  Balance :405078.03  No:122
+No: 81  Yr:  7  Month:  9  Payment date:2026-09-01  Monthly payment:4934.51  Interest amount:2845.67  Main part:2088.84  Administration fee:0.0  Overpayment:       0  Balance :402989.19  No:121
+No: 82  Yr:  7  Month: 10  Payment date:2026-10-01  Monthly payment:4934.51  Interest amount:2925.37  Main part:2009.14  Administration fee:0.0  Overpayment:       0  Balance :400980.05  No:120
+No: 83  Yr:  7  Month: 11  Payment date:2026-11-01  Monthly payment:4934.51  Interest amount:2816.88  Main part:2117.63  Administration fee:0.0  Overpayment:       0  Balance :398862.42  No:119
+No: 84  Yr:  7  Month: 12  Payment date:2026-12-01  Monthly payment:4934.51  Interest amount:2895.41  Main part:2039.10  Administration fee:0.0  Overpayment:       0  Balance :396823.32  No:118
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No: 85  Yr:  8  Month:  1  Payment date:2027-01-01  Monthly payment:4934.51  Interest amount:2880.61  Main part:2053.90  Administration fee:0.0  Overpayment:       0  Balance :394769.42  No:117
+No: 86  Yr:  8  Month:  2  Payment date:2027-02-01  Monthly payment:4934.51  Interest amount:2588.37  Main part:2346.14  Administration fee:0.0  Overpayment:       0  Balance :392423.28  No:116
+No: 87  Yr:  8  Month:  3  Payment date:2027-03-01  Monthly payment:4934.51  Interest amount:2848.67  Main part:2085.84  Administration fee:0.0  Overpayment:       0  Balance :390337.44  No:115
+No: 88  Yr:  8  Month:  4  Payment date:2027-04-01  Monthly payment:4934.51  Interest amount:2742.12  Main part:2192.39  Administration fee:0.0  Overpayment:       0  Balance :388145.05  No:114
+No: 89  Yr:  8  Month:  5  Payment date:2027-05-01  Monthly payment:4934.51  Interest amount:2817.61  Main part:2116.90  Administration fee:0.0  Overpayment:       0  Balance :386028.15  No:113
+No: 90  Yr:  8  Month:  6  Payment date:2027-06-01  Monthly payment:4934.51  Interest amount:2711.85  Main part:2222.66  Administration fee:0.0  Overpayment:       0  Balance :383805.49  No:112
+No: 91  Yr:  8  Month:  7  Payment date:2027-07-01  Monthly payment:4934.51  Interest amount:2786.11  Main part:2148.40  Administration fee:0.0  Overpayment:       0  Balance :381657.09  No:111
+No: 92  Yr:  8  Month:  8  Payment date:2027-08-01  Monthly payment:4934.51  Interest amount:2770.51  Main part:2164.00  Administration fee:0.0  Overpayment:       0  Balance :379493.09  No:110
+No: 93  Yr:  8  Month:  9  Payment date:2027-09-01  Monthly payment:4934.51  Interest amount:2665.94  Main part:2268.57  Administration fee:0.0  Overpayment:       0  Balance :377224.52  No:109
+No: 94  Yr:  8  Month: 10  Payment date:2027-10-01  Monthly payment:4934.51  Interest amount:2738.34  Main part:2196.17  Administration fee:0.0  Overpayment:       0  Balance :375028.35  No:108
+No: 95  Yr:  8  Month: 11  Payment date:2027-11-01  Monthly payment:4934.51  Interest amount:2634.57  Main part:2299.94  Administration fee:0.0  Overpayment:       0  Balance :372728.41  No:107
+No: 96  Yr:  8  Month: 12  Payment date:2027-12-01  Monthly payment:4934.51  Interest amount:2705.70  Main part:2228.81  Administration fee:0.0  Overpayment:       0  Balance :370499.60  No:106
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No: 97  Yr:  9  Month:  1  Payment date:2028-01-01  Monthly payment:4934.51  Interest amount:2689.52  Main part:2244.99  Administration fee:0.0  Overpayment:       0  Balance :368254.61  No:105
+No: 98  Yr:  9  Month:  2  Payment date:2028-02-01  Monthly payment:4934.51  Interest amount:2500.76  Main part:2433.75  Administration fee:0.0  Overpayment:       0  Balance :365820.86  No:104
+No: 99  Yr:  9  Month:  3  Payment date:2028-03-01  Monthly payment:4934.51  Interest amount:2655.55  Main part:2278.96  Administration fee:0.0  Overpayment:       0  Balance :363541.90  No:103
+No:100  Yr:  9  Month:  4  Payment date:2028-04-01  Monthly payment:4934.51  Interest amount:2553.88  Main part:2380.63  Administration fee:0.0  Overpayment:       0  Balance :361161.27  No:102
+No:101  Yr:  9  Month:  5  Payment date:2028-05-01  Monthly payment:4934.51  Interest amount:2621.73  Main part:2312.78  Administration fee:0.0  Overpayment:       0  Balance :358848.49  No:101
+No:102  Yr:  9  Month:  6  Payment date:2028-06-01  Monthly payment:4934.51  Interest amount:2520.91  Main part:2413.60  Administration fee:0.0  Overpayment:       0  Balance :356434.89  No:100
+No:103  Yr:  9  Month:  7  Payment date:2028-07-01  Monthly payment:4934.51  Interest amount:2587.42  Main part:2347.09  Administration fee:0.0  Overpayment:       0  Balance :354087.80  No: 99
+No:104  Yr:  9  Month:  8  Payment date:2028-08-01  Monthly payment:4934.51  Interest amount:2570.38  Main part:2364.13  Administration fee:0.0  Overpayment:       0  Balance :351723.67  No: 98
+No:105  Yr:  9  Month:  9  Payment date:2028-09-01  Monthly payment:4934.51  Interest amount:2470.86  Main part:2463.65  Administration fee:0.0  Overpayment:       0  Balance :349260.02  No: 97
+No:106  Yr:  9  Month: 10  Payment date:2028-10-01  Monthly payment:4934.51  Interest amount:2535.34  Main part:2399.17  Administration fee:0.0  Overpayment:       0  Balance :346860.85  No: 96
+No:107  Yr:  9  Month: 11  Payment date:2028-11-01  Monthly payment:4934.51  Interest amount:2436.70  Main part:2497.81  Administration fee:0.0  Overpayment:       0  Balance :344363.04  No: 95
+No:108  Yr:  9  Month: 12  Payment date:2028-12-01  Monthly payment:4934.51  Interest amount:2499.79  Main part:2434.72  Administration fee:0.0  Overpayment:       0  Balance :341928.32  No: 94
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No:109  Yr: 10  Month:  1  Payment date:2029-01-01  Monthly payment:4934.51  Interest amount:2482.11  Main part:2452.40  Administration fee:0.0  Overpayment:       0  Balance :339475.92  No: 93
+No:110  Yr: 10  Month:  2  Payment date:2029-02-01  Monthly payment:4934.51  Interest amount:2225.83  Main part:2708.68  Administration fee:0.0  Overpayment:       0  Balance :336767.24  No: 92
+No:111  Yr: 10  Month:  3  Payment date:2029-03-01  Monthly payment:4934.51  Interest amount:2444.65  Main part:2489.86  Administration fee:0.0  Overpayment:       0  Balance :334277.38  No: 91
+No:112  Yr: 10  Month:  4  Payment date:2029-04-01  Monthly payment:4934.51  Interest amount:2348.30  Main part:2586.21  Administration fee:0.0  Overpayment:       0  Balance :331691.17  No: 90
+No:113  Yr: 10  Month:  5  Payment date:2029-05-01  Monthly payment:4934.51  Interest amount:2407.80  Main part:2526.71  Administration fee:0.0  Overpayment:       0  Balance :329164.46  No: 89
+No:114  Yr: 10  Month:  6  Payment date:2029-06-01  Monthly payment:4934.51  Interest amount:2312.38  Main part:2622.13  Administration fee:0.0  Overpayment:       0  Balance :326542.33  No: 88
+No:115  Yr: 10  Month:  7  Payment date:2029-07-01  Monthly payment:4934.51  Interest amount:2370.43  Main part:2564.08  Administration fee:0.0  Overpayment:       0  Balance :323978.25  No: 87
+No:116  Yr: 10  Month:  8  Payment date:2029-08-01  Monthly payment:4934.51  Interest amount:2351.81  Main part:2582.70  Administration fee:0.0  Overpayment:       0  Balance :321395.55  No: 86
+No:117  Yr: 10  Month:  9  Payment date:2029-09-01  Monthly payment:4934.51  Interest amount:2257.80  Main part:2676.71  Administration fee:0.0  Overpayment:       0  Balance :318718.84  No: 85
+No:118  Yr: 10  Month: 10  Payment date:2029-10-01  Monthly payment:4934.51  Interest amount:2313.63  Main part:2620.88  Administration fee:0.0  Overpayment:       0  Balance :316097.96  No: 84
+No:119  Yr: 10  Month: 11  Payment date:2029-11-01  Monthly payment:4934.51  Interest amount:2220.59  Main part:2713.92  Administration fee:0.0  Overpayment:       0  Balance :313384.04  No: 83
+No:120  Yr: 10  Month: 12  Payment date:2029-12-01  Monthly payment:4934.51  Interest amount:2274.91  Main part:2659.60  Administration fee:0.0  Overpayment:       0  Balance :310724.44  No: 82
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No:121  Yr: 11  Month:  1  Payment date:2030-01-01  Monthly payment:4934.51  Interest amount:2255.60  Main part:2678.91  Administration fee:0.0  Overpayment:       0  Balance :308045.53  No: 81
+No:122  Yr: 11  Month:  2  Payment date:2030-02-01  Monthly payment:4934.51  Interest amount:2019.75  Main part:2914.76  Administration fee:0.0  Overpayment:       0  Balance :305130.77  No: 80
+No:123  Yr: 11  Month:  3  Payment date:2030-03-01  Monthly payment:4934.51  Interest amount:2215.00  Main part:2719.51  Administration fee:0.0  Overpayment:       0  Balance :302411.26  No: 79
+No:124  Yr: 11  Month:  4  Payment date:2030-04-01  Monthly payment:4934.51  Interest amount:2124.44  Main part:2810.07  Administration fee:0.0  Overpayment:       0  Balance :299601.19  No: 78
+No:125  Yr: 11  Month:  5  Payment date:2030-05-01  Monthly payment:4934.51  Interest amount:2174.85  Main part:2759.66  Administration fee:0.0  Overpayment:       0  Balance :296841.53  No: 77
+No:126  Yr: 11  Month:  6  Payment date:2030-06-01  Monthly payment:4934.51  Interest amount:2085.31  Main part:2849.20  Administration fee:0.0  Overpayment:       0  Balance :293992.33  No: 76
+No:127  Yr: 11  Month:  7  Payment date:2030-07-01  Monthly payment:4934.51  Interest amount:2134.14  Main part:2800.37  Administration fee:0.0  Overpayment:       0  Balance :291191.96  No: 75
+No:128  Yr: 11  Month:  8  Payment date:2030-08-01  Monthly payment:4934.51  Interest amount:2113.81  Main part:2820.70  Administration fee:0.0  Overpayment:       0  Balance :288371.26  No: 74
+No:129  Yr: 11  Month:  9  Payment date:2030-09-01  Monthly payment:4934.51  Interest amount:2025.81  Main part:2908.70  Administration fee:0.0  Overpayment:       0  Balance :285462.56  No: 73
+No:130  Yr: 11  Month: 10  Payment date:2030-10-01  Monthly payment:4934.51  Interest amount:2072.22  Main part:2862.29  Administration fee:0.0  Overpayment:       0  Balance :282600.27  No: 72
+No:131  Yr: 11  Month: 11  Payment date:2030-11-01  Monthly payment:4934.51  Interest amount:1985.27  Main part:2949.24  Administration fee:0.0  Overpayment:       0  Balance :279651.03  No: 71
+No:132  Yr: 11  Month: 12  Payment date:2030-12-01  Monthly payment:4934.51  Interest amount:2030.03  Main part:2904.48  Administration fee:0.0  Overpayment:       0  Balance :276746.55  No: 70
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No:133  Yr: 12  Month:  1  Payment date:2031-01-01  Monthly payment:4934.51  Interest amount:2008.95  Main part:2925.56  Administration fee:0.0  Overpayment:       0  Balance :273820.99  No: 69
+No:134  Yr: 12  Month:  2  Payment date:2031-02-01  Monthly payment:4934.51  Interest amount:1795.35  Main part:3139.16  Administration fee:0.0  Overpayment:       0  Balance :270681.83  No: 68
+No:135  Yr: 12  Month:  3  Payment date:2031-03-01  Monthly payment:4934.51  Interest amount:1964.92  Main part:2969.59  Administration fee:0.0  Overpayment:       0  Balance :267712.24  No: 67
+No:136  Yr: 12  Month:  4  Payment date:2031-04-01  Monthly payment:4934.51  Interest amount:1880.68  Main part:3053.83  Administration fee:0.0  Overpayment:       0  Balance :264658.41  No: 66
+No:137  Yr: 12  Month:  5  Payment date:2031-05-01  Monthly payment:4934.51  Interest amount:1921.20  Main part:3013.31  Administration fee:0.0  Overpayment:       0  Balance :261645.10  No: 65
+No:138  Yr: 12  Month:  6  Payment date:2031-06-01  Monthly payment:4934.51  Interest amount:1838.06  Main part:3096.45  Administration fee:0.0  Overpayment:       0  Balance :258548.65  No: 64
+No:139  Yr: 12  Month:  7  Payment date:2031-07-01  Monthly payment:4934.51  Interest amount:1876.85  Main part:3057.66  Administration fee:0.0  Overpayment:       0  Balance :255490.99  No: 63
+No:140  Yr: 12  Month:  8  Payment date:2031-08-01  Monthly payment:4934.51  Interest amount:1854.65  Main part:3079.86  Administration fee:0.0  Overpayment:       0  Balance :252411.13  No: 62
+No:141  Yr: 12  Month:  9  Payment date:2031-09-01  Monthly payment:4934.51  Interest amount:1773.19  Main part:3161.32  Administration fee:0.0  Overpayment:       0  Balance :249249.81  No: 61
+No:142  Yr: 12  Month: 10  Payment date:2031-10-01  Monthly payment:4934.51  Interest amount:1809.35  Main part:3125.16  Administration fee:0.0  Overpayment:       0  Balance :246124.65  No: 60
+No:143  Yr: 12  Month: 11  Payment date:2031-11-01  Monthly payment:4934.51  Interest amount:1729.03  Main part:3205.48  Administration fee:0.0  Overpayment:       0  Balance :242919.17  No: 59
+No:144  Yr: 12  Month: 12  Payment date:2031-12-01  Monthly payment:4934.51  Interest amount:1763.39  Main part:3171.12  Administration fee:0.0  Overpayment:       0  Balance :239748.05  No: 58
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No:145  Yr: 13  Month:  1  Payment date:2032-01-01  Monthly payment:4934.51  Interest amount:1740.37  Main part:3194.14  Administration fee:0.0  Overpayment:       0  Balance :236553.91  No: 57
+No:146  Yr: 13  Month:  2  Payment date:2032-02-01  Monthly payment:4934.51  Interest amount:1606.40  Main part:3328.11  Administration fee:0.0  Overpayment:       0  Balance :233225.80  No: 56
+No:147  Yr: 13  Month:  3  Payment date:2032-03-01  Monthly payment:4934.51  Interest amount:1693.02  Main part:3241.49  Administration fee:0.0  Overpayment:       0  Balance :229984.31  No: 55
+No:148  Yr: 13  Month:  4  Payment date:2032-04-01  Monthly payment:4934.51  Interest amount:1615.64  Main part:3318.87  Administration fee:0.0  Overpayment:       0  Balance :226665.44  No: 54
+No:149  Yr: 13  Month:  5  Payment date:2032-05-01  Monthly payment:4934.51  Interest amount:1645.40  Main part:3289.11  Administration fee:0.0  Overpayment:       0  Balance :223376.33  No: 53
+No:150  Yr: 13  Month:  6  Payment date:2032-06-01  Monthly payment:4934.51  Interest amount:1569.22  Main part:3365.29  Administration fee:0.0  Overpayment:       0  Balance :220011.04  No: 52
+No:151  Yr: 13  Month:  7  Payment date:2032-07-01  Monthly payment:4934.51  Interest amount:1597.10  Main part:3337.41  Administration fee:0.0  Overpayment:       0  Balance :216673.63  No: 51
+No:152  Yr: 13  Month:  8  Payment date:2032-08-01  Monthly payment:4934.51  Interest amount:1572.87  Main part:3361.64  Administration fee:0.0  Overpayment:       0  Balance :213311.99  No: 50
+No:153  Yr: 13  Month:  9  Payment date:2032-09-01  Monthly payment:4934.51  Interest amount:1498.52  Main part:3435.99  Administration fee:0.0  Overpayment:       0  Balance :209876.00  No: 49
+No:154  Yr: 13  Month: 10  Payment date:2032-10-01  Monthly payment:4934.51  Interest amount:1523.52  Main part:3410.99  Administration fee:0.0  Overpayment:       0  Balance :206465.01  No: 48
+No:155  Yr: 13  Month: 11  Payment date:2032-11-01  Monthly payment:4934.51  Interest amount:1450.42  Main part:3484.09  Administration fee:0.0  Overpayment:       0  Balance :202980.92  No: 47
+No:156  Yr: 13  Month: 12  Payment date:2032-12-01  Monthly payment:4934.51  Interest amount:1473.47  Main part:3461.04  Administration fee:0.0  Overpayment:       0  Balance :199519.88  No: 46
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No:157  Yr: 14  Month:  1  Payment date:2033-01-01  Monthly payment:4934.51  Interest amount:1448.35  Main part:3486.16  Administration fee:0.0  Overpayment:       0  Balance :196033.72  No: 45
+No:158  Yr: 14  Month:  2  Payment date:2033-02-01  Monthly payment:4934.51  Interest amount:1285.33  Main part:3649.18  Administration fee:0.0  Overpayment:       0  Balance :192384.54  No: 44
+No:159  Yr: 14  Month:  3  Payment date:2033-03-01  Monthly payment:4934.51  Interest amount:1396.55  Main part:3537.96  Administration fee:0.0  Overpayment:       0  Balance :188846.58  No: 43
+No:160  Yr: 14  Month:  4  Payment date:2033-04-01  Monthly payment:4934.51  Interest amount:1326.65  Main part:3607.86  Administration fee:0.0  Overpayment:       0  Balance :185238.72  No: 42
+No:161  Yr: 14  Month:  5  Payment date:2033-05-01  Monthly payment:4934.51  Interest amount:1344.68  Main part:3589.83  Administration fee:0.0  Overpayment:       0  Balance :181648.89  No: 41
+No:162  Yr: 14  Month:  6  Payment date:2033-06-01  Monthly payment:4934.51  Interest amount:1276.08  Main part:3658.43  Administration fee:0.0  Overpayment:       0  Balance :177990.46  No: 40
+No:163  Yr: 14  Month:  7  Payment date:2033-07-01  Monthly payment:4934.51  Interest amount:1292.06  Main part:3642.45  Administration fee:0.0  Overpayment:       0  Balance :174348.01  No: 39
+No:164  Yr: 14  Month:  8  Payment date:2033-08-01  Monthly payment:4934.51  Interest amount:1265.62  Main part:3668.89  Administration fee:0.0  Overpayment:       0  Balance :170679.12  No: 38
+No:165  Yr: 14  Month:  9  Payment date:2033-09-01  Monthly payment:4934.51  Interest amount:1199.02  Main part:3735.49  Administration fee:0.0  Overpayment:       0  Balance :166943.63  No: 37
+No:166  Yr: 14  Month: 10  Payment date:2033-10-01  Monthly payment:4934.51  Interest amount:1211.87  Main part:3722.64  Administration fee:0.0  Overpayment:       0  Balance :163220.99  No: 36
+No:167  Yr: 14  Month: 11  Payment date:2033-11-01  Monthly payment:4934.51  Interest amount:1146.63  Main part:3787.88  Administration fee:0.0  Overpayment:       0  Balance :159433.11  No: 35
+No:168  Yr: 14  Month: 12  Payment date:2033-12-01  Monthly payment:4934.51  Interest amount:1157.35  Main part:3777.16  Administration fee:0.0  Overpayment:       0  Balance :155655.95  No: 34
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No:169  Yr: 15  Month:  1  Payment date:2034-01-01  Monthly payment:4934.51  Interest amount:1129.93  Main part:3804.58  Administration fee:0.0  Overpayment:       0  Balance :151851.37  No: 33
+No:170  Yr: 15  Month:  2  Payment date:2034-02-01  Monthly payment:4934.51  Interest amount: 995.64  Main part:3938.87  Administration fee:0.0  Overpayment:       0  Balance :147912.50  No: 32
+No:171  Yr: 15  Month:  3  Payment date:2034-03-01  Monthly payment:4934.51  Interest amount:1073.72  Main part:3860.79  Administration fee:0.0  Overpayment:       0  Balance :144051.71  No: 31
+No:172  Yr: 15  Month:  4  Payment date:2034-04-01  Monthly payment:4934.51  Interest amount:1011.96  Main part:3922.55  Administration fee:0.0  Overpayment:       0  Balance :140129.16  No: 30
+No:173  Yr: 15  Month:  5  Payment date:2034-05-01  Monthly payment:4934.51  Interest amount:1017.22  Main part:3917.29  Administration fee:0.0  Overpayment:       0  Balance :136211.87  No: 29
+No:174  Yr: 15  Month:  6  Payment date:2034-06-01  Monthly payment:4934.51  Interest amount: 956.89  Main part:3977.62  Administration fee:0.0  Overpayment:       0  Balance :132234.25  No: 28
+No:175  Yr: 15  Month:  7  Payment date:2034-07-01  Monthly payment:4934.51  Interest amount: 959.91  Main part:3974.60  Administration fee:0.0  Overpayment:       0  Balance :128259.65  No: 27
+No:176  Yr: 15  Month:  8  Payment date:2034-08-01  Monthly payment:4934.51  Interest amount: 931.06  Main part:4003.45  Administration fee:0.0  Overpayment:       0  Balance :124256.20  No: 26
+No:177  Yr: 15  Month:  9  Payment date:2034-09-01  Monthly payment:4934.51  Interest amount: 872.90  Main part:4061.61  Administration fee:0.0  Overpayment:       0  Balance :120194.59  No: 25
+No:178  Yr: 15  Month: 10  Payment date:2034-10-01  Monthly payment:4934.51  Interest amount: 872.51  Main part:4062.00  Administration fee:0.0  Overpayment:       0  Balance :116132.59  No: 24
+No:179  Yr: 15  Month: 11  Payment date:2034-11-01  Monthly payment:4934.51  Interest amount: 815.83  Main part:4118.68  Administration fee:0.0  Overpayment:       0  Balance :112013.91  No: 23
+No:180  Yr: 15  Month: 12  Payment date:2034-12-01  Monthly payment:4934.51  Interest amount: 813.13  Main part:4121.38  Administration fee:0.0  Overpayment:       0  Balance :107892.53  No: 22
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No:181  Yr: 16  Month:  1  Payment date:2035-01-01  Monthly payment:4934.51  Interest amount: 783.21  Main part:4151.30  Administration fee:0.0  Overpayment:       0  Balance :103741.23  No: 21
+No:182  Yr: 16  Month:  2  Payment date:2035-02-01  Monthly payment:4934.51  Interest amount: 680.20  Main part:4254.31  Administration fee:0.0  Overpayment:       0  Balance : 99486.92  No: 20
+No:183  Yr: 16  Month:  3  Payment date:2035-03-01  Monthly payment:4934.51  Interest amount: 722.19  Main part:4212.32  Administration fee:0.0  Overpayment:       0  Balance : 95274.60  No: 19
+No:184  Yr: 16  Month:  4  Payment date:2035-04-01  Monthly payment:4934.51  Interest amount: 669.30  Main part:4265.21  Administration fee:0.0  Overpayment:       0  Balance : 91009.39  No: 18
+No:185  Yr: 16  Month:  5  Payment date:2035-05-01  Monthly payment:4934.51  Interest amount: 660.65  Main part:4273.86  Administration fee:0.0  Overpayment:       0  Balance : 86735.53  No: 17
+No:186  Yr: 16  Month:  6  Payment date:2035-06-01  Monthly payment:4934.51  Interest amount: 609.32  Main part:4325.19  Administration fee:0.0  Overpayment:       0  Balance : 82410.34  No: 16
+No:187  Yr: 16  Month:  7  Payment date:2035-07-01  Monthly payment:4934.51  Interest amount: 598.23  Main part:4336.28  Administration fee:0.0  Overpayment:       0  Balance : 78074.06  No: 15
+No:188  Yr: 16  Month:  8  Payment date:2035-08-01  Monthly payment:4934.51  Interest amount: 566.75  Main part:4367.76  Administration fee:0.0  Overpayment:       0  Balance : 73706.30  No: 14
+No:189  Yr: 16  Month:  9  Payment date:2035-09-01  Monthly payment:4934.51  Interest amount: 517.79  Main part:4416.72  Administration fee:0.0  Overpayment:       0  Balance : 69289.58  No: 13
+No:190  Yr: 16  Month: 10  Payment date:2035-10-01  Monthly payment:4934.51  Interest amount: 502.98  Main part:4431.53  Administration fee:0.0  Overpayment:       0  Balance : 64858.05  No: 12
+No:191  Yr: 16  Month: 11  Payment date:2035-11-01  Monthly payment:4934.51  Interest amount: 455.63  Main part:4478.88  Administration fee:0.0  Overpayment:       0  Balance : 60379.17  No: 11
+No:192  Yr: 16  Month: 12  Payment date:2035-12-01  Monthly payment:4934.51  Interest amount: 438.30  Main part:4496.21  Administration fee:0.0  Overpayment:       0  Balance : 55882.96  No: 10
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No:193  Yr: 17  Month:  1  Payment date:2036-01-01  Monthly payment:4934.51  Interest amount: 405.66  Main part:4528.85  Administration fee:0.0  Overpayment:       0  Balance : 51354.11  No:  9
+No:194  Yr: 17  Month:  2  Payment date:2036-02-01  Monthly payment:4934.51  Interest amount: 348.74  Main part:4585.77  Administration fee:0.0  Overpayment:       0  Balance : 46768.34  No:  8
+No:195  Yr: 17  Month:  3  Payment date:2036-03-01  Monthly payment:4934.51  Interest amount: 339.50  Main part:4595.01  Administration fee:0.0  Overpayment:       0  Balance : 42173.33  No:  7
+No:196  Yr: 17  Month:  4  Payment date:2036-04-01  Monthly payment:4934.51  Interest amount: 296.27  Main part:4638.24  Administration fee:0.0  Overpayment:       0  Balance : 37535.09  No:  6
+No:197  Yr: 17  Month:  5  Payment date:2036-05-01  Monthly payment:4934.51  Interest amount: 272.47  Main part:4662.04  Administration fee:0.0  Overpayment:       0  Balance : 32873.05  No:  5
+No:198  Yr: 17  Month:  6  Payment date:2036-06-01  Monthly payment:4934.51  Interest amount: 230.93  Main part:4703.58  Administration fee:0.0  Overpayment:       0  Balance : 28169.47  No:  4
+No:199  Yr: 17  Month:  7  Payment date:2036-07-01  Monthly payment:4934.51  Interest amount: 204.49  Main part:4730.02  Administration fee:0.0  Overpayment:       0  Balance : 23439.45  No:  3
+No:200  Yr: 17  Month:  8  Payment date:2036-08-01  Monthly payment:4934.51  Interest amount: 170.15  Main part:4764.36  Administration fee:0.0  Overpayment:       0  Balance : 18675.09  No:  2
+No:201  Yr: 17  Month:  9  Payment date:2036-09-01  Monthly payment:4934.51  Interest amount: 131.19  Main part:4803.32  Administration fee:0.0  Overpayment:       0  Balance : 13871.77  No:  1
+No:202  Yr: 17  Month: 10  Payment date:2036-10-01  Monthly payment:4934.51  Interest amount: 100.70  Main part:4833.81  Administration fee:0.0  Overpayment:       0  Balance :  9037.96  No:  0
+No:203  Yr: 17  Month: 11  Payment date:2036-11-01  Monthly payment:4934.51  Interest amount:  63.49  Main part:4871.02  Administration fee:0.0  Overpayment:       0  Balance :  4166.94  No: -1
+No:204  Yr: 17  Month: 12  Payment date:2036-12-01  Monthly payment:4197.19  Interest amount:  30.25  Main part:4166.94  Administration fee:0.0  Overpayment:       0  Balance :     0.00  No: -2
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Initial loan amount: 571521.99 PLN
+Period in months: 240
+Annual interest rate when granting a loan: 8.43%
+Month of overpayments: 10 months
+Contract fee: 0.0 PLN
+Administration fee: 0.0 PLN
+
+Overpayment - Reduce period
+Diagram of overpayment:
+Monthly: 15, Sum: 10000 PLN
+Monthly: 20, Sum: 10000 PLN
+Monthly: 25, Sum: 10000 PLN
+Monthly: 30, Sum: 10000 PLN
+Monthly: 35, Sum: 10000 PLN
+
+Diagram of WIBOR changes:
+Monthly: 0, change WIBOR: 0.00%
+
+Sum of credit interest: 484380.73 PLN
+Commission for overpayment: 5000.00 PLN
+Total sum interest and commission overpayment: 489380.73 PL
+Total sum of capital repaid by the customer: 571521.99 PLN
+Total sum capital and interest: 1055902.72 PLN
+Total administration Fee: 0.00 PLN
+Total amount to be paid by the customer: 1060902.72 PLN
+
+No:  1  Yr:  1  Month:  1  Payment date:2020-01-01  Monthly payment:4934.51  Interest amount:4148.77  Main part: 785.74  Administration fee:0.0  Overpayment:       0  Balance :570736.25  No:239
+No:  2  Yr:  1  Month:  2  Payment date:2020-02-01  Monthly payment:4934.51  Interest amount:3875.77  Main part:1058.74  Administration fee:0.0  Overpayment:       0  Balance :569677.51  No:238
+No:  3  Yr:  1  Month:  3  Payment date:2020-03-01  Monthly payment:4934.51  Interest amount:4135.38  Main part: 799.13  Administration fee:0.0  Overpayment:       0  Balance :568878.38  No:237
+No:  4  Yr:  1  Month:  4  Payment date:2020-04-01  Monthly payment:4934.51  Interest amount:3996.37  Main part: 938.14  Administration fee:0.0  Overpayment:       0  Balance :567940.24  No:236
+No:  5  Yr:  1  Month:  5  Payment date:2020-05-01  Monthly payment:4934.51  Interest amount:4122.77  Main part: 811.74  Administration fee:0.0  Overpayment:       0  Balance :567128.50  No:235
+No:  6  Yr:  1  Month:  6  Payment date:2020-06-01  Monthly payment:4934.51  Interest amount:3984.08  Main part: 950.43  Administration fee:0.0  Overpayment:       0  Balance :566178.07  No:234
+No:  7  Yr:  1  Month:  7  Payment date:2020-07-01  Monthly payment:4934.51  Interest amount:4109.98  Main part: 824.53  Administration fee:0.0  Overpayment:       0  Balance :565353.54  No:233
+No:  8  Yr:  1  Month:  8  Payment date:2020-08-01  Monthly payment:4934.51  Interest amount:4104.00  Main part: 830.51  Administration fee:0.0  Overpayment:       0  Balance :564523.03  No:232
+No:  9  Yr:  1  Month:  9  Payment date:2020-09-01  Monthly payment:4934.51  Interest amount:3965.77  Main part: 968.74  Administration fee:0.0  Overpayment:       0  Balance :563554.29  No:231
+No: 10  Yr:  1  Month: 10  Payment date:2020-10-01  Monthly payment:4934.51  Interest amount:4090.93  Main part: 843.58  Administration fee:0.0  Overpayment:       0  Balance :562710.71  No:230
+No: 11  Yr:  1  Month: 11  Payment date:2020-11-01  Monthly payment:4934.51  Interest amount:3953.04  Main part: 981.47  Administration fee:0.0  Overpayment:       0  Balance :561729.24  No:229
+No: 12  Yr:  1  Month: 12  Payment date:2020-12-01  Monthly payment:4934.51  Interest amount:4077.69  Main part: 856.82  Administration fee:0.0  Overpayment:       0  Balance :560872.42  No:228
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No: 13  Yr:  2  Month:  1  Payment date:2021-01-01  Monthly payment:4934.51  Interest amount:4071.47  Main part: 863.04  Administration fee:0.0  Overpayment:       0  Balance :560009.38  No:227
+No: 14  Yr:  2  Month:  2  Payment date:2021-02-01  Monthly payment:4934.51  Interest amount:3671.79  Main part:1262.72  Administration fee:0.0  Overpayment:       0  Balance :558746.66  No:226
+No: 15  Yr:  2  Month:  3  Payment date:2021-03-01  Monthly payment:4934.51  Interest amount:4056.04  Main part: 878.47  Administration fee:0.0  Overpayment:   10000  Balance :547868.19  No:217
+No: 16  Yr:  2  Month:  4  Payment date:2021-04-01  Monthly payment:4934.51  Interest amount:3848.77  Main part:1085.74  Administration fee:0.0  Overpayment:       0  Balance :546782.45  No:216
+No: 17  Yr:  2  Month:  5  Payment date:2021-05-01  Monthly payment:4934.51  Interest amount:3969.18  Main part: 965.33  Administration fee:0.0  Overpayment:       0  Balance :545817.12  No:215
+No: 18  Yr:  2  Month:  6  Payment date:2021-06-01  Monthly payment:4934.51  Interest amount:3834.37  Main part:1100.14  Administration fee:0.0  Overpayment:       0  Balance :544716.98  No:214
+No: 19  Yr:  2  Month:  7  Payment date:2021-07-01  Monthly payment:4934.51  Interest amount:3954.19  Main part: 980.32  Administration fee:0.0  Overpayment:       0  Balance :543736.66  No:213
+No: 20  Yr:  2  Month:  8  Payment date:2021-08-01  Monthly payment:4934.51  Interest amount:3947.08  Main part: 987.43  Administration fee:0.0  Overpayment:   10000  Balance :532749.23  No:203
+No: 21  Yr:  2  Month:  9  Payment date:2021-09-01  Monthly payment:4934.51  Interest amount:3742.56  Main part:1191.95  Administration fee:0.0  Overpayment:       0  Balance :531557.28  No:202
+No: 22  Yr:  2  Month: 10  Payment date:2021-10-01  Monthly payment:4934.51  Interest amount:3858.66  Main part:1075.85  Administration fee:0.0  Overpayment:       0  Balance :530481.43  No:201
+No: 23  Yr:  2  Month: 11  Payment date:2021-11-01  Monthly payment:4934.51  Interest amount:3726.63  Main part:1207.88  Administration fee:0.0  Overpayment:       0  Balance :529273.55  No:200
+No: 24  Yr:  2  Month: 12  Payment date:2021-12-01  Monthly payment:4934.51  Interest amount:3842.08  Main part:1092.43  Administration fee:0.0  Overpayment:       0  Balance :528181.12  No:199
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No: 25  Yr:  3  Month:  1  Payment date:2022-01-01  Monthly payment:4934.51  Interest amount:3834.15  Main part:1100.36  Administration fee:0.0  Overpayment:   10000  Balance :517080.76  No:191
+No: 26  Yr:  3  Month:  2  Payment date:2022-02-01  Monthly payment:4934.51  Interest amount:3390.33  Main part:1544.18  Administration fee:0.0  Overpayment:       0  Balance :515536.58  No:190
+No: 27  Yr:  3  Month:  3  Payment date:2022-03-01  Monthly payment:4934.51  Interest amount:3742.37  Main part:1192.14  Administration fee:0.0  Overpayment:       0  Balance :514344.44  No:189
+No: 28  Yr:  3  Month:  4  Payment date:2022-04-01  Monthly payment:4934.51  Interest amount:3613.27  Main part:1321.24  Administration fee:0.0  Overpayment:       0  Balance :513023.20  No:188
+No: 29  Yr:  3  Month:  5  Payment date:2022-05-01  Monthly payment:4934.51  Interest amount:3724.12  Main part:1210.39  Administration fee:0.0  Overpayment:       0  Balance :511812.81  No:187
+No: 30  Yr:  3  Month:  6  Payment date:2022-06-01  Monthly payment:4934.51  Interest amount:3595.48  Main part:1339.03  Administration fee:0.0  Overpayment:   10000  Balance :500473.78  No:179
+No: 31  Yr:  3  Month:  7  Payment date:2022-07-01  Monthly payment:4934.51  Interest amount:3633.02  Main part:1301.49  Administration fee:0.0  Overpayment:       0  Balance :499172.29  No:178
+No: 32  Yr:  3  Month:  8  Payment date:2022-08-01  Monthly payment:4934.51  Interest amount:3623.57  Main part:1310.94  Administration fee:0.0  Overpayment:       0  Balance :497861.35  No:177
+No: 33  Yr:  3  Month:  9  Payment date:2022-09-01  Monthly payment:4934.51  Interest amount:3497.48  Main part:1437.03  Administration fee:0.0  Overpayment:       0  Balance :496424.32  No:176
+No: 34  Yr:  3  Month: 10  Payment date:2022-10-01  Monthly payment:4934.51  Interest amount:3603.63  Main part:1330.88  Administration fee:0.0  Overpayment:       0  Balance :495093.44  No:175
+No: 35  Yr:  3  Month: 11  Payment date:2022-11-01  Monthly payment:4934.51  Interest amount:3478.03  Main part:1456.48  Administration fee:0.0  Overpayment:   10000  Balance :483636.96  No:167
+No: 36  Yr:  3  Month: 12  Payment date:2022-12-01  Monthly payment:4934.51  Interest amount:3510.80  Main part:1423.71  Administration fee:0.0  Overpayment:       0  Balance :482213.25  No:166
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No: 37  Yr:  4  Month:  1  Payment date:2023-01-01  Monthly payment:4934.51  Interest amount:3500.47  Main part:1434.04  Administration fee:0.0  Overpayment:       0  Balance :480779.21  No:165
+No: 38  Yr:  4  Month:  2  Payment date:2023-02-01  Monthly payment:4934.51  Interest amount:3152.31  Main part:1782.20  Administration fee:0.0  Overpayment:       0  Balance :478997.01  No:164
+No: 39  Yr:  4  Month:  3  Payment date:2023-03-01  Monthly payment:4934.51  Interest amount:3477.12  Main part:1457.39  Administration fee:0.0  Overpayment:       0  Balance :477539.62  No:163
+No: 40  Yr:  4  Month:  4  Payment date:2023-04-01  Monthly payment:4934.51  Interest amount:3354.72  Main part:1579.79  Administration fee:0.0  Overpayment:       0  Balance :475959.83  No:162
+No: 41  Yr:  4  Month:  5  Payment date:2023-05-01  Monthly payment:4934.51  Interest amount:3455.07  Main part:1479.44  Administration fee:0.0  Overpayment:       0  Balance :474480.39  No:161
+No: 42  Yr:  4  Month:  6  Payment date:2023-06-01  Monthly payment:4934.51  Interest amount:3333.22  Main part:1601.29  Administration fee:0.0  Overpayment:       0  Balance :472879.10  No:160
+No: 43  Yr:  4  Month:  7  Payment date:2023-07-01  Monthly payment:4934.51  Interest amount:3432.71  Main part:1501.80  Administration fee:0.0  Overpayment:       0  Balance :471377.30  No:159
+No: 44  Yr:  4  Month:  8  Payment date:2023-08-01  Monthly payment:4934.51  Interest amount:3421.81  Main part:1512.70  Administration fee:0.0  Overpayment:       0  Balance :469864.60  No:158
+No: 45  Yr:  4  Month:  9  Payment date:2023-09-01  Monthly payment:4934.51  Interest amount:3300.80  Main part:1633.71  Administration fee:0.0  Overpayment:       0  Balance :468230.89  No:157
+No: 46  Yr:  4  Month: 10  Payment date:2023-10-01  Monthly payment:4934.51  Interest amount:3398.97  Main part:1535.54  Administration fee:0.0  Overpayment:       0  Balance :466695.35  No:156
+No: 47  Yr:  4  Month: 11  Payment date:2023-11-01  Monthly payment:4934.51  Interest amount:3278.53  Main part:1655.98  Administration fee:0.0  Overpayment:       0  Balance :465039.37  No:155
+No: 48  Yr:  4  Month: 12  Payment date:2023-12-01  Monthly payment:4934.51  Interest amount:3375.80  Main part:1558.71  Administration fee:0.0  Overpayment:       0  Balance :463480.66  No:154
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No: 49  Yr:  5  Month:  1  Payment date:2024-01-01  Monthly payment:4934.51  Interest amount:3364.48  Main part:1570.03  Administration fee:0.0  Overpayment:       0  Balance :461910.63  No:153
+No: 50  Yr:  5  Month:  2  Payment date:2024-02-01  Monthly payment:4934.51  Interest amount:3136.76  Main part:1797.75  Administration fee:0.0  Overpayment:       0  Balance :460112.88  No:152
+No: 51  Yr:  5  Month:  3  Payment date:2024-03-01  Monthly payment:4934.51  Interest amount:3340.04  Main part:1594.47  Administration fee:0.0  Overpayment:       0  Balance :458518.41  No:151
+No: 52  Yr:  5  Month:  4  Payment date:2024-04-01  Monthly payment:4934.51  Interest amount:3221.09  Main part:1713.42  Administration fee:0.0  Overpayment:       0  Balance :456804.99  No:150
+No: 53  Yr:  5  Month:  5  Payment date:2024-05-01  Monthly payment:4934.51  Interest amount:3316.02  Main part:1618.49  Administration fee:0.0  Overpayment:       0  Balance :455186.50  No:149
+No: 54  Yr:  5  Month:  6  Payment date:2024-06-01  Monthly payment:4934.51  Interest amount:3197.69  Main part:1736.82  Administration fee:0.0  Overpayment:       0  Balance :453449.68  No:148
+No: 55  Yr:  5  Month:  7  Payment date:2024-07-01  Monthly payment:4934.51  Interest amount:3291.67  Main part:1642.84  Administration fee:0.0  Overpayment:       0  Balance :451806.84  No:147
+No: 56  Yr:  5  Month:  8  Payment date:2024-08-01  Monthly payment:4934.51  Interest amount:3279.74  Main part:1654.77  Administration fee:0.0  Overpayment:       0  Balance :450152.07  No:146
+No: 57  Yr:  5  Month:  9  Payment date:2024-09-01  Monthly payment:4934.51  Interest amount:3162.32  Main part:1772.19  Administration fee:0.0  Overpayment:       0  Balance :448379.88  No:145
+No: 58  Yr:  5  Month: 10  Payment date:2024-10-01  Monthly payment:4934.51  Interest amount:3254.86  Main part:1679.65  Administration fee:0.0  Overpayment:       0  Balance :446700.23  No:144
+No: 59  Yr:  5  Month: 11  Payment date:2024-11-01  Monthly payment:4934.51  Interest amount:3138.07  Main part:1796.44  Administration fee:0.0  Overpayment:       0  Balance :444903.79  No:143
+No: 60  Yr:  5  Month: 12  Payment date:2024-12-01  Monthly payment:4934.51  Interest amount:3229.63  Main part:1704.88  Administration fee:0.0  Overpayment:       0  Balance :443198.91  No:142
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No: 61  Yr:  6  Month:  1  Payment date:2025-01-01  Monthly payment:4934.51  Interest amount:3217.25  Main part:1717.26  Administration fee:0.0  Overpayment:       0  Balance :441481.65  No:141
+No: 62  Yr:  6  Month:  2  Payment date:2025-02-01  Monthly payment:4934.51  Interest amount:2894.65  Main part:2039.86  Administration fee:0.0  Overpayment:       0  Balance :439441.79  No:140
+No: 63  Yr:  6  Month:  3  Payment date:2025-03-01  Monthly payment:4934.51  Interest amount:3189.98  Main part:1744.53  Administration fee:0.0  Overpayment:       0  Balance :437697.26  No:139
+No: 64  Yr:  6  Month:  4  Payment date:2025-04-01  Monthly payment:4934.51  Interest amount:3074.82  Main part:1859.69  Administration fee:0.0  Overpayment:       0  Balance :435837.57  No:138
+No: 65  Yr:  6  Month:  5  Payment date:2025-05-01  Monthly payment:4934.51  Interest amount:3163.82  Main part:1770.69  Administration fee:0.0  Overpayment:       0  Balance :434066.88  No:137
+No: 66  Yr:  6  Month:  6  Payment date:2025-06-01  Monthly payment:4934.51  Interest amount:3049.32  Main part:1885.19  Administration fee:0.0  Overpayment:       0  Balance :432181.69  No:136
+No: 67  Yr:  6  Month:  7  Payment date:2025-07-01  Monthly payment:4934.51  Interest amount:3137.28  Main part:1797.23  Administration fee:0.0  Overpayment:       0  Balance :430384.46  No:135
+No: 68  Yr:  6  Month:  8  Payment date:2025-08-01  Monthly payment:4934.51  Interest amount:3124.23  Main part:1810.28  Administration fee:0.0  Overpayment:       0  Balance :428574.18  No:134
+No: 69  Yr:  6  Month:  9  Payment date:2025-09-01  Monthly payment:4934.51  Interest amount:3010.73  Main part:1923.78  Administration fee:0.0  Overpayment:       0  Balance :426650.40  No:133
+No: 70  Yr:  6  Month: 10  Payment date:2025-10-01  Monthly payment:4934.51  Interest amount:3097.13  Main part:1837.38  Administration fee:0.0  Overpayment:       0  Balance :424813.02  No:132
+No: 71  Yr:  6  Month: 11  Payment date:2025-11-01  Monthly payment:4934.51  Interest amount:2984.31  Main part:1950.20  Administration fee:0.0  Overpayment:       0  Balance :422862.82  No:131
+No: 72  Yr:  6  Month: 12  Payment date:2025-12-01  Monthly payment:4934.51  Interest amount:3069.63  Main part:1864.88  Administration fee:0.0  Overpayment:       0  Balance :420997.94  No:130
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No: 73  Yr:  7  Month:  1  Payment date:2026-01-01  Monthly payment:4934.51  Interest amount:3056.09  Main part:1878.42  Administration fee:0.0  Overpayment:       0  Balance :419119.52  No:129
+No: 74  Yr:  7  Month:  2  Payment date:2026-02-01  Monthly payment:4934.51  Interest amount:2748.03  Main part:2186.48  Administration fee:0.0  Overpayment:       0  Balance :416933.04  No:128
+No: 75  Yr:  7  Month:  3  Payment date:2026-03-01  Monthly payment:4934.51  Interest amount:3026.59  Main part:1907.92  Administration fee:0.0  Overpayment:       0  Balance :415025.12  No:127
+No: 76  Yr:  7  Month:  4  Payment date:2026-04-01  Monthly payment:4934.51  Interest amount:2915.55  Main part:2018.96  Administration fee:0.0  Overpayment:       0  Balance :413006.16  No:126
+No: 77  Yr:  7  Month:  5  Payment date:2026-05-01  Monthly payment:4934.51  Interest amount:2998.08  Main part:1936.43  Administration fee:0.0  Overpayment:       0  Balance :411069.73  No:125
+No: 78  Yr:  7  Month:  6  Payment date:2026-06-01  Monthly payment:4934.51  Interest amount:2887.76  Main part:2046.75  Administration fee:0.0  Overpayment:       0  Balance :409022.98  No:124
+No: 79  Yr:  7  Month:  7  Payment date:2026-07-01  Monthly payment:4934.51  Interest amount:2969.17  Main part:1965.34  Administration fee:0.0  Overpayment:       0  Balance :407057.64  No:123
+No: 80  Yr:  7  Month:  8  Payment date:2026-08-01  Monthly payment:4934.51  Interest amount:2954.90  Main part:1979.61  Administration fee:0.0  Overpayment:       0  Balance :405078.03  No:122
+No: 81  Yr:  7  Month:  9  Payment date:2026-09-01  Monthly payment:4934.51  Interest amount:2845.67  Main part:2088.84  Administration fee:0.0  Overpayment:       0  Balance :402989.19  No:121
+No: 82  Yr:  7  Month: 10  Payment date:2026-10-01  Monthly payment:4934.51  Interest amount:2925.37  Main part:2009.14  Administration fee:0.0  Overpayment:       0  Balance :400980.05  No:120
+No: 83  Yr:  7  Month: 11  Payment date:2026-11-01  Monthly payment:4934.51  Interest amount:2816.88  Main part:2117.63  Administration fee:0.0  Overpayment:       0  Balance :398862.42  No:119
+No: 84  Yr:  7  Month: 12  Payment date:2026-12-01  Monthly payment:4934.51  Interest amount:2895.41  Main part:2039.10  Administration fee:0.0  Overpayment:       0  Balance :396823.32  No:118
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No: 85  Yr:  8  Month:  1  Payment date:2027-01-01  Monthly payment:4934.51  Interest amount:2880.61  Main part:2053.90  Administration fee:0.0  Overpayment:       0  Balance :394769.42  No:117
+No: 86  Yr:  8  Month:  2  Payment date:2027-02-01  Monthly payment:4934.51  Interest amount:2588.37  Main part:2346.14  Administration fee:0.0  Overpayment:       0  Balance :392423.28  No:116
+No: 87  Yr:  8  Month:  3  Payment date:2027-03-01  Monthly payment:4934.51  Interest amount:2848.67  Main part:2085.84  Administration fee:0.0  Overpayment:       0  Balance :390337.44  No:115
+No: 88  Yr:  8  Month:  4  Payment date:2027-04-01  Monthly payment:4934.51  Interest amount:2742.12  Main part:2192.39  Administration fee:0.0  Overpayment:       0  Balance :388145.05  No:114
+No: 89  Yr:  8  Month:  5  Payment date:2027-05-01  Monthly payment:4934.51  Interest amount:2817.61  Main part:2116.90  Administration fee:0.0  Overpayment:       0  Balance :386028.15  No:113
+No: 90  Yr:  8  Month:  6  Payment date:2027-06-01  Monthly payment:4934.51  Interest amount:2711.85  Main part:2222.66  Administration fee:0.0  Overpayment:       0  Balance :383805.49  No:112
+No: 91  Yr:  8  Month:  7  Payment date:2027-07-01  Monthly payment:4934.51  Interest amount:2786.11  Main part:2148.40  Administration fee:0.0  Overpayment:       0  Balance :381657.09  No:111
+No: 92  Yr:  8  Month:  8  Payment date:2027-08-01  Monthly payment:4934.51  Interest amount:2770.51  Main part:2164.00  Administration fee:0.0  Overpayment:       0  Balance :379493.09  No:110
+No: 93  Yr:  8  Month:  9  Payment date:2027-09-01  Monthly payment:4934.51  Interest amount:2665.94  Main part:2268.57  Administration fee:0.0  Overpayment:       0  Balance :377224.52  No:109
+No: 94  Yr:  8  Month: 10  Payment date:2027-10-01  Monthly payment:4934.51  Interest amount:2738.34  Main part:2196.17  Administration fee:0.0  Overpayment:       0  Balance :375028.35  No:108
+No: 95  Yr:  8  Month: 11  Payment date:2027-11-01  Monthly payment:4934.51  Interest amount:2634.57  Main part:2299.94  Administration fee:0.0  Overpayment:       0  Balance :372728.41  No:107
+No: 96  Yr:  8  Month: 12  Payment date:2027-12-01  Monthly payment:4934.51  Interest amount:2705.70  Main part:2228.81  Administration fee:0.0  Overpayment:       0  Balance :370499.60  No:106
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No: 97  Yr:  9  Month:  1  Payment date:2028-01-01  Monthly payment:4934.51  Interest amount:2689.52  Main part:2244.99  Administration fee:0.0  Overpayment:       0  Balance :368254.61  No:105
+No: 98  Yr:  9  Month:  2  Payment date:2028-02-01  Monthly payment:4934.51  Interest amount:2500.76  Main part:2433.75  Administration fee:0.0  Overpayment:       0  Balance :365820.86  No:104
+No: 99  Yr:  9  Month:  3  Payment date:2028-03-01  Monthly payment:4934.51  Interest amount:2655.55  Main part:2278.96  Administration fee:0.0  Overpayment:       0  Balance :363541.90  No:103
+No:100  Yr:  9  Month:  4  Payment date:2028-04-01  Monthly payment:4934.51  Interest amount:2553.88  Main part:2380.63  Administration fee:0.0  Overpayment:       0  Balance :361161.27  No:102
+No:101  Yr:  9  Month:  5  Payment date:2028-05-01  Monthly payment:4934.51  Interest amount:2621.73  Main part:2312.78  Administration fee:0.0  Overpayment:       0  Balance :358848.49  No:101
+No:102  Yr:  9  Month:  6  Payment date:2028-06-01  Monthly payment:4934.51  Interest amount:2520.91  Main part:2413.60  Administration fee:0.0  Overpayment:       0  Balance :356434.89  No:100
+No:103  Yr:  9  Month:  7  Payment date:2028-07-01  Monthly payment:4934.51  Interest amount:2587.42  Main part:2347.09  Administration fee:0.0  Overpayment:       0  Balance :354087.80  No: 99
+No:104  Yr:  9  Month:  8  Payment date:2028-08-01  Monthly payment:4934.51  Interest amount:2570.38  Main part:2364.13  Administration fee:0.0  Overpayment:       0  Balance :351723.67  No: 98
+No:105  Yr:  9  Month:  9  Payment date:2028-09-01  Monthly payment:4934.51  Interest amount:2470.86  Main part:2463.65  Administration fee:0.0  Overpayment:       0  Balance :349260.02  No: 97
+No:106  Yr:  9  Month: 10  Payment date:2028-10-01  Monthly payment:4934.51  Interest amount:2535.34  Main part:2399.17  Administration fee:0.0  Overpayment:       0  Balance :346860.85  No: 96
+No:107  Yr:  9  Month: 11  Payment date:2028-11-01  Monthly payment:4934.51  Interest amount:2436.70  Main part:2497.81  Administration fee:0.0  Overpayment:       0  Balance :344363.04  No: 95
+No:108  Yr:  9  Month: 12  Payment date:2028-12-01  Monthly payment:4934.51  Interest amount:2499.79  Main part:2434.72  Administration fee:0.0  Overpayment:       0  Balance :341928.32  No: 94
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No:109  Yr: 10  Month:  1  Payment date:2029-01-01  Monthly payment:4934.51  Interest amount:2482.11  Main part:2452.40  Administration fee:0.0  Overpayment:       0  Balance :339475.92  No: 93
+No:110  Yr: 10  Month:  2  Payment date:2029-02-01  Monthly payment:4934.51  Interest amount:2225.83  Main part:2708.68  Administration fee:0.0  Overpayment:       0  Balance :336767.24  No: 92
+No:111  Yr: 10  Month:  3  Payment date:2029-03-01  Monthly payment:4934.51  Interest amount:2444.65  Main part:2489.86  Administration fee:0.0  Overpayment:       0  Balance :334277.38  No: 91
+No:112  Yr: 10  Month:  4  Payment date:2029-04-01  Monthly payment:4934.51  Interest amount:2348.30  Main part:2586.21  Administration fee:0.0  Overpayment:       0  Balance :331691.17  No: 90
+No:113  Yr: 10  Month:  5  Payment date:2029-05-01  Monthly payment:4934.51  Interest amount:2407.80  Main part:2526.71  Administration fee:0.0  Overpayment:       0  Balance :329164.46  No: 89
+No:114  Yr: 10  Month:  6  Payment date:2029-06-01  Monthly payment:4934.51  Interest amount:2312.38  Main part:2622.13  Administration fee:0.0  Overpayment:       0  Balance :326542.33  No: 88
+No:115  Yr: 10  Month:  7  Payment date:2029-07-01  Monthly payment:4934.51  Interest amount:2370.43  Main part:2564.08  Administration fee:0.0  Overpayment:       0  Balance :323978.25  No: 87
+No:116  Yr: 10  Month:  8  Payment date:2029-08-01  Monthly payment:4934.51  Interest amount:2351.81  Main part:2582.70  Administration fee:0.0  Overpayment:       0  Balance :321395.55  No: 86
+No:117  Yr: 10  Month:  9  Payment date:2029-09-01  Monthly payment:4934.51  Interest amount:2257.80  Main part:2676.71  Administration fee:0.0  Overpayment:       0  Balance :318718.84  No: 85
+No:118  Yr: 10  Month: 10  Payment date:2029-10-01  Monthly payment:4934.51  Interest amount:2313.63  Main part:2620.88  Administration fee:0.0  Overpayment:       0  Balance :316097.96  No: 84
+No:119  Yr: 10  Month: 11  Payment date:2029-11-01  Monthly payment:4934.51  Interest amount:2220.59  Main part:2713.92  Administration fee:0.0  Overpayment:       0  Balance :313384.04  No: 83
+No:120  Yr: 10  Month: 12  Payment date:2029-12-01  Monthly payment:4934.51  Interest amount:2274.91  Main part:2659.60  Administration fee:0.0  Overpayment:       0  Balance :310724.44  No: 82
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No:121  Yr: 11  Month:  1  Payment date:2030-01-01  Monthly payment:4934.51  Interest amount:2255.60  Main part:2678.91  Administration fee:0.0  Overpayment:       0  Balance :308045.53  No: 81
+No:122  Yr: 11  Month:  2  Payment date:2030-02-01  Monthly payment:4934.51  Interest amount:2019.75  Main part:2914.76  Administration fee:0.0  Overpayment:       0  Balance :305130.77  No: 80
+No:123  Yr: 11  Month:  3  Payment date:2030-03-01  Monthly payment:4934.51  Interest amount:2215.00  Main part:2719.51  Administration fee:0.0  Overpayment:       0  Balance :302411.26  No: 79
+No:124  Yr: 11  Month:  4  Payment date:2030-04-01  Monthly payment:4934.51  Interest amount:2124.44  Main part:2810.07  Administration fee:0.0  Overpayment:       0  Balance :299601.19  No: 78
+No:125  Yr: 11  Month:  5  Payment date:2030-05-01  Monthly payment:4934.51  Interest amount:2174.85  Main part:2759.66  Administration fee:0.0  Overpayment:       0  Balance :296841.53  No: 77
+No:126  Yr: 11  Month:  6  Payment date:2030-06-01  Monthly payment:4934.51  Interest amount:2085.31  Main part:2849.20  Administration fee:0.0  Overpayment:       0  Balance :293992.33  No: 76
+No:127  Yr: 11  Month:  7  Payment date:2030-07-01  Monthly payment:4934.51  Interest amount:2134.14  Main part:2800.37  Administration fee:0.0  Overpayment:       0  Balance :291191.96  No: 75
+No:128  Yr: 11  Month:  8  Payment date:2030-08-01  Monthly payment:4934.51  Interest amount:2113.81  Main part:2820.70  Administration fee:0.0  Overpayment:       0  Balance :288371.26  No: 74
+No:129  Yr: 11  Month:  9  Payment date:2030-09-01  Monthly payment:4934.51  Interest amount:2025.81  Main part:2908.70  Administration fee:0.0  Overpayment:       0  Balance :285462.56  No: 73
+No:130  Yr: 11  Month: 10  Payment date:2030-10-01  Monthly payment:4934.51  Interest amount:2072.22  Main part:2862.29  Administration fee:0.0  Overpayment:       0  Balance :282600.27  No: 72
+No:131  Yr: 11  Month: 11  Payment date:2030-11-01  Monthly payment:4934.51  Interest amount:1985.27  Main part:2949.24  Administration fee:0.0  Overpayment:       0  Balance :279651.03  No: 71
+No:132  Yr: 11  Month: 12  Payment date:2030-12-01  Monthly payment:4934.51  Interest amount:2030.03  Main part:2904.48  Administration fee:0.0  Overpayment:       0  Balance :276746.55  No: 70
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No:133  Yr: 12  Month:  1  Payment date:2031-01-01  Monthly payment:4934.51  Interest amount:2008.95  Main part:2925.56  Administration fee:0.0  Overpayment:       0  Balance :273820.99  No: 69
+No:134  Yr: 12  Month:  2  Payment date:2031-02-01  Monthly payment:4934.51  Interest amount:1795.35  Main part:3139.16  Administration fee:0.0  Overpayment:       0  Balance :270681.83  No: 68
+No:135  Yr: 12  Month:  3  Payment date:2031-03-01  Monthly payment:4934.51  Interest amount:1964.92  Main part:2969.59  Administration fee:0.0  Overpayment:       0  Balance :267712.24  No: 67
+No:136  Yr: 12  Month:  4  Payment date:2031-04-01  Monthly payment:4934.51  Interest amount:1880.68  Main part:3053.83  Administration fee:0.0  Overpayment:       0  Balance :264658.41  No: 66
+No:137  Yr: 12  Month:  5  Payment date:2031-05-01  Monthly payment:4934.51  Interest amount:1921.20  Main part:3013.31  Administration fee:0.0  Overpayment:       0  Balance :261645.10  No: 65
+No:138  Yr: 12  Month:  6  Payment date:2031-06-01  Monthly payment:4934.51  Interest amount:1838.06  Main part:3096.45  Administration fee:0.0  Overpayment:       0  Balance :258548.65  No: 64
+No:139  Yr: 12  Month:  7  Payment date:2031-07-01  Monthly payment:4934.51  Interest amount:1876.85  Main part:3057.66  Administration fee:0.0  Overpayment:       0  Balance :255490.99  No: 63
+No:140  Yr: 12  Month:  8  Payment date:2031-08-01  Monthly payment:4934.51  Interest amount:1854.65  Main part:3079.86  Administration fee:0.0  Overpayment:       0  Balance :252411.13  No: 62
+No:141  Yr: 12  Month:  9  Payment date:2031-09-01  Monthly payment:4934.51  Interest amount:1773.19  Main part:3161.32  Administration fee:0.0  Overpayment:       0  Balance :249249.81  No: 61
+No:142  Yr: 12  Month: 10  Payment date:2031-10-01  Monthly payment:4934.51  Interest amount:1809.35  Main part:3125.16  Administration fee:0.0  Overpayment:       0  Balance :246124.65  No: 60
+No:143  Yr: 12  Month: 11  Payment date:2031-11-01  Monthly payment:4934.51  Interest amount:1729.03  Main part:3205.48  Administration fee:0.0  Overpayment:       0  Balance :242919.17  No: 59
+No:144  Yr: 12  Month: 12  Payment date:2031-12-01  Monthly payment:4934.51  Interest amount:1763.39  Main part:3171.12  Administration fee:0.0  Overpayment:       0  Balance :239748.05  No: 58
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No:145  Yr: 13  Month:  1  Payment date:2032-01-01  Monthly payment:4934.51  Interest amount:1740.37  Main part:3194.14  Administration fee:0.0  Overpayment:       0  Balance :236553.91  No: 57
+No:146  Yr: 13  Month:  2  Payment date:2032-02-01  Monthly payment:4934.51  Interest amount:1606.40  Main part:3328.11  Administration fee:0.0  Overpayment:       0  Balance :233225.80  No: 56
+No:147  Yr: 13  Month:  3  Payment date:2032-03-01  Monthly payment:4934.51  Interest amount:1693.02  Main part:3241.49  Administration fee:0.0  Overpayment:       0  Balance :229984.31  No: 55
+No:148  Yr: 13  Month:  4  Payment date:2032-04-01  Monthly payment:4934.51  Interest amount:1615.64  Main part:3318.87  Administration fee:0.0  Overpayment:       0  Balance :226665.44  No: 54
+No:149  Yr: 13  Month:  5  Payment date:2032-05-01  Monthly payment:4934.51  Interest amount:1645.40  Main part:3289.11  Administration fee:0.0  Overpayment:       0  Balance :223376.33  No: 53
+No:150  Yr: 13  Month:  6  Payment date:2032-06-01  Monthly payment:4934.51  Interest amount:1569.22  Main part:3365.29  Administration fee:0.0  Overpayment:       0  Balance :220011.04  No: 52
+No:151  Yr: 13  Month:  7  Payment date:2032-07-01  Monthly payment:4934.51  Interest amount:1597.10  Main part:3337.41  Administration fee:0.0  Overpayment:       0  Balance :216673.63  No: 51
+No:152  Yr: 13  Month:  8  Payment date:2032-08-01  Monthly payment:4934.51  Interest amount:1572.87  Main part:3361.64  Administration fee:0.0  Overpayment:       0  Balance :213311.99  No: 50
+No:153  Yr: 13  Month:  9  Payment date:2032-09-01  Monthly payment:4934.51  Interest amount:1498.52  Main part:3435.99  Administration fee:0.0  Overpayment:       0  Balance :209876.00  No: 49
+No:154  Yr: 13  Month: 10  Payment date:2032-10-01  Monthly payment:4934.51  Interest amount:1523.52  Main part:3410.99  Administration fee:0.0  Overpayment:       0  Balance :206465.01  No: 48
+No:155  Yr: 13  Month: 11  Payment date:2032-11-01  Monthly payment:4934.51  Interest amount:1450.42  Main part:3484.09  Administration fee:0.0  Overpayment:       0  Balance :202980.92  No: 47
+No:156  Yr: 13  Month: 12  Payment date:2032-12-01  Monthly payment:4934.51  Interest amount:1473.47  Main part:3461.04  Administration fee:0.0  Overpayment:       0  Balance :199519.88  No: 46
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No:157  Yr: 14  Month:  1  Payment date:2033-01-01  Monthly payment:4934.51  Interest amount:1448.35  Main part:3486.16  Administration fee:0.0  Overpayment:       0  Balance :196033.72  No: 45
+No:158  Yr: 14  Month:  2  Payment date:2033-02-01  Monthly payment:4934.51  Interest amount:1285.33  Main part:3649.18  Administration fee:0.0  Overpayment:       0  Balance :192384.54  No: 44
+No:159  Yr: 14  Month:  3  Payment date:2033-03-01  Monthly payment:4934.51  Interest amount:1396.55  Main part:3537.96  Administration fee:0.0  Overpayment:       0  Balance :188846.58  No: 43
+No:160  Yr: 14  Month:  4  Payment date:2033-04-01  Monthly payment:4934.51  Interest amount:1326.65  Main part:3607.86  Administration fee:0.0  Overpayment:       0  Balance :185238.72  No: 42
+No:161  Yr: 14  Month:  5  Payment date:2033-05-01  Monthly payment:4934.51  Interest amount:1344.68  Main part:3589.83  Administration fee:0.0  Overpayment:       0  Balance :181648.89  No: 41
+No:162  Yr: 14  Month:  6  Payment date:2033-06-01  Monthly payment:4934.51  Interest amount:1276.08  Main part:3658.43  Administration fee:0.0  Overpayment:       0  Balance :177990.46  No: 40
+No:163  Yr: 14  Month:  7  Payment date:2033-07-01  Monthly payment:4934.51  Interest amount:1292.06  Main part:3642.45  Administration fee:0.0  Overpayment:       0  Balance :174348.01  No: 39
+No:164  Yr: 14  Month:  8  Payment date:2033-08-01  Monthly payment:4934.51  Interest amount:1265.62  Main part:3668.89  Administration fee:0.0  Overpayment:       0  Balance :170679.12  No: 38
+No:165  Yr: 14  Month:  9  Payment date:2033-09-01  Monthly payment:4934.51  Interest amount:1199.02  Main part:3735.49  Administration fee:0.0  Overpayment:       0  Balance :166943.63  No: 37
+No:166  Yr: 14  Month: 10  Payment date:2033-10-01  Monthly payment:4934.51  Interest amount:1211.87  Main part:3722.64  Administration fee:0.0  Overpayment:       0  Balance :163220.99  No: 36
+No:167  Yr: 14  Month: 11  Payment date:2033-11-01  Monthly payment:4934.51  Interest amount:1146.63  Main part:3787.88  Administration fee:0.0  Overpayment:       0  Balance :159433.11  No: 35
+No:168  Yr: 14  Month: 12  Payment date:2033-12-01  Monthly payment:4934.51  Interest amount:1157.35  Main part:3777.16  Administration fee:0.0  Overpayment:       0  Balance :155655.95  No: 34
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No:169  Yr: 15  Month:  1  Payment date:2034-01-01  Monthly payment:4934.51  Interest amount:1129.93  Main part:3804.58  Administration fee:0.0  Overpayment:       0  Balance :151851.37  No: 33
+No:170  Yr: 15  Month:  2  Payment date:2034-02-01  Monthly payment:4934.51  Interest amount: 995.64  Main part:3938.87  Administration fee:0.0  Overpayment:       0  Balance :147912.50  No: 32
+No:171  Yr: 15  Month:  3  Payment date:2034-03-01  Monthly payment:4934.51  Interest amount:1073.72  Main part:3860.79  Administration fee:0.0  Overpayment:       0  Balance :144051.71  No: 31
+No:172  Yr: 15  Month:  4  Payment date:2034-04-01  Monthly payment:4934.51  Interest amount:1011.96  Main part:3922.55  Administration fee:0.0  Overpayment:       0  Balance :140129.16  No: 30
+No:173  Yr: 15  Month:  5  Payment date:2034-05-01  Monthly payment:4934.51  Interest amount:1017.22  Main part:3917.29  Administration fee:0.0  Overpayment:       0  Balance :136211.87  No: 29
+No:174  Yr: 15  Month:  6  Payment date:2034-06-01  Monthly payment:4934.51  Interest amount: 956.89  Main part:3977.62  Administration fee:0.0  Overpayment:       0  Balance :132234.25  No: 28
+No:175  Yr: 15  Month:  7  Payment date:2034-07-01  Monthly payment:4934.51  Interest amount: 959.91  Main part:3974.60  Administration fee:0.0  Overpayment:       0  Balance :128259.65  No: 27
+No:176  Yr: 15  Month:  8  Payment date:2034-08-01  Monthly payment:4934.51  Interest amount: 931.06  Main part:4003.45  Administration fee:0.0  Overpayment:       0  Balance :124256.20  No: 26
+No:177  Yr: 15  Month:  9  Payment date:2034-09-01  Monthly payment:4934.51  Interest amount: 872.90  Main part:4061.61  Administration fee:0.0  Overpayment:       0  Balance :120194.59  No: 25
+No:178  Yr: 15  Month: 10  Payment date:2034-10-01  Monthly payment:4934.51  Interest amount: 872.51  Main part:4062.00  Administration fee:0.0  Overpayment:       0  Balance :116132.59  No: 24
+No:179  Yr: 15  Month: 11  Payment date:2034-11-01  Monthly payment:4934.51  Interest amount: 815.83  Main part:4118.68  Administration fee:0.0  Overpayment:       0  Balance :112013.91  No: 23
+No:180  Yr: 15  Month: 12  Payment date:2034-12-01  Monthly payment:4934.51  Interest amount: 813.13  Main part:4121.38  Administration fee:0.0  Overpayment:       0  Balance :107892.53  No: 22
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No:181  Yr: 16  Month:  1  Payment date:2035-01-01  Monthly payment:4934.51  Interest amount: 783.21  Main part:4151.30  Administration fee:0.0  Overpayment:       0  Balance :103741.23  No: 21
+No:182  Yr: 16  Month:  2  Payment date:2035-02-01  Monthly payment:4934.51  Interest amount: 680.20  Main part:4254.31  Administration fee:0.0  Overpayment:       0  Balance : 99486.92  No: 20
+No:183  Yr: 16  Month:  3  Payment date:2035-03-01  Monthly payment:4934.51  Interest amount: 722.19  Main part:4212.32  Administration fee:0.0  Overpayment:       0  Balance : 95274.60  No: 19
+No:184  Yr: 16  Month:  4  Payment date:2035-04-01  Monthly payment:4934.51  Interest amount: 669.30  Main part:4265.21  Administration fee:0.0  Overpayment:       0  Balance : 91009.39  No: 18
+No:185  Yr: 16  Month:  5  Payment date:2035-05-01  Monthly payment:4934.51  Interest amount: 660.65  Main part:4273.86  Administration fee:0.0  Overpayment:       0  Balance : 86735.53  No: 17
+No:186  Yr: 16  Month:  6  Payment date:2035-06-01  Monthly payment:4934.51  Interest amount: 609.32  Main part:4325.19  Administration fee:0.0  Overpayment:       0  Balance : 82410.34  No: 16
+No:187  Yr: 16  Month:  7  Payment date:2035-07-01  Monthly payment:4934.51  Interest amount: 598.23  Main part:4336.28  Administration fee:0.0  Overpayment:       0  Balance : 78074.06  No: 15
+No:188  Yr: 16  Month:  8  Payment date:2035-08-01  Monthly payment:4934.51  Interest amount: 566.75  Main part:4367.76  Administration fee:0.0  Overpayment:       0  Balance : 73706.30  No: 14
+No:189  Yr: 16  Month:  9  Payment date:2035-09-01  Monthly payment:4934.51  Interest amount: 517.79  Main part:4416.72  Administration fee:0.0  Overpayment:       0  Balance : 69289.58  No: 13
+No:190  Yr: 16  Month: 10  Payment date:2035-10-01  Monthly payment:4934.51  Interest amount: 502.98  Main part:4431.53  Administration fee:0.0  Overpayment:       0  Balance : 64858.05  No: 12
+No:191  Yr: 16  Month: 11  Payment date:2035-11-01  Monthly payment:4934.51  Interest amount: 455.63  Main part:4478.88  Administration fee:0.0  Overpayment:       0  Balance : 60379.17  No: 11
+No:192  Yr: 16  Month: 12  Payment date:2035-12-01  Monthly payment:4934.51  Interest amount: 438.30  Main part:4496.21  Administration fee:0.0  Overpayment:       0  Balance : 55882.96  No: 10
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+No:193  Yr: 17  Month:  1  Payment date:2036-01-01  Monthly payment:4934.51  Interest amount: 405.66  Main part:4528.85  Administration fee:0.0  Overpayment:       0  Balance : 51354.11  No:  9
+No:194  Yr: 17  Month:  2  Payment date:2036-02-01  Monthly payment:4934.51  Interest amount: 348.74  Main part:4585.77  Administration fee:0.0  Overpayment:       0  Balance : 46768.34  No:  8
+No:195  Yr: 17  Month:  3  Payment date:2036-03-01  Monthly payment:4934.51  Interest amount: 339.50  Main part:4595.01  Administration fee:0.0  Overpayment:       0  Balance : 42173.33  No:  7
+No:196  Yr: 17  Month:  4  Payment date:2036-04-01  Monthly payment:4934.51  Interest amount: 296.27  Main part:4638.24  Administration fee:0.0  Overpayment:       0  Balance : 37535.09  No:  6
+No:197  Yr: 17  Month:  5  Payment date:2036-05-01  Monthly payment:4934.51  Interest amount: 272.47  Main part:4662.04  Administration fee:0.0  Overpayment:       0  Balance : 32873.05  No:  5
+No:198  Yr: 17  Month:  6  Payment date:2036-06-01  Monthly payment:4934.51  Interest amount: 230.93  Main part:4703.58  Administration fee:0.0  Overpayment:       0  Balance : 28169.47  No:  4
+No:199  Yr: 17  Month:  7  Payment date:2036-07-01  Monthly payment:4934.51  Interest amount: 204.49  Main part:4730.02  Administration fee:0.0  Overpayment:       0  Balance : 23439.45  No:  3
+No:200  Yr: 17  Month:  8  Payment date:2036-08-01  Monthly payment:4934.51  Interest amount: 170.15  Main part:4764.36  Administration fee:0.0  Overpayment:       0  Balance : 18675.09  No:  2
+No:201  Yr: 17  Month:  9  Payment date:2036-09-01  Monthly payment:4934.51  Interest amount: 131.19  Main part:4803.32  Administration fee:0.0  Overpayment:       0  Balance : 13871.77  No:  1
+No:202  Yr: 17  Month: 10  Payment date:2036-10-01  Monthly payment:4934.51  Interest amount: 100.70  Main part:4833.81  Administration fee:0.0  Overpayment:       0  Balance :  9037.96  No:  0
+No:203  Yr: 17  Month: 11  Payment date:2036-11-01  Monthly payment:4934.51  Interest amount:  63.49  Main part:4871.02  Administration fee:0.0  Overpayment:       0  Balance :  4166.94  No: -1
+No:204  Yr: 17  Month: 12  Payment date:2036-12-01  Monthly payment:4197.19  Interest amount:  30.25  Main part:4166.94  Administration fee:0.0  Overpayment:       0  Balance :     0.00  No: -2
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+

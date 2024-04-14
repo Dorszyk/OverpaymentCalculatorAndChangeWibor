@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="pl.inbank.overpayment.services.ConstantAmountsCalculationServiceImplTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2024-03-24T22:07:12" hostname="DORSZYKP" time="1.252">
-  <properties/>
-  <testcase name="Calculate installment amounts for other installments" classname="pl.inbank.overpayment.services.ConstantAmountsCalculationServiceImplTest" time="1.25"/>
-  <testcase name="Calculate installment amounts for first installment" classname="pl.inbank.overpayment.services.ConstantAmountsCalculationServiceImplTest" time="0.002"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
