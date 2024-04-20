@@ -39,6 +39,8 @@ public class InputDataService {
                 InputData.builder()
                         .repaymentStartDate(
                                 Optional.ofNullable(inputData.get("repaymentStartDate")).map(LocalDate::parse).orElseThrow())
+                        .fixedMonthlyPayment(
+                                Optional.ofNullable(inputData.get("fixedMonthlyPayment")).map(BigDecimal::new).orElseThrow())
                         .wiborPercent(
                                 Optional.ofNullable(inputData.get("wibor")).map(BigDecimal::new).orElseThrow())
                         .amount(

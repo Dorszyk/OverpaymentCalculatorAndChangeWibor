@@ -17,113 +17,98 @@ public class ConstantAmountsCalculationServiceImpl implements ConstantAmountsCal
 
     @Override
     public InstallmentAmounts calculate(final InputData inputData, final Overpayment overpayment) {
-        BigDecimal interestPercent = inputData.interestPercent();
-        log.info("InterestPercent: [{}]", interestPercent);
+        LocalDate currentPaymentDate = inputData.repaymentStartDate().plusMonths(1);
+        LocalDate previousPaymentDate = inputData.repaymentStartDate();
+
+        BigDecimal currentInstallmentNumber = BigDecimal.ONE; // Zakładamy, że to pierwsza rata
+        BigDecimal wiborPercent = inputData.wiborPercentForInstallment(currentInstallmentNumber);
+        BigDecimal interestPercent = wiborPercent.add(inputData.marginPercent());
 
         BigDecimal residualAmount = inputData.amount();
-        log.info("ResidualAmount: [{}]", residualAmount);
-
-        // Ustalenie dat startowych i końcowych dla obliczenia odsetek
-        LocalDate previousPaymentDate = inputData.repaymentStartDate();// Zakładamy, że jest to data rozpoczęcia kredytu
-        log.info("PreviousPaymentDate: [{}]",previousPaymentDate);
-
-        LocalDate currentPaymentDate = inputData.repaymentStartDate().plusMonths(1); // Data następnej spłaty jako punkt końcowy
-        log.info("CurrentPaymentDate: [{}]",currentPaymentDate);
-
-        // Obliczenie kwoty odsetek z uwzględnieniem rzeczywistych dni
         BigDecimal interestAmount = AmountsCalculationService.calculateInterestAmount(
                 residualAmount, interestPercent, previousPaymentDate, currentPaymentDate);
-        log.info("InterestAmount: [{}]",interestAmount);
 
         BigDecimal q = AmountsCalculationService.calculateQ(interestPercent);
-        log.info("Q: [{}]", q);
 
-        // Obliczenie stałej kwoty raty bez uwzględnienia prowizji
-        BigDecimal installmentAmountWithoutCommission = calculateConstantInstallmentAmount(
-                q, interestAmount, residualAmount, inputData.amount(), inputData.monthsDuration());
-        log.info("InstallmentAmountWithoutCommission: [{}]",installmentAmountWithoutCommission);
+        BigDecimal installmentAmountWithoutCommission;
+        if (inputData.fixedMonthlyPayment() != null && wiborPercent.compareTo(inputData.wiborPercent()) == 0) {
+            // Użyj stałej raty, jeśli WIBOR się nie zmienił
+            installmentAmountWithoutCommission = inputData.fixedMonthlyPayment();
+        } else {
+            // Oblicz nową ratę z uwzględnieniem zmienionego WIBOR
+            installmentAmountWithoutCommission = calculateConstantInstallmentAmount(
+                    q, interestAmount, residualAmount, inputData.amount(), inputData.monthsDuration());
+        }
 
-        // Obliczenie kwoty kapitałowej jako różnicy między całkowitą kwotą raty (bez prowizji) a kwotą odsetek
-        BigDecimal capitalAmount = AmountsCalculationService.compareCapitalWithResidual(
-                installmentAmountWithoutCommission.subtract(interestAmount), residualAmount);
-        log.info("CapitalAmount: [{}]",capitalAmount);
-
-        // Pobranie opłaty prowizyjnej
+        BigDecimal capitalAmount = installmentAmountWithoutCommission.subtract(interestAmount).setScale(2,RoundingMode.HALF_UP);
         BigDecimal commissionAmount = inputData.monthlyCommissionFee();
-        log.info("CommissionAmount: [{}]",commissionAmount);
-
-        // Dodanie opłaty prowizyjnej do całkowitej kwoty raty
         BigDecimal installmentAmount = installmentAmountWithoutCommission.add(commissionAmount);
-        log.info("InstallmentAmount: [{}]",installmentAmount);
 
-        // Logowanie obliczeń
-        log.info(
-                "Calculated installment: [{}], residualAmount: [{}], interestAmount: [{}], capitalAmount: [{}], installmentAmount: [{}], commissionAmount: [{}]",
-                1, residualAmount, interestAmount, capitalAmount, installmentAmount, commissionAmount);
+        log.info("Calculated installment: [{}], residualAmount: [{}], interestAmount: [{}], " +
+                        "capitalAmount: [{}], installmentAmount: [{}], commissionAmount: [{}]",
+                currentInstallmentNumber, residualAmount, interestAmount, capitalAmount, installmentAmount, commissionAmount);
 
-        // Zwrócenie obliczonych wartości
         return new InstallmentAmounts(installmentAmount, interestAmount, capitalAmount, overpayment, commissionAmount);
     }
 
     @Override
     public InstallmentAmounts calculate(final InputData inputData, final Overpayment overpayment, final Installment previousInstallment) {
-        // Pobranie aktualnej wartości WIBOR dla bieżącej raty
+        // Pobieranie informacji o numerze bieżącej raty
         BigDecimal currentInstallmentNumber = previousInstallment.installmentNumber().add(BigDecimal.ONE);
         log.info("CurrentInstallmentNumber: [{}]", currentInstallmentNumber);
 
-        BigDecimal wiborPercent = inputData.wiborPercentForInstallment(previousInstallment.installmentNumber().add(BigDecimal.ONE));
+        // Pobranie aktualnej wartości WIBOR dla tej raty
+        BigDecimal wiborPercent = inputData.wiborPercentForInstallment(currentInstallmentNumber);
         log.info("WiborPercent: [{}]", wiborPercent);
 
         BigDecimal interestPercent = wiborPercent.add(inputData.marginPercent()); // Dodanie marży do WIBOR
         log.info("interestPercent: [{}]", interestPercent);
 
+        // Obliczanie wartości współczynnika q dla annuitetu
         BigDecimal q = AmountsCalculationService.calculateQ(interestPercent);
-        log.info("q: [{}]", q);
+        log.info("Q: [{}]", q);
 
-
+        // Pobranie kwoty residualnej z ostatniej raty
         BigDecimal residualAmount = previousInstallment.residual().residualAmount();
         log.info("residualAmount: [{}]", residualAmount);
 
-        LocalDate previousPaymentDate, currentPaymentDate;
-        previousPaymentDate = inputData.repaymentStartDate().plusMonths(currentInstallmentNumber.intValue() - 1);
-        log.info("previousPaymentDate: [{}]", previousPaymentDate);
+        // Ustawianie dat dla obliczeń odsetek
+        LocalDate previousPaymentDate = inputData.repaymentStartDate().plusMonths(currentInstallmentNumber.intValue() - 1);
+        LocalDate currentPaymentDate = inputData.repaymentStartDate().plusMonths(currentInstallmentNumber.intValue());
+        log.info("PreviousPaymentDate: [{}], CurrentPaymentDate: [{}]", previousPaymentDate, currentPaymentDate);
 
-        currentPaymentDate = inputData.repaymentStartDate().plusMonths(currentInstallmentNumber.intValue());
-        log.info("residualAmount: [{}]", residualAmount);
-
-        // Obliczenie kwoty odsetek z uwzględnieniem aktualnej wartości WIBOR oraz rzeczywistej liczby dni
+        // Obliczenie odsetek dla danego okresu
         BigDecimal interestAmount = AmountsCalculationService.calculateInterestAmount(
                 residualAmount, interestPercent, previousPaymentDate, currentPaymentDate);
         log.info("interestAmount: [{}]", interestAmount);
 
-        BigDecimal referenceAmount = previousInstallment.reference().referenceAmount();
-        log.info("referenceAmount: [{}]", referenceAmount);
+        // Obliczenie kwoty raty bez uwzględnienia prowizji
+        BigDecimal installmentAmountWithoutCommission;
+        if (inputData.fixedMonthlyPayment() != null && wiborPercent.equals(inputData.wiborPercent())) {
+            // Użyj stałej raty, jeśli WIBOR się nie zmienił
+            installmentAmountWithoutCommission = inputData.fixedMonthlyPayment();
+        } else {
+            // Przelicz ratę na nowo, jeśli WIBOR się zmienił
+            installmentAmountWithoutCommission = calculateConstantInstallmentAmount(
+                    q, interestAmount, residualAmount, inputData.amount(), inputData.monthsDuration());
+        }
+        log.info("InstallmentAmountWithoutCommission: [{}]", installmentAmountWithoutCommission);
 
-        BigDecimal referenceDuration = previousInstallment.reference().referenceDuration();
-        log.info("referenceDuration: [{}]", referenceDuration);
+        // Obliczenie kwoty kapitałowej
+        BigDecimal capitalAmount = installmentAmountWithoutCommission.subtract(interestAmount).setScale(2,RoundingMode.HALF_DOWN);
+        log.info("CapitalAmount: [{}]", capitalAmount);
 
-        // Obliczenie stałej kwoty raty bez uwzględnienia prowizji
-        BigDecimal installmentAmountWithoutCommission = calculateConstantInstallmentAmount(
-                q, interestAmount, residualAmount, referenceAmount, referenceDuration);
-        log.info("installmentAmountWithoutCommission: [{}]", installmentAmountWithoutCommission);
-
-        // Obliczenie kwoty kapitałowej jako różnicy między całkowitą kwotą raty (bez prowizji) a kwotą odsetek
-        BigDecimal capitalAmount = AmountsCalculationService.compareCapitalWithResidual(installmentAmountWithoutCommission.subtract(interestAmount), residualAmount);
-        log.info("capitalAmount: [{}]", capitalAmount);
         // Pobranie opłaty prowizyjnej
         BigDecimal commissionAmount = inputData.monthlyCommissionFee();
-        log.info("commissionAmount: [{}]", commissionAmount);
-
+        log.info("CommissionAmount: [{}]", commissionAmount);
 
         // Dodanie opłaty prowizyjnej do całkowitej kwoty raty
         BigDecimal installmentAmount = installmentAmountWithoutCommission.add(commissionAmount);
-        log.info("installmentAmount: [{}]", installmentAmount);
+        log.info("InstallmentAmount: [{}]", installmentAmount);
 
         log.info(
-                "Calculated installment: [{}], residualAmount: [{}], interestAmount: [{}], capitalAmount: [{}], installmentAmount: [{}], " +
-                        "commissionAmount: [{}], referenceAmount: [{}], referenceDuration: [{}], WIBOR: [{}]",
-                previousInstallment.installmentNumber().add(BigDecimal.ONE), residualAmount, interestAmount, capitalAmount, installmentAmount,
-                commissionAmount, referenceAmount, referenceDuration, wiborPercent);
+                "Calculated installment: [{}], residualAmount: [{}], interestAmount: [{}], capitalAmount: [{}], installmentAmount: [{}], commissionAmount: [{}]",
+                currentInstallmentNumber, residualAmount, interestAmount, capitalAmount, installmentAmount, commissionAmount);
 
         return new InstallmentAmounts(installmentAmount, interestAmount, capitalAmount, overpayment, commissionAmount);
     }

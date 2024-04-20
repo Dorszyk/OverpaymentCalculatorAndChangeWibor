@@ -15,11 +15,11 @@ import java.util.function.Function;
 
 @Configuration
 @ComponentScan(basePackageClasses = OverpaymentCalculatorApplication.class)
-<span class="nc" id="L18">public class CalculatorConfiguration {</span>
+<span class="fc" id="L18">public class CalculatorConfiguration {</span>
 
     @Bean
     public static SummaryService summaryService() {
-<span class="nc" id="L22">        return installments -&gt; {</span>
+<span class="fc" id="L22">        return installments -&gt; {</span>
 <span class="nc" id="L23">            BigDecimal interestSum = calculate(installments, installment -&gt; installment.installmentAmounts().interestAmount());</span>
 <span class="nc" id="L24">            BigDecimal overpaymentProvisionSum = calculate(installments, installment -&gt; installment.installmentAmounts().overpayment().provisionAmount());</span>
 <span class="nc" id="L25">            BigDecimal totalCapital = calculate(installments, installment -&gt; totalCapital(installment.installmentAmounts()));</span>

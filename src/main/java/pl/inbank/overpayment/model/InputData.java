@@ -28,7 +28,8 @@ public record InputData(
         boolean printPayoffsSchedule,
         Integer installmentNumberToPrint,
         BigDecimal loanGrantingFee,
-        BigDecimal monthlyCommissionFee
+        BigDecimal monthlyCommissionFee,
+        BigDecimal fixedMonthlyPayment
 ) {
 
     @Builder

@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import pl.inbank.overpayment.model.*;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 @Service
 public class ReferenceCalculationServiceImpl implements ReferenceCalculationService {

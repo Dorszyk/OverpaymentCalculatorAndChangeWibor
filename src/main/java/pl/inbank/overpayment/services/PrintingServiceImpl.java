@@ -43,8 +43,9 @@ public class PrintingServiceImpl implements PrintingService {
                         inputData.interestToDisplay(),
                         inputData.overpaymentStartMonth(),
                         inputData.loanGrantingFee(),
-                        inputData.monthlyCommissionFee()
-                );
+                        inputData.monthlyCommissionFee(),
+                        inputData.fixedMonthlyPayment()
+                        );
 
         if (Optional.ofNullable(inputData.overpaymentSchema()).map(schema -> schema.size() > 0).orElse(false)) {
             String overpaymentMessage = OVERPAYMENT_INFORMATION.formatted(

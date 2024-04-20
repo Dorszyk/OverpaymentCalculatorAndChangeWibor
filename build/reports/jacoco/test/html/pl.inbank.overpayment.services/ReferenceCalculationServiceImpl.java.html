@@ -6,26 +6,26 @@ import pl.inbank.overpayment.model.*;
 import java.math.BigDecimal;
 
 @Service
-<span class="nc" id="L9">public class ReferenceCalculationServiceImpl implements ReferenceCalculationService {</span>
+<span class="fc" id="L9">public class ReferenceCalculationServiceImpl implements ReferenceCalculationService {</span>
 
     @Override
     public Reference calculate(InstallmentAmounts installmentAmounts, InputData inputData) {
-<span class="nc bnc" id="L13" title="All 2 branches missed.">        if (BigDecimal.ZERO.equals(inputData.amount())) {</span>
+<span class="pc bpc" id="L13" title="1 of 2 branches missed.">        if (BigDecimal.ZERO.equals(inputData.amount())) {</span>
 <span class="nc" id="L14">            return new Reference(BigDecimal.ZERO, BigDecimal.ZERO);</span>
         }
 
-<span class="nc" id="L17">        return new Reference(inputData.amount(), inputData.monthsDuration());</span>
+<span class="fc" id="L17">        return new Reference(inputData.amount(), inputData.monthsDuration());</span>
     }
 
     @Override
     public Reference calculate(InstallmentAmounts installmentAmounts, final InputData inputData, Installment previousInstallment) {
-<span class="nc bnc" id="L22" title="All 2 branches missed.">        if (BigDecimal.ZERO.equals(previousInstallment.residual().residualAmount())) {</span>
+<span class="pc bpc" id="L22" title="1 of 2 branches missed.">        if (BigDecimal.ZERO.equals(previousInstallment.residual().residualAmount())) {</span>
 <span class="nc" id="L23">            return new Reference(BigDecimal.ZERO, BigDecimal.ZERO);</span>
         }
 
-<span class="nc bnc" id="L26" title="All 3 branches missed.">        return switch (inputData.overpaymentReduceWay()) {</span>
+<span class="pc bpc" id="L26" title="2 of 3 branches missed.">        return switch (inputData.overpaymentReduceWay()) {</span>
 <span class="nc" id="L27">            case Overpayment.REDUCE_INSTALLMENT -&gt; reduceInstallmentReference(installmentAmounts, previousInstallment.residual());</span>
-<span class="nc" id="L28">            case Overpayment.REDUCE_PERIOD -&gt; new Reference(inputData.amount(), inputData.monthsDuration());</span>
+<span class="fc" id="L28">            case Overpayment.REDUCE_PERIOD -&gt; new Reference(inputData.amount(), inputData.monthsDuration());</span>
 <span class="nc" id="L29">            default -&gt; throw new Exception(&quot;Case not handled&quot;);</span>
         };
 

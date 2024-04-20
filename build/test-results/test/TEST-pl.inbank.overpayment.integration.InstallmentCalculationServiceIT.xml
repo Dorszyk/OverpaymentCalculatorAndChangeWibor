@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="pl.inbank.overpayment.integration.InstallmentCalculationServiceIT" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-04-14T16:58:54" hostname="DORSZYKP" time="0.093">
+  <properties/>
+  <testcase name="Test installment calculation" classname="pl.inbank.overpayment.integration.InstallmentCalculationServiceIT" time="0.093"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

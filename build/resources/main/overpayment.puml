@@ -19,6 +19,7 @@ class model.InputData {
 	{method} +amount () : java.math.BigDecimal
 	{method}  {static} +builder () : model.InputData$InputDataBuilder
 	{method} +equals ( paramObject1 : Object ) : boolean
+	{method} +fixedMonthlyPayment () : java.math.BigDecimal
 	{method} +hashCode () : int
 	{method} +installmentNumberToPrint () : Integer
 	{method} +installmentType () : model.OverpaymentType
@@ -40,6 +41,7 @@ class model.InputData {
 	{method} +wiborPercent () : java.math.BigDecimal
 	{method} +wiborPercentForInstallment ( paramBigDecimal1 : java.math.BigDecimal ) : java.math.BigDecimal
 	{method} +withAmount ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData
+	{method} +withFixedMonthlyPayment ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData
 	{method} +withInstallmentNumberToPrint ( paramInteger1 : Integer ) : model.InputData
 	{method} +withInstallmentType ( paramOverpaymentType1 : model.OverpaymentType ) : model.InputData
 	{method} +withLoanGrantingFee ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData
@@ -61,6 +63,7 @@ class model.InputData {
 class model.InputData$InputDataBuilder {
 	{method} +amount ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData$InputDataBuilder
 	{method} +build () : model.InputData
+	{method} +fixedMonthlyPayment ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData$InputDataBuilder
 	{method} +installmentNumberToPrint ( paramInteger1 : Integer ) : model.InputData$InputDataBuilder
 	{method} +installmentType ( paramOverpaymentType1 : model.OverpaymentType ) : model.InputData$InputDataBuilder
 	{method} +loanGrantingFee ( paramBigDecimal1 : java.math.BigDecimal ) : model.InputData$InputDataBuilder
